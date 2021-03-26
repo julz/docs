@@ -18,7 +18,7 @@
     
     
       
-        <title>Apache Kafka Channel Example - Knative Docs</title>
+        <title>Channel Example - Knative Docs</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#prerequisites" class="md-skip">
           Skip to content
         </a>
       
@@ -91,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Apache Kafka Channel Example
+              Channel Example
             
           </span>
         </div>
@@ -204,13 +204,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../samples.md" class="md-tabs__link">
+      <a href="../../../" class="md-tabs__link md-tabs__link--active">
         Eventing Component
       </a>
     </li>
@@ -351,7 +353,7 @@
   
     <li class="md-nav__item">
       <a href="../../../../install/" class="md-nav__link">
-        Overview
+        Introduction
       </a>
     </li>
   
@@ -1245,12 +1247,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Eventing Component
@@ -1268,9 +1272,1062 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../samples.md" class="md-nav__link">
-        Samples
+      <a href="../../../" class="md-nav__link">
+        Overview
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Event Sources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Event Sources" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Event Sources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/apiserversource/" class="md-nav__link">
+        APIServerSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/containersource/" class="md-nav__link">
+        ContainerSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/pingsource/" class="md-nav__link">
+        PingSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sources/sinkbinding/" class="md-nav__link">
+        Sink Binding
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../event-registry/" class="md-nav__link">
+        Event Registry
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
+      
+      <label class="md-nav__link" for="__nav_4_5">
+        Flows
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Flows" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_5">
+          <span class="md-nav__icon md-icon"></span>
+          Flows
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flows/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flows/sequence/" class="md-nav__link">
+        Sequence
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../flows/parallel/" class="md-nav__link">
+        Parallel
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+      
+      <label class="md-nav__link" for="__nav_4_6">
+        Channels
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Channels" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Channels
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../channels/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../channels/channel-types-defaults/" class="md-nav__link">
+        Channel Types and Defaults
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../channels/create-default-channel/" class="md-nav__link">
+        Creating Channels
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../channels/channels-crds/" class="md-nav__link">
+        Available Channels
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sugar/" class="md-nav__link">
+        Sugar
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../event-delivery/" class="md-nav__link">
+        Event Delivery
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_9" type="checkbox" id="__nav_4_9" >
+      
+      <label class="md-nav__link" for="__nav_4_9">
+        Broker
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Broker" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_9">
+          <span class="md-nav__icon md-icon"></span>
+          Broker
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../broker/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../broker/kafka-broker/" class="md-nav__link">
+        Kafka Broker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../broker/config-br-defaults/" class="md-nav__link">
+        Default Broker ConfigMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../broker/kafka-configmap/" class="md-nav__link">
+        Kafka Channel ConfigMap
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../broker/alternate.md" class="md-nav__link">
+        Alternate Brokers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_10" type="checkbox" id="__nav_4_10" >
+      
+      <label class="md-nav__link" for="__nav_4_10">
+        Sink
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sink" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_10">
+          <span class="md-nav__icon md-icon"></span>
+          Sink
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sink/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sink/kafka-sink/" class="md-nav__link">
+        Apache Kafka Sink
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../triggers/" class="md-nav__link">
+        Triggers
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../debugging/" class="md-nav__link">
+        Debugging
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../accessing-traces/" class="md-nav__link">
+        Accessing CloudEvent Traces
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14" type="checkbox" id="__nav_4_14" checked>
+      
+      <label class="md-nav__link" for="__nav_4_14">
+        Samples
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Samples" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_14">
+          <span class="md-nav__icon md-icon"></span>
+          Samples
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../apache-camel-source/" class="md-nav__link">
+        Apache Camel Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_2" type="checkbox" id="__nav_4_14_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_14_2">
+        Kafka
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Kafka" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_2">
+          <span class="md-nav__icon md-icon"></span>
+          Kafka
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../binding/" class="md-nav__link">
+        Binding Example
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Channel Example
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Channel Example
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-kafkachannel-channel-crd" class="md-nav__link">
+    Creating a KafkaChannel channel CRD
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifying-the-default-channel-configuration" class="md-nav__link">
+    Specifying the default channel configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-an-apache-kafka-channel-using-the-default-channel-configuration" class="md-nav__link">
+    Creating an Apache Kafka channel using the default channel configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-knative-broker-for-apache-kafka-channels" class="md-nav__link">
+    Configuring the Knative broker for Apache Kafka channels
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-service-and-trigger-to-use-the-apache-kafka-broker" class="md-nav__link">
+    Creating a service and trigger to use the Apache Kafka broker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#verifying-your-apache-kafka-channel-and-broker" class="md-nav__link">
+    Verifying your Apache Kafka channel and broker
+  </a>
+  
+    <nav class="md-nav" aria-label="Verifying your Apache Kafka channel and broker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#receive-events-via-knative" class="md-nav__link">
+    Receive events via Knative
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#authentication-against-an-apache-kafka" class="md-nav__link">
+    Authentication against an Apache Kafka
+  </a>
+  
+    <nav class="md-nav" aria-label="Authentication against an Apache Kafka">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tls-authentication" class="md-nav__link">
+    TLS authentication
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sasl-authentication" class="md-nav__link">
+    SASL authentication
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../source/" class="md-nav__link">
+        Source Example
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../container-source/" class="md-nav__link">
+        Container Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-event-source/" class="md-nav__link">
+        Writing an Event Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../writing-event-source-easy-way/" class="md-nav__link">
+        Writing an Event Source - Easy Way
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_6" type="checkbox" id="__nav_4_14_6" >
+      
+      <label class="md-nav__link" for="__nav_4_14_6">
+        Hello World
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hello World" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_6">
+          <span class="md-nav__icon md-icon"></span>
+          Hello World
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helloworld/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helloworld/helloworld-go/" class="md-nav__link">
+        Go
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../helloworld/helloworld-python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_7" type="checkbox" id="__nav_4_14_7" >
+      
+      <label class="md-nav__link" for="__nav_4_14_7">
+        Sequences
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sequences" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_7">
+          <span class="md-nav__icon md-icon"></span>
+          Sequences
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/sequence-terminal/" class="md-nav__link">
+        Create Additional Events
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/sequence-reply-to-event-display/" class="md-nav__link">
+        Displaying Sequence Output
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/sequence-reply-to-sequence/" class="md-nav__link">
+        Using Sequences in Series
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/sequence-with-broker-trigger/" class="md-nav__link">
+        Using Broker and Trigger
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_8" type="checkbox" id="__nav_4_14_8" >
+      
+      <label class="md-nav__link" for="__nav_4_14_8">
+        Parallel
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Parallel" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_8">
+          <span class="md-nav__icon md-icon"></span>
+          Parallel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallel/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallel/multiple-branches/" class="md-nav__link">
+        Multiple Cases
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parallel/mutual-exclusivity/" class="md-nav__link">
+        Mutual Exclusivity
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ping-source/" class="md-nav__link">
+        Ping Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_14_10" type="checkbox" id="__nav_4_14_10" >
+      
+      <label class="md-nav__link" for="__nav_4_14_10">
+        GCP Sources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="GCP Sources" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_14_10">
+          <span class="md-nav__icon md-icon"></span>
+          GCP Sources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-audit-logs-source/" class="md-nav__link">
+        CloudAuditLogsSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-pubsub-source/" class="md-nav__link">
+        CloudPubSubSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-scheduler-source/" class="md-nav__link">
+        CloudSchedulerSource
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cloud-storage-source/" class="md-nav__link">
+        CloudStorageSource
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../github-source/" class="md-nav__link">
+        Github Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../gitlab-source/" class="md-nav__link">
+        Gitlab Source
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../iot-core/" class="md-nav__link">
+        IoT Core
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes-event-source/" class="md-nav__link">
+        Kubernetes Event Source
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1322,7 +2379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../client/_index/" class="md-nav__link">
+      <a href="../../../../client/" class="md-nav__link">
         Using the Client
       </a>
     </li>
@@ -1416,29 +2473,186 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/eventing/samples/kafka/channel/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/eventing/samples/kafka/channel/README.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">&para;</a></h1>
-<p><strong>TemplateSyntaxError</strong>: unexpected '%'</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 441, in render
-    md_template = self.env.from_string(markdown)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 941, in from_string
-    return cls.from_code(self, self.compile(source), globals, None)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 638, in compile
-    self.handle_exception(source=source_hint)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/_compat.py&quot;, line 28, in reraise
-    raise value.with_traceback(tb)
-  File &quot;&lt;unknown&gt;&quot;, line 1, in template
-jinja2.exceptions.TemplateSyntaxError: unexpected &#39;%&#39;
-</code></pre></div>
+                  <h1>Channel Example</h1>
                 
-                  
+                <p>You can install and configure the Apache Kafka CRD (<code>KafkaChannel</code>) as the
+default channel configuration in Knative Eventing.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Ensure that you meet the
+  <a href="../">prerequisites listed in the Apache Kafka overview</a>.</li>
+<li>A Kubernetes cluster with
+  <a href="../../../../install/README.md">Knative Kafka Channel installed</a>.</li>
+</ul>
+<h2 id="creating-a-kafkachannel-channel-crd">Creating a <code>KafkaChannel</code> channel CRD<a class="headerlink" href="#creating-a-kafkachannel-channel-crd" title="Permanent link">&para;</a></h2>
+<p>Create a new object by configuring the YAML file as follows:</p>
+<div class="highlight"><pre><span></span><code>cat &lt;&lt;-EOF | kubectl apply -f -
+---
+apiVersion: messaging.knative.dev/v1beta1
+kind: KafkaChannel
+metadata:
+  name: my-kafka-channel
+spec:
+  numPartitions: 3
+  replicationFactor: 1
+EOF
+</code></pre></div>
+<h2 id="specifying-the-default-channel-configuration">Specifying the default channel configuration<a class="headerlink" href="#specifying-the-default-channel-configuration" title="Permanent link">&para;</a></h2>
+<p>To configure the usage of the <code>KafkaChannel</code> CRD as the
+<a href="../../../channels/default-channels.md">default channel configuration</a>, edit the
+<code>default-ch-webhook</code> ConfigMap as follows:</p>
+<div class="highlight"><pre><span></span><code>cat &lt;&lt;-EOF | kubectl apply -f -
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: default-ch-webhook
+  namespace: knative-eventing
+data:
+  # Configuration for defaulting channels that do not specify CRD implementations.
+  default-ch-config: |
+    clusterDefault:
+      apiVersion: messaging.knative.dev/v1beta1
+      kind: KafkaChannel
+      spec:
+        numPartitions: 3
+        replicationFactor: 1
+EOF
+</code></pre></div>
+<h2 id="creating-an-apache-kafka-channel-using-the-default-channel-configuration">Creating an Apache Kafka channel using the default channel configuration<a class="headerlink" href="#creating-an-apache-kafka-channel-using-the-default-channel-configuration" title="Permanent link">&para;</a></h2>
+<p>Now that <code>KafkaChannel</code> is set as the default channel configuration, you can use
+the <code>channels.messaging.knative.dev</code> CRD to create a new Apache Kafka channel,
+using the generic <code>Channel</code>:</p>
+<div class="highlight"><pre><span></span><code>cat &lt;&lt;-EOF | kubectl apply -f -
+---
+apiVersion: messaging.knative.dev/v1
+kind: Channel
+metadata:
+  name: testchannel-one
+EOF
+</code></pre></div>
+<p>Check Kafka for a <code>testchannel</code> topic. With Strimzi this can be done by using
+the command:</p>
+<div class="highlight"><pre><span></span><code>kubectl -n kafka exec -it my-cluster-kafka-0 -- bin/kafka-topics.sh --zookeeper localhost:2181 --list
+</code></pre></div>
+<p>The result is:</p>
+<div class="highlight"><pre><span></span><code>...
+knative-messaging-kafka.default.testchannel-one
+...
+</code></pre></div>
+<p>The Apache Kafka topic that is created by the channel implementation is prefixed
+with <code>knative-messaging-kafka</code>. This indicates it is an Apache Kafka channel
+from Knative. It contains the name of the namespace, <code>default</code> in this example,
+followed by the actual name of the channel.</p>
+<h2 id="configuring-the-knative-broker-for-apache-kafka-channels">Configuring the Knative broker for Apache Kafka channels<a class="headerlink" href="#configuring-the-knative-broker-for-apache-kafka-channels" title="Permanent link">&para;</a></h2>
+<p>To setup a broker that will use the new default Kafka channels, you must create
+a new <em>default</em> broker, using the command:</p>
+<div class="highlight"><pre><span></span><code>kubectl create -f - <span class="s">&lt;&lt;EOF</span>
+<span class="s">apiVersion: eventing.knative.dev/v1</span>
+<span class="s">kind: Broker</span>
+<span class="s">metadata:</span>
+<span class="s"> name: default</span>
+<span class="s">EOF</span>
+</code></pre></div>
+<p>This will give you two pods, such as:</p>
+<div class="highlight"><pre><span></span><code>default-broker-filter-64658fc79f-nf596                            1/1     Running     0          15m
+default-broker-ingress-ff79755b6-vj9jt                            1/1     Running     0          15m
+</code></pre></div>
+<p>Inside the Apache Kafka cluster you should see two new topics, such as:</p>
+<div class="highlight"><pre><span></span><code>...
+knative-messaging-kafka.default.default-kn2-ingress
+knative-messaging-kafka.default.default-kn2-trigger
+...
+</code></pre></div>
+<h2 id="creating-a-service-and-trigger-to-use-the-apache-kafka-broker">Creating a service and trigger to use the Apache Kafka broker<a class="headerlink" href="#creating-a-service-and-trigger-to-use-the-apache-kafka-broker" title="Permanent link">&para;</a></h2>
+<p>To use the Apache Kafka based broker, let's take a look at a simple demo. Use
+the<code>ApiServerSource</code> to publish events to the broker as well as the <code>Trigger</code>
+API, which then routes events to a Knative <code>Service</code>.</p>
+<ol>
+<li>Install <code>ksvc</code>, using the command:
+   <div class="highlight"><pre><span></span><code>kubectl apply -f 000-ksvc.yaml
+</code></pre></div></li>
+<li>Install a source that publishes to the default broker</li>
+</ol>
+<div class="highlight"><pre><span></span><code>kubectl apply -f 020-k8s-events.yaml
+</code></pre></div>
+<ol>
+<li>Create a trigger that routes the events to the <code>ksvc</code>:
+   <div class="highlight"><pre><span></span><code>kubectl apply -f 030-trigger.yaml
+</code></pre></div></li>
+</ol>
+<h2 id="verifying-your-apache-kafka-channel-and-broker">Verifying your Apache Kafka channel and broker<a class="headerlink" href="#verifying-your-apache-kafka-channel-and-broker" title="Permanent link">&para;</a></h2>
+<p>Now that your Eventing cluster is configured for Apache Kafka, you can verify
+your configuration with the following options.</p>
+<h3 id="receive-events-via-knative">Receive events via Knative<a class="headerlink" href="#receive-events-via-knative" title="Permanent link">&para;</a></h3>
+<p>Now you can see the events in the log of the <code>ksvc</code> using the command:</p>
+<div class="highlight"><pre><span></span><code>kubectl logs --selector=&#39;serving.knative.dev/service=broker-kafka-display&#39; -c user-container
+</code></pre></div>
+<h2 id="authentication-against-an-apache-kafka">Authentication against an Apache Kafka<a class="headerlink" href="#authentication-against-an-apache-kafka" title="Permanent link">&para;</a></h2>
+<p>In production environments it is common that the Apache Kafka cluster is secured using <a href="http://kafka.apache.org/documentation/#security_ssl">TLS</a> or <a href="http://kafka.apache.org/documentation/#security_sasl">SASL</a>. This section shows how to confiugure the <code>KafkaChannel</code> to work against a protected Apache Kafka cluster, with the two supported TLS and SASL authentication methods.</p>
+<h3 id="tls-authentication">TLS authentication<a class="headerlink" href="#tls-authentication" title="Permanent link">&para;</a></h3>
+<p>To use TLS authentication you must create:</p>
+<ul>
+<li>A CA certificate</li>
+<li>A client certificate and key</li>
+</ul>
+<p><strong>NOTE:</strong> Kafka channels require these files to be in <code>.pem</code> format. If your files are in a different format, you must convert them to <code>.pem</code>.</p>
+<ol>
+<li>Create the certificate files as secrets in your chosen namespace:
+<div class="highlight"><pre><span></span><code>$ kubectl create secret --namespace &lt;namespace&gt; generic &lt;kafka-auth-secret&gt; \
+  --from-file=ca.crt=caroot.pem \
+  --from-file=user.crt=certificate.pem \
+  --from-file=user.key=key.pem
+ ```
+
+*NOTE:* It is important to use the same keys (`ca.crt`, `user.crt` and `user.key`).
+
+Reference your secret and the namespace of the secret in the `config-kafka` ConfigMap:
+</code></pre></div>
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-kafka
+  namespace: knative-eventing
+data:
+  bootstrapServers: <bootstrap-servers>
+  authSecretName: <kafka-auth-secret>
+  authSecretNamespace: <namespace>
+ ```</li>
+</ol>
+<h3 id="sasl-authentication">SASL authentication<a class="headerlink" href="#sasl-authentication" title="Permanent link">&para;</a></h3>
+<p>To use SASL authentication, you will need the following information:</p>
+<ul>
+<li>A username and password.</li>
+<li>The type of SASL mechanism you wish to use. For example; <code>PLAIN</code>, <code>SCRAM-SHA-256</code> or <code>SCRAM-SHA-512</code>.</li>
+</ul>
+<p><strong>NOTE:</strong> It is recommended to also enable TLS. If you enable this, you will also need the <code>ca.crt</code> certificate as described in the previous section.</p>
+<ol>
+<li>Create the certificate files as secrets in your chosen namespace:
+<div class="highlight"><pre><span></span><code>$ kubectl create secret --namespace &lt;namespace&gt; generic &lt;kafka-auth-secret&gt; \
+  --from-file=ca.crt=caroot.pem \
+  --from-literal=password=&quot;SecretPassword&quot; \
+  --from-literal=saslType=&quot;SCRAM-SHA-512&quot; \
+  --from-literal=user=&quot;my-sasl-user&quot;
+</code></pre></div></li>
+</ol>
+<p><em>NOTE:</em> It is important to use the same keys; <code>user</code>, <code>password</code> and <code>saslType</code>.</p>
+<p>Reference your secret and the namespace of the secret in the <code>config-kafka</code> ConfigMap:
+<div class="highlight"><pre><span></span><code>apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-kafka
+  namespace: knative-eventing
+data:
+  bootstrapServers: &lt;bootstrap-servers&gt;
+  authSecretName: &lt;kafka-auth-Secret&gt;
+  authSecretNamespace: &lt;namespace&gt;
+</code></pre></div></p>
                 
               
               
@@ -1453,6 +2667,39 @@ jinja2.exceptions.TemplateSyntaxError: unexpected &#39;%&#39;
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../binding/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Binding Example
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../source/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Source Example
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
