@@ -2507,19 +2507,21 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 <p>To install the serving component:</p>
 <ol>
 <li>
-<p>Install the required custom resources:
-   <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-crds.yaml
-</code></pre></div></p>
+<p>Install the required custom resources:</p>
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-crds.yaml
+</code></pre></div>
 </li>
 <li>
-<p>Install the core components of Knative Serving:
-   <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-core.yaml
-</code></pre></div></p>
+<p>Install the core components of Knative Serving:</p>
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-core.yaml
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>For information about the YAML files in the Knative Serving and Eventing releases, see
+<a href="../installation-files/">Installation files</a>.</p>
+</div>
 </li>
 </ol>
-<p>!!! info
-      For information about the YAML files in the Knative Serving and Eventing releases, see
-      <a href="../installation-files/">Installation files</a>.</p>
 <h2 id="install-a-networking-layer">Install a networking layer<a class="headerlink" href="#install-a-networking-layer" title="Permanent link">&para;</a></h2>
 <p>The tabs below expand to show instructions for installing a networking layer.
 Follow the procedure for the networking layer of your choice:</p>
