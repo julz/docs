@@ -2583,12 +2583,12 @@ Follow the procedure for the networking layer of your choice:</p>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Contour</label><div class="tabbed-content">
 <p>The following commands install Contour and enable its Knative integration.</p>
 <ul class="task-list">
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install a properly configured Contour:</li>
-</ul>
+<li class="task-list-item">
+<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install a properly configured Contour:</p>
 <p><div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/contour.yaml
 </code></pre></div>
-<!-- TODO(https://github.com/knative-sandbox/net-contour/issues/11): We need a guide on how to use/modify a pre-existing install. --></p>
-<ul class="task-list">
+    <!-- TODO(https://github.com/knative-sandbox/net-contour/issues/11): We need a guide on how to use/modify a pre-existing install. --></p>
+</li>
 <li class="task-list-item">
 <p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the Knative Contour controller:
   <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/net-contour.yaml
