@@ -84,46 +84,6 @@
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-concepts/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-metrics/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-targets/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/scale-to-zero/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/concurrency/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/scale-bounds/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/rps-target/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/kpa-specific/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/autoscaling/autoscale-go/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://knative.dev/docs/serving/services/deployment/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
@@ -169,6 +129,46 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/serving/using-auto-tls/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-concepts/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-metrics/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/autoscaling-targets/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/scale-to-zero/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/concurrency/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/scale-bounds/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/rps-target/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/kpa-specific/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/autoscaling/autoscale-go/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
