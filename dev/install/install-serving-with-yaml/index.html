@@ -13,7 +13,7 @@
       
         <link rel="canonical" href="https://knative.dev/docs/install/install-serving-with-yaml/">
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../images/knative-sm.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
@@ -434,6 +434,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-the-serving-component" class="md-nav__link">
     Install the Serving component
   </a>
@@ -483,6 +490,18 @@
     <li class="md-nav__item">
       <a href="../install-eventing-with-yaml/" class="md-nav__link">
         Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation-files/" class="md-nav__link">
+        Installation Files
       </a>
     </li>
   
@@ -2481,11 +2500,9 @@
                 
                 <h1 id="install-knative-serving-using-yaml-files">Install Knative Serving using YAML files<a class="headerlink" href="#install-knative-serving-using-yaml-files" title="Permanent link">&para;</a></h1>
 <p>This topic describes how to install Knative Serving by applying YAML files using the <code>kubectl</code> CLI.</p>
-<div class="admonition warning">
-<p class="admonition-title">Prerequisites</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <p>Before installation, you must meet the prerequisites.
 See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
-</div>
 <h2 id="install-the-serving-component">Install the Serving component<a class="headerlink" href="#install-the-serving-component" title="Permanent link">&para;</a></h2>
 <p>To install the serving component:</p>
 <ol>
@@ -2497,11 +2514,12 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 <li>
 <p>Install the core components of Knative Serving:
    <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-core.yaml
-</code></pre></div>
-For information about the YAML files in the Knative Serving and Eventing releases, see
-<a href="../installation-files/">Installation files</a>.</p>
+</code></pre></div></p>
 </li>
 </ol>
+<p>!!! info
+      For information about the YAML files in the Knative Serving and Eventing releases, see
+      <a href="../installation-files/">Installation files</a>.</p>
 <h2 id="install-a-networking-layer">Install a networking layer<a class="headerlink" href="#install-a-networking-layer" title="Permanent link">&para;</a></h2>
 <p>The tabs below expand to show instructions for installing a networking layer.
 Follow the procedure for the networking layer of your choice:</p>
