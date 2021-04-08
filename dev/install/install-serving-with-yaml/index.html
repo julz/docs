@@ -2488,20 +2488,20 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 </div>
 <h2 id="install-the-serving-component">Install the Serving component<a class="headerlink" href="#install-the-serving-component" title="Permanent link">&para;</a></h2>
 <p>To install the serving component:</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the required custom resources:
+<ol>
+<li>
+<p>Install the required custom resources:
    <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-crds.yaml
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the core components of Knative Serving:
+<li>
+<p>Install the core components of Knative Serving:
    <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-core.yaml
 </code></pre></div>
 For information about the YAML files in the Knative Serving and Eventing releases, see
 <a href="../installation-files/">Installation files</a>.</p>
 </li>
-</ul>
+</ol>
 <h2 id="install-a-networking-layer">Install a networking layer<a class="headerlink" href="#install-a-networking-layer" title="Permanent link">&para;</a></h2>
 <p>The tabs below expand to show instructions for installing a networking layer.
 Follow the procedure for the networking layer of your choice:</p>
@@ -2510,22 +2510,22 @@ Follow the procedure for the networking layer of your choice:</p>
 
 <div class="tabbed-set" data-tabs="1:6"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Kourier (Choose this if you are not sure)</label><div class="tabbed-content">
 <p>The following commands install Kourier and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the Knative Kourier controller:
+<ol>
+<li>
+<p>Install the Knative Kourier controller:
 <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-kourier/releases/download/v0.20.0/kourier.yaml
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To configure Knative Serving to use Kourier by default:
+<li>
+<p>To configure Knative Serving to use Kourier by default:
   <div class="highlight"><pre><span></span><code>kubectl patch configmap/config-network <span class="se">\</span>
   --namespace knative-serving <span class="se">\</span>
   --type merge <span class="se">\</span>
   --patch <span class="s1">&#39;{&quot;data&quot;:{&quot;ingress.class&quot;:&quot;kourier.ingress.networking.knative.dev&quot;}}&#39;</span>
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="highlight"><pre><span></span><code>kubectl --namespace kourier-system get service kourier
 </code></pre></div>
 <div class="admonition tip">
@@ -2533,44 +2533,44 @@ Follow the procedure for the networking layer of your choice:</p>
 </p>
 </div>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Ambassador</label><div class="tabbed-content">
 <p>The following commands install Ambassador and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Create a namespace to install Ambassador in:</p>
+<ol>
+<li>
+<p>Create a namespace to install Ambassador in:</p>
 <div class="highlight"><pre><span></span><code>kubectl create namespace ambassador
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install Ambassador:</p>
+<li>
+<p>Install Ambassador:</p>
 <div class="highlight"><pre><span></span><code>kubectl apply --namespace ambassador <span class="se">\</span>
   -f https://getambassador.io/yaml/ambassador/ambassador-crds.yaml <span class="se">\</span>
   -f https://getambassador.io/yaml/ambassador/ambassador-rbac.yaml <span class="se">\</span>
   -f https://getambassador.io/yaml/ambassador/ambassador-service.yaml
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Give Ambassador the required permissions:</p>
+<li>
+<p>Give Ambassador the required permissions:</p>
 <div class="highlight"><pre><span></span><code>kubectl patch clusterrolebinding ambassador -p <span class="s1">&#39;{&quot;subjects&quot;:[{&quot;kind&quot;: &quot;ServiceAccount&quot;, &quot;name&quot;: &quot;ambassador&quot;, &quot;namespace&quot;: &quot;ambassador&quot;}]}&#39;</span>
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Enable Knative support in Ambassador:</p>
+<li>
+<p>Enable Knative support in Ambassador:</p>
 <div class="highlight"><pre><span></span><code>kubectl <span class="nb">set</span> env --namespace ambassador  deployments/ambassador <span class="nv">AMBASSADOR_KNATIVE_SUPPORT</span><span class="o">=</span><span class="nb">true</span>
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To configure Knative Serving to use Ambassador by default:</p>
+<li>
+<p>To configure Knative Serving to use Ambassador by default:</p>
 <div class="highlight"><pre><span></span><code>kubectl patch configmap/config-network <span class="se">\</span>
   --namespace knative-serving <span class="se">\</span>
   --type merge <span class="se">\</span>
   --patch <span class="s1">&#39;{&quot;data&quot;:{&quot;ingress.class&quot;:&quot;ambassador.ingress.networking.knative.dev&quot;}}&#39;</span>
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
@@ -2578,32 +2578,32 @@ Follow the procedure for the networking layer of your choice:</p>
 <div class="highlight"><pre><span></span><code>kubectl --namespace ambassador get service ambassador
 </code></pre></div>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Contour</label><div class="tabbed-content">
 <p>The following commands install Contour and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install a properly configured Contour:</p>
+<ol>
+<li>
+<p>Install a properly configured Contour:</p>
 <p><div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/contour.yaml
 </code></pre></div>
     <!-- TODO(https://github.com/knative-sandbox/net-contour/issues/11): We need a guide on how to use/modify a pre-existing install. --></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the Knative Contour controller:
+<li>
+<p>Install the Knative Contour controller:
   <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/net-contour.yaml
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To configure Knative Serving to use Contour by default:
+<li>
+<p>To configure Knative Serving to use Contour by default:
   <div class="highlight"><pre><span></span><code>kubectl patch configmap/config-network <span class="se">\</span>
   --namespace knative-serving <span class="se">\</span>
   --type merge <span class="se">\</span>
   --patch <span class="s1">&#39;{&quot;data&quot;:{&quot;ingress.class&quot;:&quot;contour.ingress.networking.knative.dev&quot;}}&#39;</span>
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
@@ -2611,16 +2611,16 @@ Follow the procedure for the networking layer of your choice:</p>
 <div class="highlight"><pre><span></span><code>kubectl --namespace contour-external get service envoy
 </code></pre></div>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Gloo</label><div class="tabbed-content">
 <p><em>For a detailed guide on Gloo integration, see
 <a href="https://docs.solo.io/gloo/latest/installation/knative/">Installing Gloo for Knative</a>
 in the Gloo documentation.</em></p>
 <p>The following commands install Gloo and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Make sure <code>glooctl</code> is installed (version 1.3.x and higher recommended):</p>
+<ol>
+<li>
+<p>Make sure <code>glooctl</code> is installed (version 1.3.x and higher recommended):</p>
 <div class="highlight"><pre><span></span><code>glooctl version
 </code></pre></div>
 <p>If it is not installed, you can install the latest version using:
@@ -2630,13 +2630,13 @@ in the Gloo documentation.</em></p>
 <p>Or following the
     <a href="https://docs.solo.io/gloo/latest/installation/knative/#install-command-line-tool-cli">Gloo CLI install instructions</a>.</p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install Gloo and the Knative integration:
+<li>
+<p>Install Gloo and the Knative integration:
   <div class="highlight"><pre><span></span><code>glooctl install knative --install-knative<span class="o">=</span><span class="nb">false</span>
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
@@ -2644,23 +2644,23 @@ in the Gloo documentation.</em></p>
 <div class="highlight"><pre><span></span><code>glooctl proxy url --name knative-external-proxy
 </code></pre></div>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">Istio</label><div class="tabbed-content">
 <p>The following commands install Istio and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install a properly configured Istio (<a href="../installing-istio/">Advanced installation</a>)</p>
+<ol>
+<li>
+<p>Install a properly configured Istio (<a href="../installing-istio/">Advanced installation</a>)</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.20.0/istio.yaml
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install the Knative Istio controller:</p>
+<li>
+<p>Install the Knative Istio controller:</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.20.0/net-istio.yaml
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
@@ -2668,26 +2668,26 @@ in the Gloo documentation.</em></p>
 <div class="highlight"><pre><span></span><code>kubectl --namespace istio-system get service istio-ingressgateway
 </code></pre></div>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><label for="__tabbed_1_6">Kong</label><div class="tabbed-content">
 <p>The following commands install Kong and enable its Knative integration.</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Install Kong Ingress Controller:</p>
+<ol>
+<li>
+<p>Install Kong Ingress Controller:</p>
 <div class="highlight"><pre><span></span><code>kubectl apply -f https://raw.githubusercontent.com/Kong/kubernetes-ingress-controller/0.9.x/deploy/single/all-in-one-dbless.yaml
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> To configure Knative Serving to use Kong by default:</p>
+<li>
+<p>To configure Knative Serving to use Kong by default:</p>
 <div class="highlight"><pre><span></span><code>kubectl patch configmap/config-network <span class="se">\</span>
   --namespace knative-serving <span class="se">\</span>
   --type merge <span class="se">\</span>
   --patch <span class="s1">&#39;{&quot;data&quot;:{&quot;ingress.class&quot;:&quot;kong&quot;}}&#39;</span>
 </code></pre></div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
+<li>
+<p>Fetch the External IP or CNAME:</p>
 <div class="admonition tip inline end">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
@@ -2695,7 +2695,7 @@ in the Gloo documentation.</em></p>
 <div class="highlight"><pre><span></span><code>kubectl --namespace kong get service kong-proxy
 </code></pre></div>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <h2 id="verify-the-installation">Verify the installation<a class="headerlink" href="#verify-the-installation" title="Permanent link">&para;</a></h2>
@@ -2727,23 +2727,23 @@ like Minikube. For these, see "Real DNS" or "Temporary DNS".</p>
 <p>To configure DNS for Knative, take the External IP
 or CNAME from setting up networking, and configure it with your DNS provider as
 follows:</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> If the networking layer produced an External IP address, then configure a
+<ol>
+<li>
+<p>If the networking layer produced an External IP address, then configure a
   wildcard <code>A</code> record for the domain:
   <div class="highlight"><pre><span></span><code><span class="c1"># Here knative.example.com is the domain suffix for your cluster</span>
 *.knative.example.com <span class="o">==</span> A <span class="m">35</span>.233.41.212
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> If the networking layer produced a CNAME, then configure a CNAME record for
+<li>
+<p>If the networking layer produced a CNAME, then configure a CNAME record for
   the domain:
     <div class="highlight"><pre><span></span><code><span class="c1"># Here knative.example.com is the domain suffix for your cluster</span>
 *.knative.example.com <span class="o">==</span> CNAME a317a278525d111e89f272a164fd35fb-1510370581.eu-central-1.elb.amazonaws.com
 </code></pre></div></p>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Once your DNS provider has been configured, direct Knative to use that domain:
+<li>
+<p>Once your DNS provider has been configured, direct Knative to use that domain:
     <div class="highlight"><pre><span></span><code><span class="c1"># Replace knative.example.com with your domain suffix</span>
 kubectl patch configmap/config-domain <span class="se">\</span>
   --namespace knative-serving <span class="se">\</span>
@@ -2751,7 +2751,7 @@ kubectl patch configmap/config-domain <span class="se">\</span>
   --patch <span class="s1">&#39;{&quot;data&quot;:{&quot;knative.example.com&quot;:&quot;&quot;}}&#39;</span>
 </code></pre></div></p>
 </li>
-</ul>
+</ol>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Temporary DNS</label><div class="tabbed-content">
 <div class="admonition info">
@@ -2764,9 +2764,9 @@ as per the "Real DNS" method, or cannot use the "Magic DNS" method due to using,
 for example, minikube locally or IPv6 clusters.</p>
 </div>
 <p>To access your application using <code>curl</code> using this method:</p>
-<ul class="task-list">
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> After starting your application, get the URL of your application:
+<ol>
+<li>
+<p>After starting your application, get the URL of your application:
     <div class="highlight"><pre><span></span><code>kubectl get ksvc
 </code></pre></div></p>
 <div class="admonition success">
@@ -2776,8 +2776,8 @@ helloworld-go   http://helloworld-go.default.example.com   helloworld-go-vqjlf  
 </code></pre></div>
 </div>
 </li>
-<li class="task-list-item">
-<p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Instruct <code>curl</code> to connect to the External IP or CNAME defined by the
+<li>
+<p>Instruct <code>curl</code> to connect to the External IP or CNAME defined by the
   networking layer in section 3 above, and use the <code>-H "Host:"</code> command-line
   option to specify the Knative application's host name. For example, if the
   networking layer defines your External IP and port to be
@@ -2793,7 +2793,7 @@ should, using the default configuration, be:</p>
 </code></pre></div>
 </div>
 </li>
-</ul>
+</ol>
 <p>Refer to the "Real DNS" method for a permanent solution.</p>
 </div>
 </div>
