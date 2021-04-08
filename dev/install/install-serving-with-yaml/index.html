@@ -2526,12 +2526,12 @@ Follow the procedure for the networking layer of your choice:</p>
 </li>
 <li class="task-list-item">
 <p><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Fetch the External IP or CNAME:</p>
-<div class="admonition tip inline end">
+<div class="highlight"><pre><span></span><code>kubectl --namespace kourier-system get service kourier
+</code></pre></div>
+<div class="admonition tip">
 <p class="admonition-title">Tip<p>Save this for configuring DNS in the next section.</p>
 </p>
 </div>
-<div class="highlight"><pre><span></span><code>kubectl --namespace kourier-system get service kourier
-</code></pre></div>
 </li>
 </ul>
 </div>
