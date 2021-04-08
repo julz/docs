@@ -48,11 +48,7 @@
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/serving/services/deployment/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/knative-kubernetes-services/</loc>
+     <loc>https://knative.dev/docs/serving/using-subroutes/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -60,63 +56,11 @@
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/serving/accessing-traces/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/cluster-local-route/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/using-subroutes/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/rolling-out-latest-revision/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://knative.dev/docs/serving/debugging-application-issues/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/serving/tag-resolution/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/config-ha/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/feature-flags/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/using-a-tls-cert/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/installing-cert-manager/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/using-cert-manager-on-gcp/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/using-auto-tls/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/webhook-customizations/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/gke-assigning-static-ip-address/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/using-external-dns-on-gcp/</loc>
+     <loc>https://knative.dev/docs/serving/rolling-out-latest-revision/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -137,14 +81,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/serving/load-balancing/target-burst-capacity/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/setting-up-custom-ingress-gateway/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/istio-authorization/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -185,6 +121,70 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/serving/autoscaling/autoscale-go/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/services/deployment/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/accessing-traces/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/knative-kubernetes-services/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/tag-resolution/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/cluster-local-route/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/config-ha/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/feature-flags/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/webhook-customizations/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/using-a-tls-cert/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/installing-cert-manager/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/using-cert-manager-on-gcp/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/using-auto-tls/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/gke-assigning-static-ip-address/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/using-external-dns-on-gcp/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/setting-up-custom-ingress-gateway/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/serving/istio-authorization/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
