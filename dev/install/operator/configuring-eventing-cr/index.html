@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../serving/" class="md-tabs__link">
+      <a href="../../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -363,10 +363,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -430,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../serving/" class="md-nav__link">
+      <a href="../../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1531,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/sugar/" class="md-nav__link">
+      <a href="../../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1849,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1861,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2385,8 +2436,9 @@ The KnativeEventing CR allows you to set values for these ConfigMaps by using th
 <p>All Knative Eventing ConfigMaps are created in the same namespace as the KnativeEventing CR. You can use the KnativeEventing CR as a unique entry point to edit all ConfigMaps.</p>
 <p>Knative Eventing has multiple ConfigMaps that are named with the prefix <code>config-</code>.
 The <code>spec.config</code> in the KnativeEventing CR has one <code>&lt;name&gt;</code> entry for each ConfigMap, named <code>config-&lt;name&gt;</code>, with a value which will be used for the ConfigMap <code>data</code>.</p>
-<h3 id="setting-the-default-channel-for-the-broker">Setting the default channel for the broker<a class="headerlink" href="#setting-the-default-channel-for-the-broker" title="Permanent link">&para;</a></h3>
-<p>If you are using a channel-based broker, you can change the default channel type for the broker from InMemoryChannel to KafkaChannel, by updating the <code>config-br-default-channel</code> ConfigMap. You can do this by modifying the KnativeEventing CR:</p>
+<h3 id="setting-a-default-channel">Setting a default channel<a class="headerlink" href="#setting-a-default-channel" title="Permanent link">&para;</a></h3>
+<p>If you are using different channel implementations, like the KafkaChannel, or you want a specific configuration of the InMemoryChannel to be the default configuration, you can change the default behavior by updating the <code>default-ch-webhook</code> ConfigMap. </p>
+<p>You can do this by modifying the KnativeEventing CR:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">operator.knative.dev/v1alpha1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">KnativeEventing</span>
 <span class="nt">metadata</span><span class="p">:</span>
@@ -2413,6 +2465,24 @@ The <code>spec.config</code> in the KnativeEventing CR has one <code>&lt;name&gt
                 <span class="no">retry: 5</span>
 </code></pre></div>
 <p><strong>NOTE:</strong> The <code>clusterDefault</code> setting determines the global, cluster-wide default channel type. You can configure channel defaults for individual namespaces by using the <code>namespaceDefaults</code> setting.</p>
+<h3 id="setting-the-default-channel-for-the-broker">Setting the default channel for the broker<a class="headerlink" href="#setting-the-default-channel-for-the-broker" title="Permanent link">&para;</a></h3>
+<p>If you are using a channel-based broker, you can change the default channel type for the broker from InMemoryChannel to KafkaChannel, by updating the <code>config-br-default-channel</code> ConfigMap. </p>
+<p>You can do this by modifying the KnativeEventing CR:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">operator.knative.dev/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">KnativeEventing</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">knative-eventing</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">knative-eventing</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">config</span><span class="p">:</span>
+    <span class="nt">config-br-default-channel</span><span class="p">:</span>
+      <span class="nt">channelTemplateSpec</span><span class="p">:</span> <span class="p p-Indicator">|</span>
+        <span class="no">apiVersion: messaging.knative.dev/v1beta1</span>
+        <span class="no">kind: KafkaChannel</span>
+        <span class="no">spec:</span>
+          <span class="no">numPartitions: 6</span>
+          <span class="no">replicationFactor: 1</span>
+</code></pre></div>
 <h2 id="private-repository-and-private-secrets">Private repository and private secrets<a class="headerlink" href="#private-repository-and-private-secrets" title="Permanent link">&para;</a></h2>
 <p>The Knative Eventing Operator CR is configured the same way as the Knative Serving Operator CR.
 See the documentation on <a href="../configuring-serving-cr/#private-repository-and-private-secrets">Private repository and private secret</a>.</p>

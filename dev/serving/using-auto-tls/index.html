@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../README.md" class="md-tabs__link md-tabs__link--active">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -434,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1667,7 +1718,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/sugar/" class="md-nav__link">
+      <a href="../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1985,7 +2036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1997,7 +2048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2495,7 +2546,7 @@
                   <h1>Enabling automatic TLS certificate provisioning</h1>
                 
                 <p>If you install and configure cert-manager, you can configure Knative to
-automatically obtain new TLS certificates and renew existing ones for Knative 
+automatically obtain new TLS certificates and renew existing ones for Knative
 Services.
 To learn more about using secure connections in Knative, see
 <a href="../using-a-tls-cert/">Configuring HTTPS with TLS certificates</a>.</p>
@@ -2518,27 +2569,26 @@ To learn more about using secure connections in Knative, see
 <li>
 <p>Using HTTP-01 challenge</p>
 <ul>
-<li>In this type, your cluster does not need to be able to talk to your DNS server. You just 
-need to map your domain to the IP of the cluser ingress.</li>
+<li>In this type, your cluster does not need to be able to talk to your DNS server. You must map your domain to the IP of the cluser ingress.</li>
 <li>When using HTTP-01 challenge, <strong>a certificate will be provisioned per Knative Service.</strong></li>
 <li><strong>HTTP-01 does not support provisioning a certificate per namespace.</strong></li>
 </ul>
 </li>
 </ol>
 <h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
-<p>You must meet the following prerequisites to enable auto TLS:</p>
+<p>You must meet the following prerequisites to enable Auto TLS:</p>
 <ul>
 <li>The following must be installed on your Knative cluster:</li>
 <li><a href="../install/">Knative Serving</a>.</li>
-<li>A Networking layer such as <a href="../../install/any-kubernetes-cluster/#installing-the-serving-component">Kourier</a>, <a href="../../install/installing-istio/#installing-istio-with-SDS-to-secure-the-ingress-gateway">Istio with SDS, version 1.3 or higher</a>,
-    <a href="../../install/any-kubernetes-cluster/#installing-the-serving-component">Contour, version 1.1 or higher</a>,
-    or <a href="https://docs.solo.io/gloo/latest/installation/knative/">Gloo, version 0.18.16 or higher</a>.
-    Note: Currently, <a href="https://github.com/datawire/ambassador">Ambassador</a> is unsupported.</li>
+<li>A Networking layer such as Kourier, Istio with SDS v1.3 or higher, Contour v1.1 or higher, or Gloo v0.18.16 or higher.
+  See <a href="../../install/install-serving-with-yaml/#install-a-networking-layer">Install a networking layer</a> or
+  <a href="../../install/installing-istio/#installing-istio-with-SDS-to-secure-the-ingress-gateway">Istio with SDS, version 1.3 or higher</a>.<br>
+    <strong>Note:</strong> Currently, <a href="https://github.com/datawire/ambassador">Ambassador</a> is unsupported for use with Auto TLS.</li>
 <li><a href="../installing-cert-manager/">cert-manager version <code>1.0.0</code> and higher</a>.</li>
 <li>Your Knative cluster must be configured to use a
   <a href="../using-a-custom-domain/">custom domain</a>.</li>
 <li>Your DNS provider must be setup and configured to your domain.</li>
-<li>If you want to use HTTP-01 challenge, you need to configure your custom 
+<li>If you want to use HTTP-01 challenge, you need to configure your custom
 domain to map to the IP of ingress. You can achieve this by adding a DNS A record to map the domain to the IP according to the instructions of your DNS provider.</li>
 </ul>
 <h2 id="enabling-auto-tls">Enabling Auto TLS<a class="headerlink" href="#enabling-auto-tls" title="Permanent link">&para;</a></h2>
@@ -2625,7 +2675,7 @@ providers, are provided in
 <h3 id="install-networking-certmanager-deployment">Install networking-certmanager deployment<a class="headerlink" href="#install-networking-certmanager-deployment" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
-<p>Determine if <code>networking-certmanager</code> is already installed by running the 
+<p>Determine if <code>networking-certmanager</code> is already installed by running the
     following command:</p>
 <div class="highlight"><pre><span></span><code>kubectl get deployment networking-certmanager -n knative-serving
 </code></pre></div>
@@ -2642,7 +2692,7 @@ providers, are provided in
  challenge. This component cannot be used with HTTP-01 challenge.</p>
 <ol>
 <li>
-<p>Determine if <code>networking-ns-cert</code> deployment is already installed by 
+<p>Determine if <code>networking-ns-cert</code> deployment is already installed by
 running the following command:</p>
 <div class="highlight"><pre><span></span><code>kubectl get deployment networking-ns-cert -n knative-serving
 </code></pre></div>
@@ -2684,7 +2734,7 @@ data:
     kind: ClusterIssuer
     name: letsencrypt-http01-issuer
 </code></pre></div>
-<p><code>issueRef</code> defines which <code>ClusterIssuer</code> will be used by Knative to issue 
+<p><code>issueRef</code> defines which <code>ClusterIssuer</code> will be used by Knative to issue
 certificates.</p>
 </li>
 <li>
@@ -2778,7 +2828,7 @@ be able to handle HTTPS traffic.</p>
 </code></pre></div></p>
 </li>
 <li>
-<p>When the certificate is provisioned (which could take up to several minutes depending on 
+<p>When the certificate is provisioned (which could take up to several minutes depending on
     the challenge type), you should see something like:
     <div class="highlight"><pre><span></span><code>NAME               URL                                           LATESTCREATED            LATESTREADY              READY   REASON
 autoscale-go       https://autoscale-go.default.{custom-domain}   autoscale-go-6jf85 autoscale-go-6jf85       True  

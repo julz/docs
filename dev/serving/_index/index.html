@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#serving-resources" class="md-skip">
           Skip to content
         </a>
       
@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
+      <a href="../README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -363,10 +363,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -430,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1531,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/sugar/" class="md-nav__link">
+      <a href="../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1849,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1861,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2356,22 +2407,76 @@
                   </a>
                 
                 
-                <h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">&para;</a></h1>
-<p><strong>TemplateSyntaxError</strong>: unexpected '%'</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 441, in render
-    md_template = self.env.from_string(markdown)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 941, in from_string
-    return cls.from_code(self, self.compile(source), globals, None)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 638, in compile
-    self.handle_exception(source=source_hint)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/_compat.py&quot;, line 28, in reraise
-    raise value.with_traceback(tb)
-  File &quot;&lt;unknown&gt;&quot;, line 1, in template
-jinja2.exceptions.TemplateSyntaxError: unexpected &#39;%&#39;
-</code></pre></div>
+                  <h1>Knative Serving</h1>
+                
+                <p>Knative Serving builds on Kubernetes and Istio to support deploying and serving
+of serverless applications and functions. Serving is easy to get started with
+and scales to support advanced scenarios.</p>
+<p>The Knative Serving project provides middleware primitives that enable:</p>
+<ul>
+<li>Rapid deployment of serverless containers</li>
+<li><a href="../autoscaling/">Automatic scaling up and down to zero</a></li>
+<li>Routing and network programming for Istio components</li>
+<li>Point-in-time snapshots of deployed code and configurations</li>
+</ul>
+<h2 id="serving-resources">Serving resources<a class="headerlink" href="#serving-resources" title="Permanent link">&para;</a></h2>
+<p>Knative Serving defines a set of objects as Kubernetes Custom Resource
+Definitions (CRDs). These objects are used to define and control how your
+serverless workload behaves on the cluster:</p>
+<ul>
+<li><a href="https://github.com/knative/docs/blob/main/docs/serving/spec/knative-api-specification-1.0.md#service">Service</a>:
+  The <code>service.serving.knative.dev</code> resource automatically manages the whole
+  lifecycle of your workload. It controls the creation of other objects to
+  ensure that your app has a route, a configuration, and a new revision for each
+  update of the service. Service can be defined to always route traffic to the
+  latest revision or to a pinned revision.</li>
+<li><a href="https://github.com/knative/docs/blob/main/docs/serving/spec/knative-api-specification-1.0.md#route">Route</a>:
+  The <code>route.serving.knative.dev</code> resource maps a network endpoint to one or
+  more revisions. You can manage the traffic in several ways, including
+  fractional traffic and named routes.</li>
+<li><a href="https://github.com/knative/docs/blob/main/docs/serving/spec/knative-api-specification-1.0.md#configuration">Configuration</a>:
+  The <code>configuration.serving.knative.dev</code> resource maintains the desired state
+  for your deployment. It provides a clean separation between code and
+  configuration and follows the Twelve-Factor App methodology. Modifying a
+  configuration creates a new revision.</li>
+<li><a href="https://github.com/knative/docs/blob/main/docs/serving/spec/knative-api-specification-1.0.md#revision">Revision</a>:
+  The <code>revision.serving.knative.dev</code> resource is a point-in-time snapshot of the
+  code and configuration for each modification made to the workload. Revisions
+  are immutable objects and can be retained for as long as useful. Knative
+  Serving Revisions can be automatically scaled up and down according to
+  incoming traffic. See
+  <a href="./autoscaling">Configuring the Autoscaler</a> for more
+  information.</li>
+</ul>
+<p><img alt="Diagram that displays how the Serving resources coordinate with each other." src="https://github.com/knative/serving/raw/main/docs/spec/images/object_model.png" /></p>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<p>To get started with Serving, check out one of the <a href="./samples/">hello world</a>
+sample projects. These projects use the <code>Service</code> resource, which manages all of
+the details for you.</p>
+<p>With the <code>Service</code> resource, a deployed service will automatically have a
+matching route and configuration created. Each time the <code>Service</code> is updated, a
+new revision is created.</p>
+<p>For more information on the resources and their interactions, see the
+<a href="https://github.com/knative/serving/blob/main/docs/spec/overview.md">Resource Types Overview</a>
+in the Knative Serving repository.</p>
+<h2 id="more-samples-and-demos">More samples and demos<a class="headerlink" href="#more-samples-and-demos" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../samples/">Knative Serving code samples</a></li>
+</ul>
+<h2 id="debugging-knative-serving-issues">Debugging Knative Serving issues<a class="headerlink" href="#debugging-knative-serving-issues" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../debugging-application-issues/">Debugging Application Issues</a></li>
+</ul>
+<h2 id="configuration-and-networking">Configuration and Networking<a class="headerlink" href="#configuration-and-networking" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../cluster-local-route/">Configuring cluster local routes</a></li>
+<li><a href="../using-a-custom-domain/">Using a custom domain</a></li>
+<li><a href="../gke-assigning-static-ip-address/">Assigning a static IP address for Knative on Google Kubernetes Engine</a></li>
+<li><a href="../using-subroutes/">Using subroutes</a></li>
+</ul>
+<h2 id="known-issues">Known Issues<a class="headerlink" href="#known-issues" title="Permanent link">&para;</a></h2>
+<p>See the <a href="https://github.com/knative/serving/issues">Knative Serving Issues</a> page
+for a full list of known issues.</p>
                 
                   
                 

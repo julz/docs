@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../README.md" class="md-tabs__link md-tabs__link--active">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -434,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1592,7 +1643,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/sugar/" class="md-nav__link">
+      <a href="../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1910,7 +1961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1922,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2424,8 +2475,10 @@ If you have configured additional security features, such as Istio's authorizati
 <h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
 <p>You must meet the following prerequisites to use Istio AuthorizationPolicy:</p>
 <ul>
-<li><a href="https://knative.dev/docs/install/any-kubernetes-cluster/#installing-the-serving-component">Istio must be used for your Knative Ingress</a>.</li>
-<li><a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/">Istio sidecar injection must be enabled</a>.</li>
+<li>Istio must be used for your Knative Ingress.
+See <a href="../../install/install-serving-with-yaml/#install-a-networking-layer">Install a networking layer</a>.</li>
+<li>Istio sidecar injection must be enabled.
+See the <a href="https://istio.io/latest/docs/setup/additional-setup/sidecar-injection/">Istio Documentation</a>.</li>
 </ul>
 <h2 id="mutual-tls-in-knative">Mutual TLS in Knative<a class="headerlink" href="#mutual-tls-in-knative" title="Permanent link">&para;</a></h2>
 <p>Because Knative requests are frequently routed through activator, some considerations need to be made when using mutual TLS.</p>

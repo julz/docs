@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../serving/" class="md-tabs__link">
+      <a href="../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -432,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../serving/" class="md-nav__link">
+      <a href="../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1585,7 +1636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sugar/" class="md-nav__link">
+      <a href="../sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1903,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/writing-event-source/" class="md-nav__link">
+      <a href="../samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1915,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2536,40 +2587,58 @@ The Source object defines the arguments and parameters needed to instantiate a C
 <td>AutoContainerSource is a controller that allows the Source CRDs <em>without</em> needing a controller. It notices CRDs with a specific label and starts controlling resources of that type. It utilizes Container Source as underlying infrastructure.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscodecommitsource/README.md">AWS CodeCommit</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awscloudwatchsource">Amazon CloudWatch</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for events of the specified types on the specified AWS CodeCommit repository. Brings those events into Knative.</td>
+<td>Collects metrics from <a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch</a>.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awscognitoidentitysource/README.md">AWS Cognito</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awscloudwatchlogssource">Amazon CloudWatch Logs</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for AWS Cognito events. Brings those events into Knative.</td>
+<td>Subscribes to log events from an <a href="https://aws.amazon.com/cloudwatch/">Amazon CloudWatch Logs</a> stream.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awsdynamodbsource/README.md">AWS DynamoDB</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awscodecommitsource/README.md">Amazon CodeCommit</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for events of on the specified AWS DynamoDB table. Brings those events into Knative.</td>
+<td>Registers for events emitted by an <a href="https://aws.amazon.com/codecommit/">Amazon CodeCommit</a> source code repository.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awskinesissource/README.md">AWS Kinesis</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awscognitoidentitysource/README.md">Amazon Cognito Identity</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for events on the specified AWS Kinesis stream. Brings those events into Knative.</td>
+<td>Registers for events from <a href="https://aws.amazon.com/cognito/">Amazon Cognito</a> identity pools.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssnssource">AWS SNS</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awscognitouserpoolsource/README.md">Amazon Cognito User</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for events of the specified AWS SNS endpoint. Brings those events into Knative.</td>
+<td>Registers for events from <a href="https://aws.amazon.com/cognito/">Amazon Cognito</a> user pools.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssqssource/README.md">AWS SQS</a></td>
+<td><a href="https://github.com/triggermesh/aws-event-sources/blob/master/cmd/awsdynamodbsource/README.md">Amazon DynamoDB</a></td>
 <td>Supported</td>
 <td>TriggerMesh</td>
-<td>Registers for events of the specified AWS SQS queue. Brings those events into Knative.</td>
+<td>Reads records from an <a href="https://aws.amazon.com/dynamodb/">Amazon DynamoDB</a> stream.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awskinesissource/README.md">Amazon Kinesis</a></td>
+<td>Supported</td>
+<td>TriggerMesh</td>
+<td>Reads records from an <a href="https://aws.amazon.com/kinesis/">Amazon Kinesis</a> stream.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssnssource/README.md">Amazon SNS</a></td>
+<td>Supported</td>
+<td>TriggerMesh</td>
+<td>Subscribes to messages from an <a href="https://aws.amazon.com/sns/">Amazon SNS</a> topic.</td>
+</tr>
+<tr>
+<td><a href="https://github.com/triggermesh/aws-event-sources/tree/master/cmd/awssqssource/README.md">Amazon SQS</a></td>
+<td>Supported</td>
+<td>TriggerMesh</td>
+<td>Consumes messages from an <a href="https://aws.amazon.com/sqs/">Amazon SQS</a> queue.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/nachocano/bitbucket-source">BitBucket</a></td>
@@ -2638,10 +2707,10 @@ The Source object defines the arguments and parameters needed to instantiate a C
 <td>Brings Redis Stream into Knative.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/knative-sources/tree/master/slack">SlackSource</a></td>
+<td><a href="https://github.com/triggermesh/knative-sources">Slack</a></td>
 <td>v1alpha1</td>
 <td>TriggerMesh</td>
-<td>Brings Slack into Knative.</td>
+<td>Subscribes to events from Slack.</td>
 </tr>
 <tr>
 <td><a href="https://github.com/vmware-tanzu/sources-for-knative/blob/master/README.md">VMware</a></td>
@@ -2650,10 +2719,10 @@ The Source object defines the arguments and parameters needed to instantiate a C
 <td>Brings <a href="https://www.vmware.com/products/vsphere.html">vSphere</a> events into Knative.</td>
 </tr>
 <tr>
-<td><a href="https://github.com/triggermesh/knative-sources/tree/master/zendesk">ZenDesk</a></td>
+<td><a href="https://github.com/triggermesh/knative-sources">Zendesk</a></td>
 <td>v1alpha1</td>
 <td>TriggerMesh</td>
-<td>Brings ZenDesk into Knative.</td>
+<td>Subscribes to events from Zendesk.</td>
 </tr>
 </tbody>
 </table>

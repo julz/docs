@@ -11,21 +11,21 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/eventing/samples/writing-event-source/02-lifecycle-and-types/">
+        <link rel="canonical" href="https://knative.dev/docs/eventing/sources/creating-event-sources/writing-event-source/06-yaml/">
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Sample Source Lifecycle and Types - Knative</title>
+        <title>Publishing to your Kubernetes cluster - Knative</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.33e2939f.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ef6f36e2.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ef6f36e2.min.css">
         
       
     
@@ -40,7 +40,7 @@
     
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
     
     
       
@@ -57,7 +57,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#api-definition" class="md-skip">
+        <a href="#run-the-sample-source-locally" class="md-skip">
           Skip to content
         </a>
       
@@ -76,9 +76,9 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
+    <a href="../../../../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../../../images/knative-sm.png" alt="logo">
+  <img src="../../../../../images/knative-sm.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sample Source Lifecycle and Types
+              Publishing to your Kubernetes cluster
             
           </span>
         </div>
@@ -165,7 +165,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../.." class="md-tabs__link">
+    <a href="../../../../.." class="md-tabs__link">
       Home
     </a>
   </li>
@@ -180,7 +180,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../install/" class="md-tabs__link">
+      <a href="../../../../../install/" class="md-tabs__link">
         Installing Knative
       </a>
     </li>
@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../serving/" class="md-tabs__link">
+      <a href="../../../../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -212,7 +212,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link">
+      <a href="../../../../" class="md-tabs__link">
         Eventing Component
       </a>
     </li>
@@ -228,7 +228,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../client/install-kn/" class="md-tabs__link">
+      <a href="../../../../../client/install-kn/" class="md-tabs__link">
         Client
       </a>
     </li>
@@ -244,7 +244,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../reference/api/serving/" class="md-tabs__link">
+      <a href="../../../../../reference/api/serving/" class="md-tabs__link">
         Reference
       </a>
     </li>
@@ -257,7 +257,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../../todo" class="md-tabs__link">
+    <a href="../../../../../todo" class="md-tabs__link">
       Community
     </a>
   </li>
@@ -285,9 +285,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
+    <a href="../../../../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../../../images/knative-sm.png" alt="logo">
+  <img src="../../../../../images/knative-sm.png" alt="logo">
 
     </a>
     Knative
@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -352,7 +352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../install/" class="md-nav__link">
+      <a href="../../../../../install/" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -363,9 +363,30 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
     </li>
   
@@ -376,7 +397,37 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../install/knative-with-operators/" class="md-nav__link">
+      <a href="../../../../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../install/knative-with-operators/" class="md-nav__link">
         Installing with the Operator
       </a>
     </li>
@@ -388,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../install/knative-offerings/" class="md-nav__link">
+      <a href="../../../../../install/knative-offerings/" class="md-nav__link">
         Using a Knative-based Offering
       </a>
     </li>
@@ -430,7 +481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/" class="md-nav__link">
+      <a href="../../../../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -442,7 +493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/getting-started-knative-app/" class="md-nav__link">
+      <a href="../../../../../serving/getting-started-knative-app/" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -475,7 +526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/services/creating-services/" class="md-nav__link">
+      <a href="../../../../../serving/services/creating-services/" class="md-nav__link">
         Creating Knative Services
       </a>
     </li>
@@ -487,7 +538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/services/deployment/" class="md-nav__link">
+      <a href="../../../../../serving/services/deployment/" class="md-nav__link">
         Configuring the Knative Deployment
       </a>
     </li>
@@ -505,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/knative-kubernetes-services/" class="md-nav__link">
+      <a href="../../../../../serving/knative-kubernetes-services/" class="md-nav__link">
         Knative Kubernetes Components
       </a>
     </li>
@@ -517,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/deploying/private-registry/" class="md-nav__link">
+      <a href="../../../../../serving/deploying/private-registry/" class="md-nav__link">
         Using a Private Registry
       </a>
     </li>
@@ -529,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/accessing-traces/" class="md-nav__link">
+      <a href="../../../../../serving/accessing-traces/" class="md-nav__link">
         Accessing Request Traces
       </a>
     </li>
@@ -541,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/cluster-local-route/" class="md-nav__link">
+      <a href="../../../../../serving/cluster-local-route/" class="md-nav__link">
         Configuing Cluster-Local Services
       </a>
     </li>
@@ -553,7 +604,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-subroutes/" class="md-nav__link">
+      <a href="../../../../../serving/using-subroutes/" class="md-nav__link">
         Creating and Using Sub-Routes
       </a>
     </li>
@@ -565,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/rolling-out-latest-revision/" class="md-nav__link">
+      <a href="../../../../../serving/rolling-out-latest-revision/" class="md-nav__link">
         Gradually Rolling out Revisions
       </a>
     </li>
@@ -577,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/debugging-application-issues/" class="md-nav__link">
+      <a href="../../../../../serving/debugging-application-issues/" class="md-nav__link">
         Debugging Issues with your Application
       </a>
     </li>
@@ -589,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/tag-resolution/" class="md-nav__link">
+      <a href="../../../../../serving/tag-resolution/" class="md-nav__link">
         Enabling tag to digest resolution
       </a>
     </li>
@@ -601,7 +652,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/config-ha/" class="md-nav__link">
+      <a href="../../../../../serving/config-ha/" class="md-nav__link">
         Configuring high-availability components
       </a>
     </li>
@@ -613,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/feature-flags/" class="md-nav__link">
+      <a href="../../../../../serving/feature-flags/" class="md-nav__link">
         Feature Flags
       </a>
     </li>
@@ -625,7 +676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-a-tls-cert/" class="md-nav__link">
+      <a href="../../../../../serving/using-a-tls-cert/" class="md-nav__link">
         Configuring HTTPS Connections
       </a>
     </li>
@@ -658,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/installing-cert-manager/" class="md-nav__link">
+      <a href="../../../../../serving/installing-cert-manager/" class="md-nav__link">
         Installing cert-manager for TLS Certificates
       </a>
     </li>
@@ -670,7 +721,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-cert-manager-on-gcp/" class="md-nav__link">
+      <a href="../../../../../serving/using-cert-manager-on-gcp/" class="md-nav__link">
         Configuring HTTPS with cert-manager and Google Cloud DNS
       </a>
     </li>
@@ -682,7 +733,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-auto-tls/" class="md-nav__link">
+      <a href="../../../../../serving/using-auto-tls/" class="md-nav__link">
         Enabling automatic TLS certificate provisioning
       </a>
     </li>
@@ -700,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/webhook-customizations/" class="md-nav__link">
+      <a href="../../../../../serving/webhook-customizations/" class="md-nav__link">
         Exclude namespaces from the Knative webhook
       </a>
     </li>
@@ -733,7 +784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/gke-assigning-static-ip-address/" class="md-nav__link">
+      <a href="../../../../../serving/gke-assigning-static-ip-address/" class="md-nav__link">
         Assigning Static IPs in GKE
       </a>
     </li>
@@ -745,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-external-dns-on-gcp/" class="md-nav__link">
+      <a href="../../../../../serving/using-external-dns-on-gcp/" class="md-nav__link">
         Using ExternalDNS on Google Cloud Platform to automate DNS setup
       </a>
     </li>
@@ -784,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-a-custom-domain/" class="md-nav__link">
+      <a href="../../../../../serving/using-a-custom-domain/" class="md-nav__link">
         Setting up a Custom Domain
       </a>
     </li>
@@ -796,7 +847,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/using-a-custom-domain-per-service/" class="md-nav__link">
+      <a href="../../../../../serving/using-a-custom-domain-per-service/" class="md-nav__link">
         Setting up a Custom Domain per Service
       </a>
     </li>
@@ -808,7 +859,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/creating-domain-mappings/" class="md-nav__link">
+      <a href="../../../../../serving/creating-domain-mappings/" class="md-nav__link">
         Creating Domain Mappings
       </a>
     </li>
@@ -847,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/load-balancing/" class="md-nav__link">
+      <a href="../../../../../serving/load-balancing/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -859,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/load-balancing/target-burst-capacity/" class="md-nav__link">
+      <a href="../../../../../serving/load-balancing/target-burst-capacity/" class="md-nav__link">
         Target Burst Capacity
       </a>
     </li>
@@ -898,7 +949,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/setting-up-custom-ingress-gateway/" class="md-nav__link">
+      <a href="../../../../../serving/setting-up-custom-ingress-gateway/" class="md-nav__link">
         Setting up custom ingress gateway
       </a>
     </li>
@@ -910,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/istio-authorization/" class="md-nav__link">
+      <a href="../../../../../serving/istio-authorization/" class="md-nav__link">
         Enabling requests to Knative services when additional authorization policies are enabled
       </a>
     </li>
@@ -949,7 +1000,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -961,7 +1012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/autoscaling-concepts/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/autoscaling-concepts/" class="md-nav__link">
         Concepts
       </a>
     </li>
@@ -973,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/autoscaling-metrics/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/autoscaling-metrics/" class="md-nav__link">
         Metrics
       </a>
     </li>
@@ -985,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/autoscaling-targets/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/autoscaling-targets/" class="md-nav__link">
         Targets
       </a>
     </li>
@@ -997,7 +1048,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/scale-to-zero/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/scale-to-zero/" class="md-nav__link">
         Configuring Scale-to-zero
       </a>
     </li>
@@ -1009,7 +1060,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/concurrency/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/concurrency/" class="md-nav__link">
         Configuring Concurrency
       </a>
     </li>
@@ -1021,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/scale-bounds/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/scale-bounds/" class="md-nav__link">
         Configuring Scale Bounds
       </a>
     </li>
@@ -1033,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/rps-target/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/rps-target/" class="md-nav__link">
         Configuring RPS Target
       </a>
     </li>
@@ -1045,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/kpa-specific/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/kpa-specific/" class="md-nav__link">
         KPA-Specific Configuration
       </a>
     </li>
@@ -1057,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/autoscaling/autoscale-go/" class="md-nav__link">
+      <a href="../../../../../serving/autoscaling/autoscale-go/" class="md-nav__link">
         Autoscaling Sample App
       </a>
     </li>
@@ -1096,7 +1147,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/" class="md-nav__link">
+      <a href="../../../../../serving/samples/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1129,7 +1180,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/hello-world/helloworld-go/" class="md-nav__link">
+      <a href="../../../../../serving/samples/hello-world/helloworld-go/" class="md-nav__link">
         Hello World Go
       </a>
     </li>
@@ -1147,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/rest-api-go/" class="md-nav__link">
+      <a href="../../../../../serving/samples/rest-api-go/" class="md-nav__link">
         Rest API
       </a>
     </li>
@@ -1180,7 +1231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/cloudevents/cloudevents-nodejs/" class="md-nav__link">
+      <a href="../../../../../serving/samples/cloudevents/cloudevents-nodejs/" class="md-nav__link">
         NodeJS
       </a>
     </li>
@@ -1192,7 +1243,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/cloudevents/cloudevents-vertx/" class="md-nav__link">
+      <a href="../../../../../serving/samples/cloudevents/cloudevents-vertx/" class="md-nav__link">
         Java (Vert.x)
       </a>
     </li>
@@ -1204,7 +1255,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/cloudevents/cloudevents-rust/" class="md-nav__link">
+      <a href="../../../../../serving/samples/cloudevents/cloudevents-rust/" class="md-nav__link">
         Rust
       </a>
     </li>
@@ -1222,7 +1273,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../serving/samples/blue-green-deployment/" class="md-nav__link">
+      <a href="../../../../../serving/samples/blue-green-deployment/" class="md-nav__link">
         Blue Green Deployment
       </a>
     </li>
@@ -1270,7 +1321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
+      <a href="../../../../" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1282,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/" class="md-nav__link">
+      <a href="../../../../getting-started/" class="md-nav__link">
         Getting Started
       </a>
     </li>
@@ -1315,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sources/" class="md-nav__link">
+      <a href="../../../" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1327,7 +1378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sources/apiserversource/" class="md-nav__link">
+      <a href="../../../apiserversource/" class="md-nav__link">
         APIServerSource
       </a>
     </li>
@@ -1339,7 +1390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sources/containersource/" class="md-nav__link">
+      <a href="../../../containersource/" class="md-nav__link">
         ContainerSource
       </a>
     </li>
@@ -1351,7 +1402,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sources/pingsource/" class="md-nav__link">
+      <a href="../../../pingsource/" class="md-nav__link">
         PingSource
       </a>
     </li>
@@ -1363,7 +1414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sources/sinkbinding/" class="md-nav__link">
+      <a href="../../../sinkbinding/" class="md-nav__link">
         Sink Binding
       </a>
     </li>
@@ -1381,7 +1432,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../event-registry/" class="md-nav__link">
+      <a href="../../../../event-registry/" class="md-nav__link">
         Event Registry
       </a>
     </li>
@@ -1414,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../flows/" class="md-nav__link">
+      <a href="../../../../flows/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1426,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../flows/sequence/" class="md-nav__link">
+      <a href="../../../../flows/sequence/" class="md-nav__link">
         Sequence
       </a>
     </li>
@@ -1438,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../flows/parallel/" class="md-nav__link">
+      <a href="../../../../flows/parallel/" class="md-nav__link">
         Parallel
       </a>
     </li>
@@ -1477,7 +1528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../channels/" class="md-nav__link">
+      <a href="../../../../channels/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1489,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../channels/channel-types-defaults/" class="md-nav__link">
+      <a href="../../../../channels/channel-types-defaults/" class="md-nav__link">
         Channel Types and Defaults
       </a>
     </li>
@@ -1501,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../channels/create-default-channel/" class="md-nav__link">
+      <a href="../../../../channels/create-default-channel/" class="md-nav__link">
         Creating Channels
       </a>
     </li>
@@ -1513,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../channels/channels-crds/" class="md-nav__link">
+      <a href="../../../../channels/channels-crds/" class="md-nav__link">
         Available Channels
       </a>
     </li>
@@ -1531,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sugar/" class="md-nav__link">
+      <a href="../../../../sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1543,7 +1594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../event-delivery/" class="md-nav__link">
+      <a href="../../../../event-delivery/" class="md-nav__link">
         Event Delivery
       </a>
     </li>
@@ -1576,7 +1627,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../broker/" class="md-nav__link">
+      <a href="../../../../broker/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1588,7 +1639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../broker/kafka-broker/" class="md-nav__link">
+      <a href="../../../../broker/kafka-broker/" class="md-nav__link">
         Kafka Broker
       </a>
     </li>
@@ -1600,7 +1651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../broker/config-br-defaults/" class="md-nav__link">
+      <a href="../../../../broker/config-br-defaults/" class="md-nav__link">
         Default Broker ConfigMap
       </a>
     </li>
@@ -1612,7 +1663,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../broker/kafka-configmap/" class="md-nav__link">
+      <a href="../../../../broker/kafka-configmap/" class="md-nav__link">
         Kafka Channel ConfigMap
       </a>
     </li>
@@ -1624,7 +1675,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../broker/alternate.md" class="md-nav__link">
+      <a href="../../../../broker/alternate.md" class="md-nav__link">
         Alternate Brokers
       </a>
     </li>
@@ -1663,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sink/" class="md-nav__link">
+      <a href="../../../../sink/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1675,7 +1726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../sink/kafka-sink/" class="md-nav__link">
+      <a href="../../../../sink/kafka-sink/" class="md-nav__link">
         Apache Kafka Sink
       </a>
     </li>
@@ -1693,7 +1744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../triggers/" class="md-nav__link">
+      <a href="../../../../triggers/" class="md-nav__link">
         Triggers
       </a>
     </li>
@@ -1705,7 +1756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../debugging/" class="md-nav__link">
+      <a href="../../../../debugging/" class="md-nav__link">
         Debugging
       </a>
     </li>
@@ -1717,7 +1768,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../accessing-traces/" class="md-nav__link">
+      <a href="../../../../accessing-traces/" class="md-nav__link">
         Accessing CloudEvent Traces
       </a>
     </li>
@@ -1750,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../apache-camel-source/" class="md-nav__link">
+      <a href="../../../../samples/apache-camel-source/" class="md-nav__link">
         Apache Camel Source
       </a>
     </li>
@@ -1783,7 +1834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kafka/" class="md-nav__link">
+      <a href="../../../../samples/kafka/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1795,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kafka/binding/" class="md-nav__link">
+      <a href="../../../../samples/kafka/binding/" class="md-nav__link">
         Binding Example
       </a>
     </li>
@@ -1807,7 +1858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kafka/channel/" class="md-nav__link">
+      <a href="../../../../samples/kafka/channel/" class="md-nav__link">
         Channel Example
       </a>
     </li>
@@ -1819,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kafka/source/" class="md-nav__link">
+      <a href="../../../../samples/kafka/source/" class="md-nav__link">
         Source Example
       </a>
     </li>
@@ -1837,7 +1888,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../container-source/" class="md-nav__link">
+      <a href="../../../../samples/container-source/" class="md-nav__link">
         Container Source
       </a>
     </li>
@@ -1849,7 +1900,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../../../samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1861,7 +1912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../../../samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -1894,7 +1945,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helloworld/" class="md-nav__link">
+      <a href="../../../../samples/helloworld/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1906,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helloworld/helloworld-go/" class="md-nav__link">
+      <a href="../../../../samples/helloworld/helloworld-go/" class="md-nav__link">
         Go
       </a>
     </li>
@@ -1918,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../helloworld/helloworld-python/" class="md-nav__link">
+      <a href="../../../../samples/helloworld/helloworld-python/" class="md-nav__link">
         Python
       </a>
     </li>
@@ -1957,7 +2008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sequence/sequence-terminal/" class="md-nav__link">
+      <a href="../../../../samples/sequence/sequence-terminal/" class="md-nav__link">
         Create Additional Events
       </a>
     </li>
@@ -1969,7 +2020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sequence/sequence-reply-to-event-display/" class="md-nav__link">
+      <a href="../../../../samples/sequence/sequence-reply-to-event-display/" class="md-nav__link">
         Displaying Sequence Output
       </a>
     </li>
@@ -1981,7 +2032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sequence/sequence-reply-to-sequence/" class="md-nav__link">
+      <a href="../../../../samples/sequence/sequence-reply-to-sequence/" class="md-nav__link">
         Using Sequences in Series
       </a>
     </li>
@@ -1993,7 +2044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sequence/sequence-with-broker-trigger/" class="md-nav__link">
+      <a href="../../../../samples/sequence/sequence-with-broker-trigger/" class="md-nav__link">
         Using Broker and Trigger
       </a>
     </li>
@@ -2032,7 +2083,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parallel/" class="md-nav__link">
+      <a href="../../../../samples/parallel/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -2044,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parallel/multiple-branches/" class="md-nav__link">
+      <a href="../../../../samples/parallel/multiple-branches/" class="md-nav__link">
         Multiple Cases
       </a>
     </li>
@@ -2056,7 +2107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../parallel/mutual-exclusivity/" class="md-nav__link">
+      <a href="../../../../samples/parallel/mutual-exclusivity/" class="md-nav__link">
         Mutual Exclusivity
       </a>
     </li>
@@ -2074,7 +2125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ping-source/" class="md-nav__link">
+      <a href="../../../../samples/ping-source/" class="md-nav__link">
         Ping Source
       </a>
     </li>
@@ -2107,7 +2158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud-audit-logs-source/" class="md-nav__link">
+      <a href="../../../../samples/cloud-audit-logs-source/" class="md-nav__link">
         CloudAuditLogsSource
       </a>
     </li>
@@ -2119,7 +2170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud-pubsub-source/" class="md-nav__link">
+      <a href="../../../../samples/cloud-pubsub-source/" class="md-nav__link">
         CloudPubSubSource
       </a>
     </li>
@@ -2131,7 +2182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud-scheduler-source/" class="md-nav__link">
+      <a href="../../../../samples/cloud-scheduler-source/" class="md-nav__link">
         CloudSchedulerSource
       </a>
     </li>
@@ -2143,7 +2194,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cloud-storage-source/" class="md-nav__link">
+      <a href="../../../../samples/cloud-storage-source/" class="md-nav__link">
         CloudStorageSource
       </a>
     </li>
@@ -2161,7 +2212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../github-source/" class="md-nav__link">
+      <a href="../../../../samples/github-source/" class="md-nav__link">
         Github Source
       </a>
     </li>
@@ -2173,7 +2224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../gitlab-source/" class="md-nav__link">
+      <a href="../../../../samples/gitlab-source/" class="md-nav__link">
         Gitlab Source
       </a>
     </li>
@@ -2185,7 +2236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../iot-core/" class="md-nav__link">
+      <a href="../../../../samples/iot-core/" class="md-nav__link">
         IoT Core
       </a>
     </li>
@@ -2197,7 +2248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes-event-source/" class="md-nav__link">
+      <a href="../../../../samples/kubernetes-event-source/" class="md-nav__link">
         Kubernetes Event Source
       </a>
     </li>
@@ -2245,7 +2296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../client/install-kn/" class="md-nav__link">
+      <a href="../../../../../client/install-kn/" class="md-nav__link">
         Installing the Client
       </a>
     </li>
@@ -2257,7 +2308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../client/" class="md-nav__link">
+      <a href="../../../../../client/" class="md-nav__link">
         Using the Client
       </a>
     </li>
@@ -2299,7 +2350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/api/serving/" class="md-nav__link">
+      <a href="../../../../../reference/api/serving/" class="md-nav__link">
         Serving
       </a>
     </li>
@@ -2311,7 +2362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../reference/api/eventing/eventing/" class="md-nav__link">
+      <a href="../../../../../reference/api/eventing/eventing/" class="md-nav__link">
         Eventing
       </a>
     </li>
@@ -2332,7 +2383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../todo" class="md-nav__link">
+      <a href="../../../../../todo" class="md-nav__link">
         Community
       </a>
     </li>
@@ -2351,104 +2402,86 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/eventing/samples/writing-event-source/02-lifecycle-and-types.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/eventing/sources/creating-event-sources/writing-event-source/06-yaml.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Sample Source Lifecycle and Types</h1>
+                  <h1>Publishing to your Kubernetes cluster</h1>
                 
-                <h2 id="api-definition">API Definition<a class="headerlink" href="#api-definition" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Define the types required in the resource’s schema in
-<code>pkg/apis/samples/v1alpha1/samplesource_types.go</code>
-This includes the fields that will be required in the resource yaml as
-well as what will be referenced in the controller using the source’s
-clientset and API</li>
-</ol>
-<p><div class="highlight"><pre><span></span><code><span class="c1">// +genclient</span>
-<span class="c1">// +genreconciler</span>
-<span class="c1">// +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object</span>
-<span class="c1">// +k8s:openapi-gen=true</span>
-<span class="kd">type</span> <span class="nx">SampleSource</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">metav1</span><span class="p">.</span><span class="nx">TypeMeta</span> <span class="s">`json:&quot;,inline&quot;`</span>
-    <span class="c1">// +optional</span>
-    <span class="nx">metav1</span><span class="p">.</span><span class="nx">ObjectMeta</span> <span class="s">`json:&quot;metadata,omitempty&quot;`</span>
-
-    <span class="c1">// Spec holds the desired state of the SampleSource (from the client).</span>
-    <span class="nx">Spec</span> <span class="nx">SampleSourceSpec</span> <span class="s">`json:&quot;spec&quot;`</span>
-
-    <span class="c1">// Status communicates the observed state of the SampleSource (from the controller).</span>
-    <span class="c1">// +optional</span>
-    <span class="nx">Status</span> <span class="nx">SampleSourceStatus</span> <span class="s">`json:&quot;status,omitempty&quot;`</span>
-<span class="p">}</span>
-
-<span class="c1">// SampleSourceSpec holds the desired state of the SampleSource (from the client).</span>
-<span class="kd">type</span> <span class="nx">SampleSourceSpec</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="c1">// inherits duck/v1 SourceSpec, which currently provides:</span>
-    <span class="c1">// * Sink - a reference to an object that will resolve to a domain name or</span>
-    <span class="c1">//   a URI directly to use as the sink.</span>
-    <span class="c1">// * CloudEventOverrides - defines overrides to control the output format</span>
-    <span class="c1">//   and modifications of the event sent to the sink.</span>
-    <span class="nx">duckv1</span><span class="p">.</span><span class="nx">SourceSpec</span> <span class="s">`json:&quot;,inline&quot;`</span>
-
-    <span class="c1">// ServiceAccountName holds the name of the Kubernetes service account</span>
-    <span class="c1">// as which the underlying K8s resources should be run. If unspecified</span>
-    <span class="c1">// this will default to the &quot;default&quot; service account for the namespace</span>
-    <span class="c1">// in which the SampleSource exists.</span>
-    <span class="c1">// +optional</span>
-    <span class="nx">ServiceAccountName</span> <span class="kt">string</span> <span class="s">`json:&quot;serviceAccountName,omitempty&quot;`</span>
-
-    <span class="c1">// Interval is the time interval between events.</span>
-    <span class="c1">//</span>
-    <span class="c1">// The string format is a sequence of decimal numbers, each with optional</span>
-    <span class="c1">// fraction and a unit suffix, such as &quot;300ms&quot;, &quot;-1.5h&quot; or &quot;2h45m&quot;. Valid time</span>
-    <span class="c1">// units are &quot;ns&quot;, &quot;us&quot; (or &quot;µs&quot;), &quot;ms&quot;, &quot;s&quot;, &quot;m&quot;, &quot;h&quot;. If unspecified</span>
-    <span class="c1">// this will default to &quot;10s&quot;.</span>
-    <span class="nx">Interval</span> <span class="kt">string</span> <span class="s">`json:&quot;interval&quot;`</span>
-<span class="p">}</span>
-
-<span class="c1">// SampleSourceStatus communicates the observed state of the SampleSource (from the controller).</span>
-<span class="kd">type</span> <span class="nx">SampleSourceStatus</span> <span class="kd">struct</span> <span class="p">{</span>
-    <span class="nx">duckv1</span><span class="p">.</span><span class="nx">Status</span> <span class="s">`json:&quot;,inline&quot;`</span>
-
-    <span class="c1">// SinkURI is the current active sink URI that has been configured</span>
-    <span class="c1">// for the SampleSource.</span>
-    <span class="c1">// +optional</span>
-    <span class="nx">SinkURI</span> <span class="o">*</span><span class="nx">apis</span><span class="p">.</span><span class="nx">URL</span> <span class="s">`json:&quot;sinkUri,omitempty&quot;`</span>
-<span class="p">}</span>
+                <h2 id="run-the-sample-source-locally">Run the sample source locally<a class="headerlink" href="#run-the-sample-source-locally" title="Permanent link">&para;</a></h2>
+<p>Start a minikube cluster.</p>
+<p><em>If you already have a Kubernetes cluster running, you can skip this step. The
+cluster must be 1.15+</em></p>
+<div class="highlight"><pre><span></span><code>minikube start
 </code></pre></div>
-Define the lifecycle that will be reflected in the status and SinkURI fields</p>
-<p><div class="highlight"><pre><span></span><code><span class="kd">const</span> <span class="p">(</span>
-    <span class="c1">// SampleConditionReady has status True when the SampleSource is ready to send events.</span>
-    <span class="nx">SampleConditionReady</span> <span class="p">=</span> <span class="nx">apis</span><span class="p">.</span><span class="nx">ConditionReady</span>
-    <span class="c1">// ...</span>
-<span class="p">)</span>
+<p>Setup <code>ko</code> to use the minikube docker instance and local registry
+<div class="highlight"><pre><span></span><code><span class="nb">eval</span> <span class="k">$(</span>minikube docker-env<span class="k">)</span>
+<span class="nb">export</span> <span class="nv">KO_DOCKER_REPO</span><span class="o">=</span>ko.local
+</code></pre></div></p>
+<p>Apply the CRD and configuration yaml
+<div class="highlight"><pre><span></span><code>ko apply -f config
+</code></pre></div></p>
+<p>Once the <code>sample-source-controller-manager</code> is running in the <code>knative-samples</code> namespace, you can
+apply the <code>example.yaml</code> to connect our <code>sample-source</code> every <code>10s</code> directly to a <code>ksvc</code>.</p>
+<p><div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">serving.knative.dev/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">event-display</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">knative-samples</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">template</span><span class="p">:</span>
+    <span class="nt">spec</span><span class="p">:</span>
+      <span class="nt">containers</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">image</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display</span>
+<span class="nn">---</span>
+<span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">samples.knative.dev/v1alpha1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">SampleSource</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">sample-source</span>
+  <span class="nt">namespace</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">knative-samples</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">interval</span><span class="p">:</span> <span class="s">&quot;10s&quot;</span>
+  <span class="nt">sink</span><span class="p">:</span>
+    <span class="nt">ref</span><span class="p">:</span>
+      <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">serving.knative.dev/v1</span>
+      <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">event-display</span>
 </code></pre></div>
-Define the functions that will be called from the Reconciler functions to set the lifecycle conditions.  This is typically done in
-<code>pkg/apis/samples/VERSION/samplesource_lifecycle.go</code></p>
-<div class="highlight"><pre><span></span><code><span class="c1">// InitializeConditions sets relevant unset conditions to Unknown state.</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="o">*</span><span class="nx">SampleSourceStatus</span><span class="p">)</span> <span class="nx">InitializeConditions</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">SampleCondSet</span><span class="p">.</span><span class="nx">Manage</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">InitializeConditions</span><span class="p">()</span>
-<span class="p">}</span>
-
-<span class="o">...</span>
-
-<span class="c1">// MarkSink sets the condition that the source has a sink configured.</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="o">*</span><span class="nx">SampleSourceStatus</span><span class="p">)</span> <span class="nx">MarkSink</span><span class="p">(</span><span class="nx">uri</span> <span class="o">*</span><span class="nx">apis</span><span class="p">.</span><span class="nx">URL</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">s</span><span class="p">.</span><span class="nx">SinkURI</span> <span class="p">=</span> <span class="nx">uri</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nx">uri</span><span class="p">.</span><span class="nx">String</span><span class="p">())</span> <span class="p">&gt;</span> <span class="mi">0</span> <span class="p">{</span>
-        <span class="nx">SampleCondSet</span><span class="p">.</span><span class="nx">Manage</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">MarkTrue</span><span class="p">(</span><span class="nx">SampleConditionSinkProvided</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="nx">SampleCondSet</span><span class="p">.</span><span class="nx">Manage</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">MarkUnknown</span><span class="p">(</span><span class="nx">SampleConditionSinkProvided</span><span class="p">,</span> <span class="s">&quot;SinkEmpty&quot;</span><span class="p">,</span> <span class="s">&quot;Sink has resolved to empty.%s&quot;</span><span class="p">,</span> <span class="s">&quot;&quot;</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="c1">// MarkNoSink sets the condition that the source does not have a sink configured.</span>
-<span class="kd">func</span> <span class="p">(</span><span class="nx">s</span> <span class="o">*</span><span class="nx">SampleSourceStatus</span><span class="p">)</span> <span class="nx">MarkNoSink</span><span class="p">(</span><span class="nx">reason</span><span class="p">,</span> <span class="nx">messageFormat</span> <span class="kt">string</span><span class="p">,</span> <span class="nx">messageA</span> <span class="o">...</span><span class="kd">interface</span><span class="p">{})</span> <span class="p">{</span>
-    <span class="nx">SampleCondSet</span><span class="p">.</span><span class="nx">Manage</span><span class="p">(</span><span class="nx">s</span><span class="p">).</span><span class="nx">MarkFalse</span><span class="p">(</span><span class="nx">SampleConditionSinkProvided</span><span class="p">,</span> <span class="nx">reason</span><span class="p">,</span> <span class="nx">messageFormat</span><span class="p">,</span> <span class="nx">messageA</span><span class="o">...</span><span class="p">)</span>
-<span class="p">}</span>
+<div class="highlight"><pre><span></span><code>ko apply -f example.yaml
+</code></pre></div></p>
+<p>Once reconciled, you can confirm the <code>ksvc</code> is outputting valid cloudevents every <code>10s</code> to align with our specified interval.</p>
+<p><div class="highlight"><pre><span></span><code>% kubectl -n knative-samples logs -l serving.knative.dev/service<span class="o">=</span>event-display -c user-container -f
 </code></pre></div>
+<div class="highlight"><pre><span></span><code>☁️  cloudevents.Event
+Validation: valid
+Context Attributes,
+  specversion: 1.0
+  type: dev.knative.sample
+  source: http://sample.knative.dev/heartbeat-source
+  id: d4619592-363e-4a41-82d1-b1586c390e24
+  time: 2019-12-17T01:31:10.795588888Z
+  datacontenttype: application/json
+Data,
+  {
+    &quot;Sequence&quot;: 0,
+    &quot;Heartbeat&quot;: &quot;10s&quot;
+  }
+☁️  cloudevents.Event
+Validation: valid
+Context Attributes,
+  specversion: 1.0
+  type: dev.knative.sample
+  source: http://sample.knative.dev/heartbeat-source
+  id: db2edad0-06bc-4234-b9e1-7ea3955841d6
+  time: 2019-12-17T01:31:20.825969504Z
+  datacontenttype: application/json
+Data,
+  {
+    &quot;Sequence&quot;: 1,
+    &quot;Heartbeat&quot;: &quot;10s&quot;
+  }
+</code></pre></div></p>
                 
                   
                 
@@ -2490,10 +2523,10 @@ Define the functions that will be called from the Reconciler functions to set th
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../../../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.d892486b.min.js"></script>
       
     
   </body>

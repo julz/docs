@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../" class="md-tabs__link md-tabs__link--active">
+      <a href="../../README.md" class="md-tabs__link md-tabs__link--active">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -434,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../../README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1645,7 +1696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/sugar/" class="md-nav__link">
+      <a href="../../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1963,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1975,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2476,8 +2527,10 @@
 <h2 id="supported-autoscaler-types">Supported Autoscaler types<a class="headerlink" href="#supported-autoscaler-types" title="Permanent link">&para;</a></h2>
 <p>Knative Serving supports the implementation of Knative Pod Autoscaler (KPA) and Kubernetes' Horizontal Pod Autoscaler (HPA). The features and limitations of each of these Autoscalers are listed below.</p>
 <div class="admonition danger">
-<p class="admonition-title">Note</p>
-<p>If you want to use Kubernetes Horizontal Pod Autoscaler (HPA), you must install it after you install <a href="../../../install/any-kubernetes-cluster/#optional-serving-extensions">Knative Serving</a>.</p>
+<p class="admonition-title">IMPORTANT</p>
+<p>If you want to use Kubernetes Horizontal Pod Autoscaler (HPA),
+you must install it after you install Knative Serving.
+For how to install HPA, see <a href="../../../install/install-extensions/#install-optional-serving-extensions">Install optional Eventing extensions</a>.</p>
 </div>
 <h3 id="knative-pod-autoscaler-kpa">Knative Pod Autoscaler (KPA)<a class="headerlink" href="#knative-pod-autoscaler-kpa" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2487,7 +2540,7 @@
 </ul>
 <h3 id="horizontal-pod-autoscaler-hpa">Horizontal Pod Autoscaler (HPA)<a class="headerlink" href="#horizontal-pod-autoscaler-hpa" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Not part of the Knative Serving core, and must be enabled after <a href="../../../install/any-kubernetes-cluster/#optional-serving-extensions">Knative Serving installation</a>.</li>
+<li>Not part of the Knative Serving core, and you must install Knative Serving first.</li>
 <li>Does not support scale to zero functionality.</li>
 <li>Supports CPU-based autoscaling.</li>
 </ul>

@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link md-tabs__link--active">
+      <a href="../README.md" class="md-tabs__link md-tabs__link--active">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -434,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1571,7 +1622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/sugar/" class="md-nav__link">
+      <a href="../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1889,7 +1940,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1901,7 +1952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2407,7 +2458,9 @@ This guide provides information about configuration options that you can modify 
 <p>For more information about which metrics can be used to control the Autoscaler, see the <a href="autoscaling-metrics/">metrics</a> documentation.</p>
 <h2 id="optional-autoscaling-configuration-tasks">Optional autoscaling configuration tasks<a class="headerlink" href="#optional-autoscaling-configuration-tasks" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Configure your Knative deployment to use the Kubernetes <a href="../../install/any-kubernetes-cluster/#optional-serving-extensions">Horizontal Pod Autoscaler (HPA)</a> instead of the default KPA.</li>
+<li>Configure your Knative deployment to use the Kubernetes Horizontal Pod Autoscaler (HPA)
+instead of the default KPA.
+For how to install HPA, see <a href="../../install/install-extensions/#install-optional-serving-extensions">Install optional Eventing extensions</a>.</li>
 <li>Disable scale to zero functionality for your cluster (<a href="scale-to-zero/">global configuration only</a>).</li>
 <li>Configure the <a href="autoscaling-metrics/">type of metrics</a> your Autoscaler consumes.</li>
 <li>Configure <a href="concurrency/">concurrency limits</a> for applications.</li>

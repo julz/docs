@@ -8,7 +8,15 @@
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/install/any-kubernetes-cluster/</loc>
+     <loc>https://knative.dev/docs/install/prerequisites/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/install/install-serving-with-yaml/</loc>
+     <lastmod>2021-04-08</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/install/install-eventing-with-yaml/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -17,10 +25,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/install/knative-offerings/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -260,10 +264,6 @@
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/eventing/sugar/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
      <loc>https://knative.dev/docs/eventing/event-delivery/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
@@ -325,14 +325,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/eventing/samples/container-source/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/eventing/samples/writing-event-source/</loc>
-     <lastmod>2021-04-08</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/eventing/samples/writing-event-source-easy-way/</loc>
      <lastmod>2021-04-08</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

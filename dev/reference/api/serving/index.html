@@ -191,7 +191,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../serving/" class="md-tabs__link">
+      <a href="../../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -360,10 +360,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -427,7 +478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../serving/" class="md-nav__link">
+      <a href="../../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1528,7 +1579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/sugar/" class="md-nav__link">
+      <a href="../../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1846,7 +1897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1858,7 +1909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -3828,6 +3879,30 @@ for both serving and non serving containers.
 ref: <a href="http://bit.ly/image-digests">http://bit.ly/image-digests</a></p>
 </td>
 </tr>
+<tr>
+<td>
+<code>actualReplicas</code><br/>
+<em>
+int32
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>ActualReplicas reflects the amount of ready pods running this revision.</p>
+</td>
+</tr>
+<tr>
+<td>
+<code>desiredReplicas</code><br/>
+<em>
+int32
+</em>
+</td>
+<td>
+<em>(Optional)</em>
+<p>DesiredReplicas reflects the desired amount of pods running this revision.</p>
+</td>
+</tr>
 </tbody>
 </table>
 <h3 id="serving.knative.dev/v1.RevisionTemplateSpec">RevisionTemplateSpec
@@ -4568,7 +4643,7 @@ knative.dev/pkg/apis/duck/v1.Addressable
 <hr/>
 <p><em>
 Generated with <code>gen-crd-api-reference-docs</code>
-on git commit <code>b9576f56c</code>.
+on git commit <code>813aa6596</code>.
 </em></p>
                 
               

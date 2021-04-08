@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#install-kn-using-a-binary" class="md-skip">
+        <a href="#install-kn-using-brew" class="md-skip">
           Skip to content
         </a>
       
@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../serving/" class="md-tabs__link">
+      <a href="../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -432,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../serving/" class="md-nav__link">
+      <a href="../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1533,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/sugar/" class="md-nav__link">
+      <a href="../../eventing/sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1851,7 +1902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1863,7 +1914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../eventing/samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../eventing/samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2276,6 +2327,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#install-kn-using-brew" class="md-nav__link">
+    Install kn using brew
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#install-kn-using-a-binary" class="md-nav__link">
     Install kn using a binary
   </a>
@@ -2298,13 +2356,6 @@
         <li class="md-nav__item">
   <a href="#install-kn-using-go" class="md-nav__link">
     Install kn using Go
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#install-kn-using-brew" class="md-nav__link">
-    Install kn using brew
   </a>
   
 </li>
@@ -2438,6 +2489,10 @@
                   <h1>Installing the Client</h1>
                 
                 <p>This guide provides details about how you can set up the Knative <code>kn</code> CLI.</p>
+<h2 id="install-kn-using-brew">Install kn using brew<a class="headerlink" href="#install-kn-using-brew" title="Permanent link">&para;</a></h2>
+<p>For macOS, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.</p>
+<div class="highlight"><pre><span></span><code>brew install kn
+</code></pre></div>
 <h2 id="install-kn-using-a-binary">Install kn using a binary<a class="headerlink" href="#install-kn-using-a-binary" title="Permanent link">&para;</a></h2>
 <p>You can install <code>kn</code> by downloading the executable binary for your system and placing it in the system path.</p>
 <p>A link to the latest stable binary release is available on the <a href="https://github.com/knative/client/releases" target="_blank"><code>kn</code> release page</a>.</p>
@@ -2469,8 +2524,6 @@ cd client/
 </code></pre></div>
 </li>
 </ol>
-<h2 id="install-kn-using-brew">Install kn using brew<a class="headerlink" href="#install-kn-using-brew" title="Permanent link">&para;</a></h2>
-<p>For macOs, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">brew</a>.</p>
 <h2 id="running-kn-using-container-images">Running kn using container images<a class="headerlink" href="#running-kn-using-container-images" title="Permanent link">&para;</a></h2>
 <p><strong>WARNING:</strong> Nightly container images include features which may not be included in the latest Knative release and are not considered to be stable.</p>
 <p>Links to images are available here:</p>

@@ -196,7 +196,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../serving/" class="md-tabs__link">
+      <a href="../../../serving/README.md" class="md-tabs__link">
         Serving Component
       </a>
     </li>
@@ -365,10 +365,61 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../install/any-kubernetes-cluster/" class="md-nav__link">
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
         Installing using YAML
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing using YAML" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Installing using YAML
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/prerequisites/" class="md-nav__link">
+        Prerequisites
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-serving-with-yaml/" class="md-nav__link">
+        Install Serving with YAML
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/install-eventing-with-yaml/" class="md-nav__link">
+        Install Eventing with YAML
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -432,7 +483,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../serving/" class="md-nav__link">
+      <a href="../../../serving/README.md" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1535,7 +1586,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sugar/" class="md-nav__link">
+      <a href="../../sugar/README.md" class="md-nav__link">
         Sugar
       </a>
     </li>
@@ -1708,7 +1759,14 @@
     Enable debug logging for data plane components
   </a>
   
-    <nav class="md-nav" aria-label="Enable debug logging for data plane components">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-order-of-delivered-events" class="md-nav__link">
+    Configuring the order of delivered events
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the order of delivered events">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1985,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../samples/writing-event-source/" class="md-nav__link">
+      <a href="../../samples/writing-event-source/README.md" class="md-nav__link">
         Writing an Event Source
       </a>
     </li>
@@ -1997,7 +2055,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../samples/writing-event-source-easy-way/" class="md-nav__link">
+      <a href="../../samples/writing-event-source-easy-way/README.md" class="md-nav__link">
         Writing an Event Source - Easy Way
       </a>
     </li>
@@ -2507,7 +2565,7 @@ with Apache Kafka for the Knative Broker and Trigger model.</p>
 </ul>
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <ol>
-<li><a href="../../../install/any-kubernetes-cluster/#installing-the-eventing-component">Knative Eventing installation</a>.</li>
+<li><a href="../../../install/install-eventing-with-yaml/">Installing Eventing using YAML files</a>.</li>
 <li>An Apache Kafka cluster (if you're just getting started you can follow <a href="https://strimzi.io/quickstarts/">Strimzi Quickstart page</a>).</li>
 </ol>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
@@ -2703,7 +2761,7 @@ installation step:</p>
       <span class="no">&lt;/root&gt;</span>
     <span class="no">&lt;/configuration&gt;</span>
 </code></pre></div>
-<p>To change the logging level to <code>DEBUG</code>, you need to: </p>
+<p>To change the logging level to <code>DEBUG</code>, you must:</p>
 <ol>
 <li>
 <p>Apply the following <code>kafka-config-logging</code> <code>ConfigMap</code> or replace <code>level="INFO"</code> with <code>level="DEBUG"</code> to the
@@ -2732,9 +2790,32 @@ kubectl rollout restart deployment -n knative-eventing kafka-broker-dispatcher
 </code></pre></div>
 </li>
 </ol>
+<h2 id="configuring-the-order-of-delivered-events">Configuring the order of delivered events<a class="headerlink" href="#configuring-the-order-of-delivered-events" title="Permanent link">&para;</a></h2>
+<p>When dispatching events, the Kafka broker can be configured to support different delivery ordering guarantees.</p>
+<p>You can configure the delivery order of events using the <code>kafka.eventing.knative.dev/delivery.order</code> annotation on the <code>Trigger</code> object:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">eventing.knative.dev/v1</span>
+<span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Trigger</span>
+<span class="nt">metadata</span><span class="p">:</span>
+  <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-service-trigger</span>
+  <span class="nt">annotations</span><span class="p">:</span>
+     <span class="nt">kafka.eventing.knative.dev/delivery.order</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ordered</span>
+<span class="nt">spec</span><span class="p">:</span>
+  <span class="nt">broker</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-kafka-broker</span>
+  <span class="nt">subscriber</span><span class="p">:</span>
+    <span class="nt">ref</span><span class="p">:</span>
+      <span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">serving.knative.dev/v1</span>
+      <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Service</span>
+      <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">my-service</span>
+</code></pre></div>
+<p>The supported consumer delivery guarantees are:</p>
+<ul>
+<li><code>unordered</code>: Unordered consumer is a non-blocking consumer that potentially delivers messages unordered, while preserving proper offset management.</li>
+<li><code>ordered</code>: Ordered consumer is a per-partition blocking consumer that delivers messages in order.</li>
+</ul>
+<p><code>unordered</code> is the default ordering guarantee, while <strong><code>ordered</code> is considered unstable, use with caution</strong>.</p>
 <h3 id="additional-information">Additional information<a class="headerlink" href="#additional-information" title="Permanent link">&para;</a></h3>
 <ul>
-<li>To report bugs or add feature requests, open an issue in the <a href="https://github.com/knative-sandbox/eventing-kafka-broker">eventing-kafka-broker repository</a>.</li>
+<li>To report a bug or request a feature, open an issue in the <a href="https://github.com/knative-sandbox/eventing-kafka-broker">eventing-kafka-broker repository</a>.</li>
 </ul>
                 
                   
