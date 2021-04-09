@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/install/check-install-version/">
+        <link rel="canonical" href="https://knative.dev/docs/install/quickstart/">
       
       <link rel="icon" href="../../images/knative-sm.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
     
     
       
-        <title>Checking the version of your Knative components - Knative</title>
+        <title>Quickstart - Knative</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#macro-rendering-error" class="md-skip">
+        <a href="#next-steps" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Checking the version of your Knative components
+              Quickstart
             
           </span>
         </div>
@@ -174,13 +174,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../quickstart/" class="md-tabs__link">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
         Installing Knative
       </a>
     </li>
@@ -329,12 +331,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Installing Knative
@@ -350,11 +354,45 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../quickstart/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quickstart
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Quickstart
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    Next Steps
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2453,29 +2491,25 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/install/check-install-version.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/install/quickstart.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="macro-rendering-error"><em>Macro Rendering Error</em><a class="headerlink" href="#macro-rendering-error" title="Permanent link">&para;</a></h1>
-<p><strong>TemplateSyntaxError</strong>: expected token 'end of print statement', got 'string'</p>
-<div class="highlight"><pre><span></span><code>Traceback (most recent call last):
-  File &quot;/usr/local/lib/python3.9/site-packages/mkdocs_macros/plugin.py&quot;, line 441, in render
-    md_template = self.env.from_string(markdown)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 941, in from_string
-    return cls.from_code(self, self.compile(source), globals, None)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 638, in compile
-    self.handle_exception(source=source_hint)
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/environment.py&quot;, line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File &quot;/usr/local/lib/python3.9/site-packages/jinja2/_compat.py&quot;, line 28, in reraise
-    raise value.with_traceback(tb)
-  File &quot;&lt;unknown&gt;&quot;, line 7, in template
-jinja2.exceptions.TemplateSyntaxError: expected token &#39;end of print statement&#39;, got &#39;string&#39;
-</code></pre></div>
+                  <h1>Quickstart</h1>
                 
-                  
+                <p>The fastest way to get started with knative locally is to use the <a href="https://konk.dev">Konk</a> (Knative-on-kind) script.</p>
+<p>This script installs a local knative installation on your local machine's <code>Docker</code> daemon using <a href="https://kind.sigs.k8s.io/">Kind</a>. You will need to have Docker installed.</p>
+<div class="admonition success">
+<p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
+<div class="highlight"><pre><span></span><code>curl -sL get.konk.dev | bash
+</code></pre></div>
+</div>
+<h2 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If you would like to customize the Knative installation or install it on a remote cluster, start by <a href="../prerequisites/">Checking the Pre-Requisites</a>.</li>
+<li>Now that you've installed Knative, get started with <a href="../../serving/">Serving</a> or <a href="../../eventing/">Eventing</a>.</li>
+</ul>
                 
               
               
@@ -2495,6 +2529,39 @@ jinja2.exceptions.TemplateSyntaxError: expected token &#39;end of print statemen
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../.." class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../prerequisites/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Prerequisites
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
