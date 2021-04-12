@@ -4,7 +4,19 @@
      <lastmod>2021-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/docs/install/quickstart/</loc>
+     <loc>https://knative.dev/docs/getting-started/getting-started/</loc>
+     <lastmod>2021-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/getting-started/install-cli/</loc>
+     <lastmod>2021-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/getting-started/getting-started-serving/</loc>
+     <lastmod>2021-04-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/docs/getting-started/getting-started-eventing/</loc>
      <lastmod>2021-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -37,10 +49,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/serving/</loc>
-     <lastmod>2021-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/serving/getting-started-knative-app/</loc>
      <lastmod>2021-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -217,10 +225,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/eventing/</loc>
-     <lastmod>2021-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/eventing/getting-started/</loc>
      <lastmod>2021-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -413,14 +417,6 @@
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://knative.dev/docs/eventing/samples/kubernetes-event-source/</loc>
-     <lastmod>2021-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/client/install-kn/</loc>
-     <lastmod>2021-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://knative.dev/docs/client/</loc>
      <lastmod>2021-04-12</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
