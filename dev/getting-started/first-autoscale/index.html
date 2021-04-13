@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#autoscaling-in-action" class="md-skip">
+        <a href="#check-the-knative-pods" class="md-skip">
           Skip to content
         </a>
       
@@ -442,22 +442,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#autoscaling-in-action" class="md-nav__link">
-    Autoscaling in action
-  </a>
-  
-    <nav class="md-nav" aria-label="Autoscaling in action">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#check-the-knative-pods" class="md-nav__link">
     Check the Knative Pods
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -475,7 +462,7 @@
   
     <li class="md-nav__item">
       <a href="../first-traffic-split/" class="md-nav__link">
-        First Traffic Split
+        Traffic Splitting
       </a>
     </li>
   
@@ -2612,9 +2599,8 @@
                 
                   <h1>Autoscaling in Action</h1>
                 
-                <h2 id="autoscaling-in-action">Autoscaling in action<a class="headerlink" href="#autoscaling-in-action" title="Permanent link">&para;</a></h2>
-<p>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about earlier? One of Knative Serving's powers is autoscaling. This means your Knative Service will only "spin up" to preform its job (in this case, saying "Hello world!") if it is needed, otherwise, it will spin down and wait for a new request to come in.</p>
-<p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href="https://kubernetes.io/docs/concepts/workloads/pods/">Pods</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
+                <p>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about? One of Knative Serving's powers is autoscaling. This means your Knative Service will only "spin up" to preform its job (in this case, saying "Hello world!") if it is needed, otherwise, it will spin down and wait for a new request to come in.</p>
+<p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pods</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
 <h4 id="check-the-knative-pods">Check the Knative Pods<a class="headerlink" href="#check-the-knative-pods" title="Permanent link">&para;</a></h4>
 <p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser or by using <code>open</code> instead of <code>curl</code> in your CLI.
 <div class="highlight"><pre><span></span><code>open <span class="nv">$SERVICE_URL</span>
@@ -2624,17 +2610,17 @@
 </code></pre></div></p>
 <p>The output should look like this:
 <div class="highlight"><pre><span></span><code>NAME                                     READY   STATUS
-hello-xxxxxx-1                           <span class="m">2</span>/2     Running
-hello-xxxxxx-1                           <span class="m">2</span>/2     Terminating
-hello-xxxxxx-1                           <span class="m">1</span>/2     Terminating
-hello-xxxxxx-1                           <span class="m">0</span>/2     Terminating
+hello-xxxxx-1                           <span class="m">2</span>/2     Running
+hello-xxxxx-1                           <span class="m">2</span>/2     Terminating
+hello-xxxxx-1                           <span class="m">1</span>/2     Terminating
+hello-xxxxx-1                           <span class="m">0</span>/2     Terminating
 </code></pre></div></p>
 <p>Try to access the url again, and you will see a new pod running again.
 <div class="highlight"><pre><span></span><code>NAME                                     READY   STATUS
-hello-xxxxxx-1                           <span class="m">0</span>/2     Pending
-hello-xxxxxx-1                           <span class="m">0</span>/2     ContainerCreating
-hello-xxxxxx-1                           <span class="m">1</span>/2     Running
-hello-xxxxxx-1                           <span class="m">2</span>/2     Running
+hello-xxxxx-1                           <span class="m">0</span>/2     Pending
+hello-xxxxx-1                           <span class="m">0</span>/2     ContainerCreating
+hello-xxxxx-1                           <span class="m">1</span>/2     Running
+hello-xxxxx-1                           <span class="m">2</span>/2     Running
 </code></pre></div></p>
 <p>Some people call this <strong>Serverless</strong> 🎉 🌮 🔥</p>
                 
@@ -2680,7 +2666,7 @@ hello-xxxxxx-1                           <span class="m">2</span>/2     Running
               <span class="md-footer__direction">
                 Next
               </span>
-              First Traffic Split
+              Traffic Splitting
             </div>
           </div>
           <div class="md-footer__button md-icon">
