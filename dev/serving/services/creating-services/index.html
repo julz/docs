@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#before-you-begin" class="md-skip">
+        <a href="#creating-knative-services" class="md-skip">
           Skip to content
         </a>
       
@@ -265,6 +265,22 @@
   
 
 
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../client/" class="md-tabs__link">
+        Client
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
   <li class="md-tabs__item">
     <a href="../../../todo" class="md-tabs__link">
       Community
@@ -385,8 +401,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../getting-started/getting-started-serving/" class="md-nav__link">
-        Getting Started with Knative Serving
+      <a href="../../../getting-started/first-service/" class="md-nav__link">
+        Deploying your first Knative Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/first-autoscale/" class="md-nav__link">
+        Autoscaling in Action
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/first-traffic-split/" class="md-nav__link">
+        First Traffic Split
       </a>
     </li>
   
@@ -622,6 +662,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Creating Knative Services
@@ -635,6 +677,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2514,6 +2558,60 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Client
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../client/" class="md-nav__link">
+        CLI tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../client/install-kn/" class="md-nav__link">
+        Install kn
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../../todo" class="md-nav__link">
         Community
@@ -2539,9 +2637,8 @@
                   </a>
                 
                 
-                  <h1>Creating Knative Services</h1>
-                
-                <p>Knative Services are used to deploy an application. Each Knative Service is defined by a Route and a Configuration, which have the same name as the Service, contained in a YAML file. Every time the Configuration is updated, a new Revision is created.</p>
+                <h1 id="creating-knative-services">Creating Knative Services<a class="headerlink" href="#creating-knative-services" title="Permanent link">&para;</a></h1>
+<p>Knative Services are used to deploy an application. Each Knative Service is defined by a Route and a Configuration, which have the same name as the Service, contained in a YAML file. Every time the Configuration is updated, a new Revision is created.</p>
 <p>Knative Service Revisions are each backed by a deployment with 2 Kubernetes Services. <br />
 For more information about Kubernetes Services, see the <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes documentation</a>.   </p>
 <h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>

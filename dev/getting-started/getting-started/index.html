@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-knative" class="md-skip">
+        <a href="#installing-knative-with-konk-knative-on-kind" class="md-skip">
           Skip to content
         </a>
       
@@ -265,6 +265,22 @@
   
 
 
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../client/" class="md-tabs__link">
+        Client
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
   <li class="md-tabs__item">
     <a href="../../todo" class="md-tabs__link">
       Community
@@ -394,22 +410,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-knative-with-konk-knative-on-kind" class="md-nav__link">
-    Installing Knative with KonK (Knative on Kind)
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing Knative with KonK (Knative on Kind)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     Prerequisites
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -445,8 +448,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-serving/" class="md-nav__link">
-        Getting Started with Knative Serving
+      <a href="../first-service/" class="md-nav__link">
+        Deploying your first Knative Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-autoscale/" class="md-nav__link">
+        Autoscaling in Action
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-traffic-split/" class="md-nav__link">
+        First Traffic Split
       </a>
     </li>
   
@@ -2502,6 +2529,60 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        Client
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/" class="md-nav__link">
+        CLI tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../client/install-kn/" class="md-nav__link">
+        Install kn
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../todo" class="md-nav__link">
         Community
@@ -2527,8 +2608,7 @@
                   </a>
                 
                 
-                <h1 id="installing-knative">Installing Knative<a class="headerlink" href="#installing-knative" title="Permanent link">&para;</a></h1>
-<h2 id="installing-knative-with-konk-knative-on-kind">Installing Knative with KonK (Knative on Kind)<a class="headerlink" href="#installing-knative-with-konk-knative-on-kind" title="Permanent link">&para;</a></h2>
+                <h1 id="installing-knative-with-konk-knative-on-kind">Installing Knative with KonK (Knative on Kind)<a class="headerlink" href="#installing-knative-with-konk-knative-on-kind" title="Permanent link">&para;</a></h1>
 <p><strong>The fastest way to get started with Knative locally</strong> is to use the <a href= "https://konk.dev" target="blank_">Konk (Knative-on-kind) script.</a></p>
 <p>This script installs a local Knative deployment on your local machine's <code>Docker</code> daemon using <a href="https://kind.sigs.k8s.io/">Kind</a>.</p>
 <h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
@@ -2541,14 +2621,17 @@
 <div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
 </code></pre></div>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you decide to use an installation method other than KonK, you will need DNS configured on Knative Serving and a broker installed for Knative Eventing to successfully complete the "Getting Started" tutorial.</p>
-</div>
+<details class="question"><summary>Need to upgrade Kind?"</summary><div class="highlight"><pre><span></span><code>brew upgrade kind
+</code></pre></div>
+</details>
 <h2 id="other-installation-options">Other Installation Options<a class="headerlink" href="#other-installation-options" title="Permanent link">&para;</a></h2>
 <ul>
-<li>If you would like to customize the Knative installation or install it on a remote cluster, start by <a href="../../install/prerequisites/">Checking the Pre-Requisites</a>.</li>
+<li>If you would like to customize the Knative installation or install it on a remote cluster, start by <a href="./install/prerequisites.md">Checking the Pre-Requisites</a> then come back here to finish the remaining steps!</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>You will need <code>networking layer</code> and <code>DNS</code> for Knative Serving as well as a <code>broker</code> for Knative Eventing if you want to follow this tutorial. </p>
+</div>
                 
               
               

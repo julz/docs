@@ -261,6 +261,24 @@
         
   
   
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        Client
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
 
 
   <li class="md-tabs__item">
@@ -383,8 +401,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/getting-started-serving/" class="md-nav__link">
-        Getting Started with Knative Serving
+      <a href="../../getting-started/first-service/" class="md-nav__link">
+        Deploying your first Knative Service
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-autoscale/" class="md-nav__link">
+        Autoscaling in Action
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/first-traffic-split/" class="md-nav__link">
+        First Traffic Split
       </a>
     </li>
   
@@ -2439,6 +2481,137 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      <label class="md-nav__link" for="__nav_7">
+        Client
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Client" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Client
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        CLI tools
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Install kn
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Install kn
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#install-kn-using-brew" class="md-nav__link">
+    Install kn using brew
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-kn-using-a-binary" class="md-nav__link">
+    Install kn using a binary
+  </a>
+  
+    <nav class="md-nav" aria-label="Install kn using a binary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-kn-using-the-nightly-built-binary" class="md-nav__link">
+    Install kn using the nightly-built binary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-kn-using-go" class="md-nav__link">
+    Install kn using Go
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-kn-using-container-images" class="md-nav__link">
+    Running kn using container images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-kn-with-tekton" class="md-nav__link">
+    Using kn with Tekton
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
   
     <li class="md-nav__item">
       <a href="../../todo" class="md-nav__link">
@@ -2465,12 +2638,12 @@
                   </a>
                 
                 
-                  <h1>Setting up kn</h1>
+                  <h1>Install kn</h1>
                 
                 <p>This guide provides details about how you can set up the Knative <code>kn</code> CLI.</p>
 <h2 id="install-kn-using-brew">Install kn using brew<a class="headerlink" href="#install-kn-using-brew" title="Permanent link">&para;</a></h2>
 <p>For macOS, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.</p>
-<div class="highlight"><pre><span></span><code>brew install kn
+<div class="highlight"><pre><span></span><code>brew install knative/client/kn
 </code></pre></div>
 <h2 id="install-kn-using-a-binary">Install kn using a binary<a class="headerlink" href="#install-kn-using-a-binary" title="Permanent link">&para;</a></h2>
 <p>You can install <code>kn</code> by downloading the executable binary for your system and placing it in the system path.</p>
@@ -2537,6 +2710,25 @@ cd client/
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              CLI tools
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
