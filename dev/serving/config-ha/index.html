@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#disabling-leader-election" class="md-skip">
+        <a href="#configuring-high-availability-components" class="md-skip">
           Skip to content
         </a>
       
@@ -923,6 +923,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Configuring high-availability components
@@ -936,6 +938,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2613,9 +2617,8 @@
                   </a>
                 
                 
-                  <h1>Configuring high-availability components</h1>
-                
-                <p>Active/passive high availability (HA) is a standard feature of Kubernetes APIs that helps to ensure that APIs stay operational if a disruption occurs. In an HA deployment, if an active controller crashes or is deleted, another controller is available to take over processing of the APIs that were being serviced by the controller that is now unavailable.</p>
+                <h1 id="configuring-high-availability-components">Configuring high-availability components<a class="headerlink" href="#configuring-high-availability-components" title="Permanent link">&para;</a></h1>
+<p>Active/passive high availability (HA) is a standard feature of Kubernetes APIs that helps to ensure that APIs stay operational if a disruption occurs. In an HA deployment, if an active controller crashes or is deleted, another controller is available to take over processing of the APIs that were being serviced by the controller that is now unavailable.</p>
 <p>When using a leader election HA pattern, instances of controllers are already scheduled and running inside the cluster before they are required. These controller instances compete to use a shared resource, known as the leader election lock. The instance of the controller that has access to the leader election lock resource at any given time is referred to as the leader.</p>
 <p>Leader election is enabled by default for all Knative Serving components.
 HA functionality is disabled by default for all Knative Serving components, which are configured with only one replica.</p>

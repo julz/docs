@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#modes" class="md-skip">
+        <a href="#additional-autoscaling-configuration-for-knative-pod-autoscaler" class="md-skip">
           Skip to content
         </a>
       
@@ -1157,6 +1157,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           KPA-Specific Configuration
@@ -1170,6 +1172,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2653,9 +2657,8 @@
                   </a>
                 
                 
-                  <h1>KPA-Specific Configuration</h1>
-                
-                <p>The following settings are specific to the Knative Pod Autoscaler (KPA).</p>
+                <h1 id="additional-autoscaling-configuration-for-knative-pod-autoscaler">Additional autoscaling configuration for Knative Pod Autoscaler<a class="headerlink" href="#additional-autoscaling-configuration-for-knative-pod-autoscaler" title="Permanent link">&para;</a></h1>
+<p>The following settings are specific to the Knative Pod Autoscaler (KPA).</p>
 <h2 id="modes">Modes<a class="headerlink" href="#modes" title="Permanent link">&para;</a></h2>
 <p>The KPA acts on <a href="../autoscaling-metrics/">metrics</a> (<code>concurrency</code> or <code>rps</code>) aggregated over time-based windows.</p>
 <p>These windows define the amount of historical data that the Autoscaler takes into account, and are used to smooth the data over the specified amount of time.

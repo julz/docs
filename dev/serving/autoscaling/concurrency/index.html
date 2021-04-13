@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#soft-versus-hard-concurrency-limits" class="md-skip">
+        <a href="#configuring-concurrency" class="md-skip">
           Skip to content
         </a>
       
@@ -1121,6 +1121,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Configuring Concurrency
@@ -1134,6 +1136,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2626,9 +2630,8 @@
                   </a>
                 
                 
-                  <h1>Configuring Concurrency</h1>
-                
-                <p>Concurrency determines the number of simultaneous requests that can be processed by each replica of an application at any given time.</p>
+                <h1 id="configuring-concurrency">Configuring concurrency<a class="headerlink" href="#configuring-concurrency" title="Permanent link">&para;</a></h1>
+<p>Concurrency determines the number of simultaneous requests that can be processed by each replica of an application at any given time.</p>
 <!-- this is where including files would be useful. We could create a concurrency global config module and insert it here, in the docs for metrics, and in the docs for targets. Showing the correct information each time instead of having it in one place with the per revision config jumbled in with it makes it easier to understand IMHO, and would mean users don't need to visit different pages or hunt for the same information for similar user stories @abrennan89.-->
 <p>For per-revision concurrency, you must configure both <code>autoscaling.knative.dev/metric</code>and <code>autoscaling.knative.dev/target</code> for a <a href="#soft-limit">soft limit</a>, or <code>containerConcurrency</code> for a <a href="#hard-limit">hard limit</a>.</p>
 <p>For global concurrency, you can set the <code>container-concurrency-target-default</code> value.</p>

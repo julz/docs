@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reconciler-functionality" class="md-skip">
+        <a href="#reconciler-implementation-and-design" class="md-skip">
           Skip to content
         </a>
       
@@ -2559,9 +2559,8 @@
                   </a>
                 
                 
-                  <h1>Reconciler Implementation and Design</h1>
-                
-                <h2 id="reconciler-functionality">Reconciler Functionality<a class="headerlink" href="#reconciler-functionality" title="Permanent link">&para;</a></h2>
+                <h1 id="reconciler-implementation-and-design">Reconciler Implementation and Design<a class="headerlink" href="#reconciler-implementation-and-design" title="Permanent link">&para;</a></h1>
+<h2 id="reconciler-functionality">Reconciler Functionality<a class="headerlink" href="#reconciler-functionality" title="Permanent link">&para;</a></h2>
 <p>General steps the reconciliation process needs to cover:
 1. Update the <code>ObservedGeneration</code> and initialize the <code>Status</code> conditions (as defined in <code>samplesource_lifecycle.go</code> and <code>samplesource_types.go</code>)
 <div class="highlight"><pre><span></span><code><span class="nx">src</span><span class="p">.</span><span class="nx">Status</span><span class="p">.</span><span class="nx">InitializeConditions</span><span class="p">()</span>

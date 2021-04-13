@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-the-target-burst-capacity" class="md-skip">
+        <a href="#configuring-target-burst-capacity" class="md-skip">
           Skip to content
         </a>
       
@@ -820,6 +820,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Target Burst Capacity
@@ -833,6 +835,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2601,9 +2605,8 @@
                   </a>
                 
                 
-                  <h1>Target Burst Capacity</h1>
-                
-                <p><em>Target burst capacity</em> is a <a href="../../autoscaling/autoscaling-concepts/">global and per-revision</a> integer setting that determines the size of traffic burst a Knative application can handle without buffering.
+                <h1 id="configuring-target-burst-capacity">Configuring target burst capacity<a class="headerlink" href="#configuring-target-burst-capacity" title="Permanent link">&para;</a></h1>
+<p><em>Target burst capacity</em> is a <a href="../../autoscaling/autoscaling-concepts/">global and per-revision</a> integer setting that determines the size of traffic burst a Knative application can handle without buffering.
 If a traffic burst is too large for the application to handle, the <em>Activator</em> service will be placed in the request path to protect the revision and optimize request load balancing.</p>
 <p>The Activator service is responsible for receiving and buffering requests for inactive revisions, or for revisions where a traffic burst is larger than the limits of what can be handled without buffering for that revision. It can also quickly spin up additional pods for capacity, and throttle how quickly requests are sent to pods.</p>
 <p>Target burst capacity can be configured using a combination of the following parameters:</p>

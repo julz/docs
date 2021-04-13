@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuring-gradual-rollout" class="md-skip">
+        <a href="#gradually-rolling-out-latest-revisions" class="md-skip">
           Skip to content
         </a>
       
@@ -710,6 +710,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Gradually Rolling out Revisions
@@ -723,6 +725,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2613,9 +2617,8 @@
                   </a>
                 
                 
-                  <h1>Gradually Rolling out Revisions</h1>
-                
-                <p>If your traffic configuration points to a Configuration target, rather than revision target, it means that when a new Revision is created and ready 100% of that target's traffic will be immediately shifted to the new revision, which might not be ready to accept that scale with a single pod and with cold starts taking some time it is possible to end up in a situation where a lot of requests are backed up either at QP or Activator and after a while they might expire or QP might outright reject the requests.</p>
+                <h1 id="gradually-rolling-out-latest-revisions">Gradually rolling out latest Revisions<a class="headerlink" href="#gradually-rolling-out-latest-revisions" title="Permanent link">&para;</a></h1>
+<p>If your traffic configuration points to a Configuration target, rather than revision target, it means that when a new Revision is created and ready 100% of that target's traffic will be immediately shifted to the new revision, which might not be ready to accept that scale with a single pod and with cold starts taking some time it is possible to end up in a situation where a lot of requests are backed up either at QP or Activator and after a while they might expire or QP might outright reject the requests.</p>
 <p>To mitigate this problem Knative as of 0.20 release Knative provides users with a possibility to gradually shift the traffic to the latest revision.
 This is governed by a single parameter which denotes <code>rollout-duration</code>.</p>
 <p>The affected Configuration targets will be rolled out to 1% of traffic first and then in equal incremental steps for the rest of the assigned traffic. Note, that the rollout is purely time based and does not interact with the Autoscaling subsystem.</p>

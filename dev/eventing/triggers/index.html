@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trigger-filtering" class="md-skip">
+        <a href="#triggers" class="md-skip">
           Skip to content
         </a>
       
@@ -1905,6 +1905,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Triggers
@@ -1918,6 +1920,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2597,9 +2601,8 @@
                   </a>
                 
                 
-                  <h1>Triggers</h1>
-                
-                <p>A Trigger represents a desire to subscribe to events from a specific Broker.</p>
+                <h1 id="triggers">Triggers<a class="headerlink" href="#triggers" title="Permanent link">&para;</a></h1>
+<p>A Trigger represents a desire to subscribe to events from a specific Broker.</p>
 <p>The <code>subscriber</code> value must be a <a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">Destination</a>.</p>
 <p>Simple example which will receive all the events from the given (<code>default</code>) broker and
 deliver them to Knative Serving service <code>my-service</code>:</p>

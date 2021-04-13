@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configuring-targets" class="md-skip">
+        <a href="#targets" class="md-skip">
           Skip to content
         </a>
       
@@ -1097,6 +1097,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Targets
@@ -1110,6 +1112,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2599,9 +2603,8 @@
                   </a>
                 
                 
-                  <h1>Targets</h1>
-                
-                <p>Configuring a target provide the Autoscaler with a value that it tries to maintain for the configured metric for a revision.
+                <h1 id="targets">Targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h1>
+<p>Configuring a target provide the Autoscaler with a value that it tries to maintain for the configured metric for a revision.
 See the <a href="../autoscaling-metrics/">metrics</a> documentation for more information about configurable metric types.</p>
 <p>The <code>target</code> annotation, used to configure per-revision targets,  is <em>metric agnostic</em>. This means the target is simply an integer value, which can be applied for any metric type.</p>
 <h2 id="configuring-targets">Configuring targets<a class="headerlink" href="#configuring-targets" title="Permanent link">&para;</a></h2>

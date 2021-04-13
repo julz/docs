@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#control" class="md-skip">
+        <a href="#feature-flags" class="md-skip">
           Skip to content
         </a>
       
@@ -938,9 +938,45 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Feature Flags
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Feature Flags
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    Control
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lifecyle" class="md-nav__link">
+    Lifecyle
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2574,7 +2610,8 @@
                   </a>
                 
                 
-                <p>Knative is deliberate about the concepts it incorporates into its core API. The API aims to be portable and abstracts away the specificities of each users' implementation. That being said, the Knative API should empower users to surface extra features and extensions possible within their platform of choice.</p>
+                <h1 id="feature-flags">Feature Flags<a class="headerlink" href="#feature-flags" title="Permanent link">&para;</a></h1>
+<p>Knative is deliberate about the concepts it incorporates into its core API. The API aims to be portable and abstracts away the specificities of each users' implementation. That being said, the Knative API should empower users to surface extra features and extensions possible within their platform of choice.</p>
 <p>This document introduces two concepts:
 * Feature: a way to stage the introduction of features to the Knative API.
 * Extension: a way to extend Knative beyond the portable concepts of the Knative API.</p>

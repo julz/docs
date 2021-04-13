@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#exclude-namespaces-from-the-knative-webhook" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -941,6 +946,8 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2567,9 +2574,8 @@
                   </a>
                 
                 
-                  <h1>Exclude namespaces from the Knative webhook</h1>
-                
-                <p>The Knative webhook examines resources that are created, read, updated, or deleted. This includes system namespaces, which can cause issues during an upgrade if the webhook becomes non-responsive. Cluster administrators may want to disable the Knative webhook on system namespaces to prevent issues during upgrades.</p>
+                <h1 id="exclude-namespaces-from-the-knative-webhook">Exclude namespaces from the Knative webhook<a class="headerlink" href="#exclude-namespaces-from-the-knative-webhook" title="Permanent link">&para;</a></h1>
+<p>The Knative webhook examines resources that are created, read, updated, or deleted. This includes system namespaces, which can cause issues during an upgrade if the webhook becomes non-responsive. Cluster administrators may want to disable the Knative webhook on system namespaces to prevent issues during upgrades.</p>
 <p>You can configure the label <code>webhooks.knative.dev/exclude</code> to allow namespaces to bypass the Knative webhook.</p>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">v1</span>
 <span class="nt">kind</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Namespace</span>

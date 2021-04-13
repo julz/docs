@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#using-tags-to-create-target-urls" class="md-skip">
+        <a href="#creating-and-using-subroutes" class="md-skip">
           Skip to content
         </a>
       
@@ -674,6 +674,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Creating and Using Sub-Routes
@@ -687,6 +689,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2599,9 +2603,8 @@
                   </a>
                 
                 
-                  <h1>Creating and Using Sub-Routes</h1>
-                
-                <p>Subroutes are most effective when used with multiple revisions. When defining a Knative service/route, the traffic section of the spec can split between the different revisions. For example:</p>
+                <h1 id="creating-and-using-subroutes">Creating and using Subroutes<a class="headerlink" href="#creating-and-using-subroutes" title="Permanent link">&para;</a></h1>
+<p>Subroutes are most effective when used with multiple revisions. When defining a Knative service/route, the traffic section of the spec can split between the different revisions. For example:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">traffic</span><span class="p">:</span>
 <span class="p p-Indicator">-</span> <span class="nt">percent</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
   <span class="nt">revisionName</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">foo</span>

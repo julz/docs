@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#accessing-the-deployment-configmap" class="md-skip">
+        <a href="#modifying-the-deployment-config-map" class="md-skip">
           Skip to content
         </a>
       
@@ -863,6 +863,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Configuring the Knative Deployment
@@ -876,6 +878,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2606,9 +2610,8 @@
                   </a>
                 
                 
-                  <h1>Configuring the Knative Deployment</h1>
-                
-                <p>The <code>config-deployment</code> ConfigMap is located in the <code>knative-serving</code> namespace.
+                <h1 id="modifying-the-deployment-config-map">Modifying the Deployment Config Map<a class="headerlink" href="#modifying-the-deployment-config-map" title="Permanent link">&para;</a></h1>
+<p>The <code>config-deployment</code> ConfigMap is located in the <code>knative-serving</code> namespace.
 This ConfigMap, known as the Deployment ConfigMap, contains settings that determine how Kubernetes <code>Deployment</code> resources, that back Knative services, are configured.</p>
 <h2 id="accessing-the-deployment-configmap">Accessing the Deployment ConfigMap<a class="headerlink" href="#accessing-the-deployment-configmap" title="Permanent link">&para;</a></h2>
 <p>To view the current Deployment ConfigMap:</p>

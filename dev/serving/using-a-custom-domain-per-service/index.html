@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#edit-using-kubectl" class="md-skip">
+        <a href="#setting-up-a-custom-domain-per-service" class="md-skip">
           Skip to content
         </a>
       
@@ -757,6 +757,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Setting up a Custom Domain per Service
@@ -770,6 +772,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2615,9 +2619,8 @@
                   </a>
                 
                 
-                  <h1>Setting up a Custom Domain per Service</h1>
-                
-                <p>By default, Knative uses the <code>{route}.{namespace}.{default-domain}</code> fully qualified domain name for the Service, where <code>default-domain</code> is <code>example.com</code>. You are able to change the <code>default-domain</code> following the <a href="../using-a-custom-domain/">Setting up a custom domain</a> guide.</p>
+                <h1 id="setting-up-a-custom-domain-per-service">Setting up a custom domain per Service<a class="headerlink" href="#setting-up-a-custom-domain-per-service" title="Permanent link">&para;</a></h1>
+<p>By default, Knative uses the <code>{route}.{namespace}.{default-domain}</code> fully qualified domain name for the Service, where <code>default-domain</code> is <code>example.com</code>. You are able to change the <code>default-domain</code> following the <a href="../using-a-custom-domain/">Setting up a custom domain</a> guide.</p>
 <p>This guide documents the process to use a custom FQDN for a Service, like <code>my-service.example.com</code>, created by <a href="https://bsideup.github.io/posts/knative_custom_domains/">@bsideup</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">NOTE</p>

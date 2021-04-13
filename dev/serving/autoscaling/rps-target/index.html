@@ -64,6 +64,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#configuring-the-requests-per-second-rps-target" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1139,6 +1144,8 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -2567,9 +2574,8 @@
                   </a>
                 
                 
-                  <h1>Configuring RPS Target</h1>
-                
-                <p>This setting specifies a target for requests-per-second per replica of an application.</p>
+                <h1 id="configuring-the-requests-per-second-rps-target">Configuring the requests per second (RPS) target<a class="headerlink" href="#configuring-the-requests-per-second-rps-target" title="Permanent link">&para;</a></h1>
+<p>This setting specifies a target for requests-per-second per replica of an application.</p>
 <ul>
 <li><strong>Global key:</strong> <code>requests-per-second-target-default</code></li>
 <li><strong>Per-revision annotation key:</strong> <code>autoscaling.knative.dev/target</code> (your revision must also be configured to use the <code>rps</code> <a href="../autoscaling-metrics/">metric annotation</a>)</li>

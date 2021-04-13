@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#sink-binding" class="md-skip">
           Skip to content
         </a>
       
@@ -1577,6 +1577,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Sink Binding
@@ -1590,6 +1592,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2720,9 +2724,8 @@
                   </a>
                 
                 
-                  <h1>Sink Binding</h1>
-                
-                <p><img alt="version" src="https://img.shields.io/badge/API_Version-v1-red?style=flat-square" /></p>
+                <h1 id="sink-binding">Sink binding<a class="headerlink" href="#sink-binding" title="Permanent link">&para;</a></h1>
+<p><img alt="version" src="https://img.shields.io/badge/API_Version-v1-red?style=flat-square" /></p>
 <p>The <code>SinkBinding</code> custom object supports decoupling event production from delivery addressing.</p>
 <p>You can use sink binding to connect Kubernetes resources that embed a <code>PodSpec</code> and want to produce events, such as an event source, to an addressable Kubernetes object that can receive events, also known as an <em>event sink</em>.</p>
 <p>Sink binding can be used to create new event sources using any of the familiar compute objects that Kubernetes makes available.

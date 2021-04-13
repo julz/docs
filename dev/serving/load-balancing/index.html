@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activator-pod-selection" class="md-skip">
+        <a href="#load-balancing" class="md-skip">
           Skip to content
         </a>
       
@@ -808,6 +808,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Overview
@@ -821,6 +823,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2608,9 +2612,8 @@
                   </a>
                 
                 
-                  <h1>Overview</h1>
-                
-                <p>You can turn on Knative load balancing, by placing the <em>Activator service</em> in the request path to act as a load balancer.</p>
+                <h1 id="load-balancing">Load balancing<a class="headerlink" href="#load-balancing" title="Permanent link">&para;</a></h1>
+<p>You can turn on Knative load balancing, by placing the <em>Activator service</em> in the request path to act as a load balancer.</p>
 <p><strong>NOTE:</strong> To do this, you must first ensure that individual pod addressability is enabled.</p>
 <h2 id="activator-pod-selection">Activator pod selection<a class="headerlink" href="#activator-pod-selection" title="Permanent link">&para;</a></h2>
 <p>Activator pods are scaled horizontally, so there may be multiple Activators in a deployment. In general, the system will perform best if the number of revision pods is larger than the number of Activator pods, and those numbers divide equally.</p>

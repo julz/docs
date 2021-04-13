@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#format-of-the-file" class="md-skip">
+        <a href="#default-broker-configmap" class="md-skip">
           Skip to content
         </a>
       
@@ -1814,6 +1814,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Default Broker ConfigMap
@@ -1827,6 +1829,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2653,9 +2657,8 @@
                   </a>
                 
                 
-                  <h1>Default Broker ConfigMap</h1>
-                
-                <p><strong>NOTE:</strong> This guide assumes Knative Eventing is installed in the <code>knative-eventing</code> namespace. If you have installed Knative Eventing in a different namespace, replace <code>default</code> with the name of that namespace.</p>
+                <h1 id="default-broker-configmap">Default Broker ConfigMap<a class="headerlink" href="#default-broker-configmap" title="Permanent link">&para;</a></h1>
+<p><strong>NOTE:</strong> This guide assumes Knative Eventing is installed in the <code>knative-eventing</code> namespace. If you have installed Knative Eventing in a different namespace, replace <code>default</code> with the name of that namespace.</p>
 <p>Knative Eventing provides a <code>config-br-defaults</code> ConfigMap, which provides default configuration settings to enable the creation of Brokers and Channels.</p>
 <p>If you are using the <code>config-br-defaults</code> ConfigMap default configuration, the example below will create a Broker called <code>default</code> in the default namespace, and uses <code>MTChannelBasedBroker</code> as the
 implementation.</p>

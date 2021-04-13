@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#setting-metrics-per-revision" class="md-skip">
+        <a href="#metrics" class="md-skip">
           Skip to content
         </a>
       
@@ -1085,6 +1085,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Metrics
@@ -1098,6 +1100,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2606,9 +2610,8 @@
                   </a>
                 
                 
-                  <h1>Metrics</h1>
-                
-                <p>The metric configuration defines which metric type is watched by the Autoscaler.</p>
+                <h1 id="metrics">Metrics<a class="headerlink" href="#metrics" title="Permanent link">&para;</a></h1>
+<p>The metric configuration defines which metric type is watched by the Autoscaler.</p>
 <h2 id="setting-metrics-per-revision">Setting metrics per revision<a class="headerlink" href="#setting-metrics-per-revision" title="Permanent link">&para;</a></h2>
 <p>For <a href="../autoscaling-concepts/">per-revision</a> configuration, this is determined using the <code>autoscaling.knative.dev/metric</code> annotation.
 The possible metric types that can be configured per revision depend on the type of Autoscaler implementation you are using:</p>

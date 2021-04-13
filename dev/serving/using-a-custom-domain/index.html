@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#edit-using-kubectl" class="md-skip">
+        <a href="#setting-up-a-custom-domain" class="md-skip">
           Skip to content
         </a>
       
@@ -745,6 +745,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Setting up a Custom Domain
@@ -758,6 +760,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2649,9 +2653,8 @@
                   </a>
                 
                 
-                  <h1>Setting up a Custom Domain</h1>
-                
-                <p>By default, Knative Serving routes use <code>example.com</code> as the default domain. The
+                <h1 id="setting-up-a-custom-domain">Setting up a custom domain<a class="headerlink" href="#setting-up-a-custom-domain" title="Permanent link">&para;</a></h1>
+<p>By default, Knative Serving routes use <code>example.com</code> as the default domain. The
 fully qualified domain name for a route by default is
 <code>{route}.{namespace}.{default-domain}</code>.</p>
 <p>To change the {default-domain} value there are a few steps involved:</p>

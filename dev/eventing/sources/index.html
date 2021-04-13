@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#knative-sources" class="md-skip">
+        <a href="#event-sources" class="md-skip">
           Skip to content
         </a>
       
@@ -1529,6 +1529,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Overview
@@ -1542,6 +1544,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2613,9 +2617,8 @@
                   </a>
                 
                 
-                  <h1>Overview</h1>
-                
-                <p>An event source is a Kubernetes custom resource (CR), created by a developer or cluster administrator, that acts as a link between an event producer and an event <em>sink</em>.
+                <h1 id="event-sources">Event sources<a class="headerlink" href="#event-sources" title="Permanent link">&para;</a></h1>
+<p>An event source is a Kubernetes custom resource (CR), created by a developer or cluster administrator, that acts as a link between an event producer and an event <em>sink</em>.
 A sink can be a k8s service, including Knative Services, a Channel, or a Broker that receives events from an event source.</p>
 <p>Event sources are created by instantiating a CR from a Source object.
 The Source object defines the arguments and parameters needed to instantiate a CR.</p>

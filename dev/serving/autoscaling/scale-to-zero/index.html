@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enable-scale-to-zero" class="md-skip">
+        <a href="#configuring-scale-to-zero" class="md-skip">
           Skip to content
         </a>
       
@@ -1109,6 +1109,8 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Configuring Scale-to-zero
@@ -1122,6 +1124,8 @@
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2613,9 +2617,8 @@
                   </a>
                 
                 
-                  <h1>Configuring Scale-to-zero</h1>
-                
-                <p><strong>IMPORTANT:</strong> Scale to zero can only be enabled if you are using the Knative Pod Autoscaler (KPA), and can only be configured globally. For more information about using KPA or global configuration, see the documentation on <a href="../autoscaling-concepts/">Autoscaling concepts</a>.</p>
+                <h1 id="configuring-scale-to-zero">Configuring scale to zero<a class="headerlink" href="#configuring-scale-to-zero" title="Permanent link">&para;</a></h1>
+<p><strong>IMPORTANT:</strong> Scale to zero can only be enabled if you are using the Knative Pod Autoscaler (KPA), and can only be configured globally. For more information about using KPA or global configuration, see the documentation on <a href="../autoscaling-concepts/">Autoscaling concepts</a>.</p>
 <h2 id="enable-scale-to-zero">Enable scale to zero<a class="headerlink" href="#enable-scale-to-zero" title="Permanent link">&para;</a></h2>
 <p>The scale to zero value controls whether Knative allows replicas to scale down to zero (if set to <code>true</code>), or stop at 1 replica if set to <code>false</code>.</p>
 <p><strong>NOTE:</strong> For more information about scale bounds configuration per revision, see the documentation on <a href="../scale-bounds/">Configuring scale bounds</a>.</p>
