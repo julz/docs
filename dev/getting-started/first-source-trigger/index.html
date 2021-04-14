@@ -587,6 +587,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#creating-your-first-trigger" class="md-nav__link">
+    Creating your first Trigger
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2774,9 +2781,36 @@ Where <code>&lt;service-url&gt;</code> is the location where your Knative Servic
 </table>
 <p>Fill out the form with whatever you data you would like to and hit the "SEND EVENT" button.</p>
 <p>You should see this:
-<img alt="Screen Shot 2021-04-13 at 9 34 24 PM" src="https://user-images.githubusercontent.com/16281246/114641562-5504a400-9ca0-11eb-944a-13a2251b3488.png" /></p>
+<img alt="screencapture-cloudevents-player-default-127-0-0-1-nip-io-2021-04-14-07_42_26" src="https://user-images.githubusercontent.com/16281246/114704777-fcabc180-9cf4-11eb-8cd8-ae85ca32101e.png" /></p>
+<p>!!! tip Clicking the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></span> will show you the CloudEvent as the <code>Broker</code> sees it.</p>
 <p>The <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2 21 21-9L2 3v7l15 2-15 2v7z"/></svg></span> icon in the "Status" column implies that the event has been sent to our <code>Broker</code> which we specified through the environment variable <code>BROKER_URL</code>. But where has the event gone? Well, right now, nowhere!</p>
-<p>A <code>Broker</code> is simply a receptacle for events. In order for our events to be sent somewhere, we must create a <code>Trigger</code> which listens for our events.</p>
+<p>A <code>Broker</code> is simply a receptacle for events. In order for your events to be sent somewhere, you must create a <code>Trigger</code> which listens for your events and places them somewhere.</p>
+<h2 id="creating-your-first-trigger">Creating your first <code>Trigger</code><a class="headerlink" href="#creating-your-first-trigger" title="Permanent link">&para;</a></h2>
+<p>A <a href="../eventing/triggers/"><code>Trigger</code></a> represents a desire to subscribe to events from a specific broker.</p>
+<p>If, for example, you wanted to intake the CloudEvents our CloudEvents Player was emitting to our <code>Broker</code> you could create a <code>Trigger</code>, like so:</p>
+<p><div class="highlight"><pre><span></span><code>    kn trigger create cloudevents-player --sink cloudevents-player
+</code></pre></div>
+Notice that you specified a <code>Sink</code> in the creation of our <code>Trigger</code> which tells Knative where to put the Events this <code>Trigger</code> is listening for.</p>
+<p>You should see:
+<div class="highlight"><pre><span></span><code>Trigger <span class="s1">&#39;cloudevents-player&#39;</span> successfully created <span class="k">in</span> namespace <span class="s1">&#39;default&#39;</span>.
+</code></pre></div></p>
+<details class="question"><summary>What CloudEvents is my <code>Trigger</code> listening for?</summary><p>Since we didn't specify a <code>--filter</code> in our <code>kn</code> command, our Trigger is listening for any CloudEvents coming into the <code>Broker</code>.</p>
+</details>
+<p>Now, when we go back to the CloudEvents Player and send an Event, we see that CloudEvents are both sent and received:</p>
+<p><img alt="screencapture-cloudevents-player-default-127-0-0-1-nip-io-2021-04-14-07_39_08" src="https://user-images.githubusercontent.com/16281246/114704377-8909b480-9cf4-11eb-9db0-815223199b5b.png" /></p>
+<details class="question"><summary>What if I want to filter on CloudEvent attributes?</summary><p>First, delete your existing Trigger:
+<div class="highlight"><pre><span></span><code>  kn trigger delete cloudevents-player
+</code></pre></div>
+Now let's add a Trigger that listens for a certain CloudEvent Type
+<div class="highlight"><pre><span></span><code>  kn trigger create cloudevents-player --sink cloudevents-player --filter <span class="nv">type</span><span class="o">=</span>com.example
+</code></pre></div></p>
+<p>If you send a CloudEvent with type "com.example," it will be reflected in the CloudEvents Player UI. Any other types will be ignored by the <code>Trigger</code>.</p>
+<p>You can filter on any aspect of the CloudEvent you would like to.</p>
+</details>
+<p>In review, you have created a Knative Service (the CloudEvents Player) as your <code>Source</code> of CloudEvents which are sent through the <code>Broker</code>, routed by the <code>Trigger</code> and received by that same Knative Service which is <em>also</em> acting as a <code>Sink</code> for CloudEvents.</p>
+<details class="info"><summary>Architecture Diagram</summary><p>//TODO</p>
+</details>
+<p>Some people call this <strong>"Event-Driven Architecture"</strong> <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
                 
               
               
