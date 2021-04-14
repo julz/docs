@@ -181,11 +181,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
+  
+
   
 
       
@@ -378,9 +385,30 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Installing Knative
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Knative
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Getting Started with Knative
+        Installing Knative Serving and Eventing
       </a>
     </li>
   
@@ -397,6 +425,35 @@
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Getting Started with Knative Serving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Serving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -486,14 +543,71 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Getting Started with Knative Eventing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Eventing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-eventing/" class="md-nav__link">
-        Getting Started with Knative Eventing
+      <a href="../first-cloud-event/" class="md-nav__link">
+        Background and CloudEvents
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-broker/" class="md-nav__link">
+        Examining the Broker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-source-trigger/" class="md-nav__link">
+        Routing CloudEvents with Sources, Brokers and Triggers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2649,12 +2763,12 @@ Once you've edited your existing YAML file:
 </div>
 </div>
 <p>As before, Knative spits out some helpful information to the CLI:
-<div class="highlight"><pre><span></span><code>Service hello created to latest revision <span class="o">{</span>REVISION_NAME<span class="o">}</span> is available at URL:
-<span class="o">{</span>SERVICE_URL<span class="o">}</span>
+<div class="highlight"><pre><span></span><code>Service hello created to latest revision &lt;revision-name&gt; is available at URL:
+&lt;service-url&gt;
 </code></pre></div></p>
 <p>Notice, since we are updating an existing Knative Service, the URL doesn't change, but your <code>Revision</code> should have incremented by one (something like "hello-xxxxx-2").</p>
 <p>Let's ping our Knative Service again to see the change:
-<div class="highlight"><pre><span></span><code>curl $SERVICE_URL
+<div class="highlight"><pre><span></span><code>curl &lt;service-url&gt;
 </code></pre></div></p>
 <p><strong>The output should be:</strong>
 <div class="highlight"><pre><span></span><code>Hello Knative!
@@ -2708,10 +2822,10 @@ Once you've edited your existing YAML file:
 </code></pre></div></p>
 </div>
 </div>
-<p>Now when we curl our Service URL...
-<div class="highlight"><pre><span></span><code><span class="o">[</span>...<span class="o">]</span> curl SERVICE_URL
+<p>Now when we curl our Knative Service URL...
+<div class="highlight"><pre><span></span><code><span class="o">[</span>...<span class="o">]</span> curl &lt;service-url&gt;
 Hello Knative!
-<span class="o">[</span>...<span class="o">]</span> curl SERVICE_URL
+<span class="o">[</span>...<span class="o">]</span> curl &lt;service-url&gt;
 Hello world!
 </code></pre></div></p>
 <p>Congratulations, <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> you've successfully split traffic between 2 different <code>Revisions</code>. Up next, Knative Eventing!</p>
@@ -2752,13 +2866,13 @@ Hello world!
         </a>
       
       
-        <a href="../getting-started-eventing/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../first-cloud-event/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Getting Started with Knative Eventing
+              Background and CloudEvents
             </div>
           </div>
           <div class="md-footer__button md-icon">

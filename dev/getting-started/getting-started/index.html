@@ -18,7 +18,7 @@
     
     
       
-        <title>Getting Started with Knative - Knative</title>
+        <title>Installing Knative Serving and Eventing - Knative</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started with Knative
+              Installing Knative Serving and Eventing
             
           </span>
         </div>
@@ -181,11 +181,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
+  
+
   
 
       
@@ -380,6 +387,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Installing Knative
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Knative
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -388,12 +418,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Getting Started with Knative
+          Installing Knative Serving and Eventing
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Getting Started with Knative
+        Installing Knative Serving and Eventing
       </a>
       
         
@@ -410,8 +440,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#pre-requisites" class="md-nav__link">
+    Pre-Requisites
   </a>
   
 </li>
@@ -442,6 +472,33 @@
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Getting Started with Knative Serving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Serving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -479,14 +536,71 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Getting Started with Knative Eventing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Eventing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-eventing/" class="md-nav__link">
-        Getting Started with Knative Eventing
+      <a href="../first-cloud-event/" class="md-nav__link">
+        Background and CloudEvents
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-broker/" class="md-nav__link">
+        Examining the Broker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-source-trigger/" class="md-nav__link">
+        Routing CloudEvents with Sources, Brokers and Triggers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2611,7 +2725,7 @@
                 <h1 id="installing-knative-with-konk-knative-on-kind">Installing Knative with KonK (Knative on Kind)<a class="headerlink" href="#installing-knative-with-konk-knative-on-kind" title="Permanent link">&para;</a></h1>
 <p><strong>The fastest way to get started with Knative locally</strong> is to use the <a href= "https://konk.dev" target="blank_">Konk (Knative-on-kind) script.</a></p>
 <p>This script installs a local Knative deployment on your local machine's <code>Docker</code> daemon using <a href= "https://kind.sigs.k8s.io/" target="blank_">Kind</a>.</p>
-<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<h2 id="pre-requisites">Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>You will need to have <a href= "https://docs.docker.com/get-docker/" target="blank_">Docker installed</a>.</li>
 <li>You will need to have <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind installed</a>.</li>
@@ -2621,12 +2735,13 @@
 <div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
 </code></pre></div>
 </div>
-<details class="question"><summary>Need to upgrade Kind?</summary><div class="highlight"><pre><span></span><code>brew upgrade kind
+<details class="question"><summary>Need to upgrade Kind?</summary><p><div class="highlight"><pre><span></span><code>brew upgrade kind
 </code></pre></div>
+Or follow the "Kind" link in the Pre-Requisites above</p>
 </details>
 <h2 id="other-installation-options">Other Installation Options<a class="headerlink" href="#other-installation-options" title="Permanent link">&para;</a></h2>
 <ul>
-<li>If you would like to customize the Knative installation or install it on a remote cluster, start by <a href="./install/prerequisites.md">Checking the Pre-Requisites</a> then come back here to finish the remaining steps!</li>
+<li>If you would like to customize the Knative installation or install it on a remote cluster, start by <a href="../../install/prerequisites/">Checking the Pre-Requisites</a> then come back here to finish the remaining steps!</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>

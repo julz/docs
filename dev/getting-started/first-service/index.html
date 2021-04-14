@@ -181,11 +181,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
+  
+
   
 
       
@@ -378,9 +385,30 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Installing Knative
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Knative
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Getting Started with Knative
+        Installing Knative Serving and Eventing
       </a>
     </li>
   
@@ -397,6 +425,35 @@
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Getting Started with Knative Serving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Serving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -492,14 +549,71 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Getting Started with Knative Eventing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Eventing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-eventing/" class="md-nav__link">
-        Getting Started with Knative Eventing
+      <a href="../first-cloud-event/" class="md-nav__link">
+        Background and CloudEvents
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-broker/" class="md-nav__link">
+        Examining the Broker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-source-trigger/" class="md-nav__link">
+        Routing CloudEvents with Sources, Brokers and Triggers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2653,21 +2767,24 @@ Once you've created your YAML file (named something like "hello.yaml"):
 </code></pre></div></p>
 </div>
 </div>
-<h4 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h4>
+<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
 <p>After Knative has successfully created your service, you should see the following:
-<div class="highlight"><pre><span></span><code>Service hello created to latest revision <span class="o">{</span>REVISION_NAME<span class="o">}</span> is available at URL:
-<span class="o">{</span>SERVICE_URL<span class="o">}</span>
-</code></pre></div></p>
-<h4 id="testing-your-deployment">Testing your deployment<a class="headerlink" href="#testing-your-deployment" title="Permanent link">&para;</a></h4>
-<div class="highlight"><pre><span></span><code>curl $SERVICE_URL
+<div class="highlight"><pre><span></span><code>Service hello created to latest revision &lt;revision-name&gt; is available at URL:
+&lt;service-url&gt;
 </code></pre></div>
+Where <code>&lt;revision-name&gt;</code> is the name of the <code>Revision</code> you've just created (we'll talk more about these later).
+Where <code>&lt;service-url&gt;</code> is the URL where your Knative Service can be reached.</p>
+<h3 id="testing-your-deployment">Testing your deployment<a class="headerlink" href="#testing-your-deployment" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><pre><span></span><code>curl &lt;service-url&gt;
+</code></pre></div>
+Where <code>&lt;service-url&gt;</code> is the URL returned to you by the previous command.</p>
 <p><strong>The output should be:</strong>
 <div class="highlight"><pre><span></span><code>Hello world!
 </code></pre></div></p>
 <p>Congratulations <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" />, you've just created your first Knative Service!</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Hit <span class="keys"><kbd>n</kbd></span> on your keyboard to move forward in the tutorial. Use <span class="keys"><kbd>p</kbd></span> to go back at any time.</p>
+<p>Hit <span class="keys"><kbd>n</kbd></span> / <span class="keys"><kbd>.</kbd></span> on your keyboard to move forward in the tutorial. Use <span class="keys"><kbd>p</kbd></span> / <span class="keys"><kbd>,</kbd></span> to go back at any time.</p>
 </div>
                 
               

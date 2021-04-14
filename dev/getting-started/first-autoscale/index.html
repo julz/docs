@@ -181,11 +181,18 @@
   
   
   
+    
+
+  
+  
+  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
+  
+
   
 
       
@@ -378,9 +385,30 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      <label class="md-nav__link" for="__nav_2_1">
+        Installing Knative
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Installing Knative
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Getting Started with Knative
+        Installing Knative Serving and Eventing
       </a>
     </li>
   
@@ -397,6 +425,35 @@
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+      
+      <label class="md-nav__link" for="__nav_2_2">
+        Getting Started with Knative Serving
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Serving
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
           
             
   
@@ -468,14 +525,71 @@
   
 
           
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      <label class="md-nav__link" for="__nav_2_3">
+        Getting Started with Knative Eventing
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Getting Started with Knative Eventing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
             
   
   
   
     <li class="md-nav__item">
-      <a href="../getting-started-eventing/" class="md-nav__link">
-        Getting Started with Knative Eventing
+      <a href="../first-cloud-event/" class="md-nav__link">
+        Background and CloudEvents
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-broker/" class="md-nav__link">
+        Examining the Broker
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-source-trigger/" class="md-nav__link">
+        Routing CloudEvents with Sources, Brokers and Triggers
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -2603,8 +2717,9 @@
 <p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pods</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
 <h4 id="check-the-knative-pods">Check the Knative Pods<a class="headerlink" href="#check-the-knative-pods" title="Permanent link">&para;</a></h4>
 <p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser or by using <code>open</code> instead of <code>curl</code> in your CLI.
-<div class="highlight"><pre><span></span><code>open <span class="nv">$SERVICE_URL</span>
-</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>open &lt;service-url&gt;
+</code></pre></div>
+Where <code>&lt;service-url&gt;</code> is the URL where your Knative Service was deployed (same as the <code>&lt;service-url&gt;</code> in the last step).</p>
 <p>You can watch the pods and see how they scale down to zero after http traffic stops to the url
 <div class="highlight"><pre><span></span><code>kubectl get pod -l serving.knative.dev/service<span class="o">=</span>hello -w
 </code></pre></div></p>
