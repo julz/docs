@@ -2741,7 +2741,7 @@
                 
                 <h2 id="creating-your-first-source">Creating your first Source<a class="headerlink" href="#creating-your-first-source" title="Permanent link">&para;</a></h2>
 <p>Now that we have a <code>Broker</code>, let's send some CloudEvents to using a <code>Source</code>.</p>
-<p>A <code>Source</code> is Kubernetes customer resource (CR) that emits CloudEvents to a specified location (in our case, a <code>Broker</code>). Basically, a <code>Source</code> is exactly what it sounds like: it's a "source" of CloudEvents.</p>
+<p>A <code>Source</code> is a Kubernetes custom resource (CR) that emits CloudEvents to a specified location (in our case, a <code>Broker</code>). Basically, a <code>Source</code> is exactly what it sounds like: it's a "source" of CloudEvents.</p>
 <p>You can check the current state of sources in your deployment by running the following command:</p>
 <div class="highlight"><pre><span></span><code>    kn <span class="nb">source</span> list
 </code></pre></div>
@@ -2824,7 +2824,7 @@ Now let's add a Trigger that listens for a certain CloudEvent Type
 <p>In review, you have created a Knative Service (the CloudEvents Player) as your <code>Source</code> of CloudEvents which are sent through the <code>Broker</code>, routed by the <code>Trigger</code> and received by that same Knative Service which is <em>also</em> acting as a <code>Sink</code> for CloudEvents.</p>
 <details class="info"><summary>Architecture Diagram</summary><p>//TODO</p>
 </details>
-<p>Some people call this <strong>"Event-Driven Architecture"</strong> which can be used to create your own <strong>"Fucntions as a Service"</strong> on Kubernetes <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
+<p>Some people call this <strong>"Event-Driven Architecture"</strong> which can be used to create your own <strong>"Functions as a Service"</strong> on Kubernetes <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
                 
               
               
