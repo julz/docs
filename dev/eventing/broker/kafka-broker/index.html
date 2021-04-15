@@ -2851,12 +2851,12 @@ with Apache Kafka for the Knative Broker and Trigger model.</p>
 <ol>
 <li>
 <p>Install the Kafka controller by entering the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.20.0/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-controller.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Kafka Broker data plane by entering the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.20.0/eventing-kafka-broker.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-broker.yaml
 </code></pre></div>
 </li>
 <li>
@@ -3116,11 +3116,24 @@ kubectl rollout restart deployment -n knative-eventing kafka-broker-dispatcher
       </main>
       
         
+
+<!-- Footer -->
 <footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="Footer"
+    >
+
+      <!-- Link to previous page -->
       
-        <a href="../" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a
+          href="../"
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3134,8 +3147,14 @@ kubectl rollout restart deployment -n knative-eventing kafka-broker-dispatcher
           </div>
         </a>
       
+
+      <!-- Link to next page -->
       
-        <a href="../config-br-defaults/" class="md-footer__link md-footer__link--next" rel="next">
+        <a
+          href="../config-br-defaults/"
+          class="md-footer__link md-footer__link--next"
+          rel="next"
+        >
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -3151,20 +3170,30 @@ kubectl rollout restart deployment -n knative-eventing kafka-broker-dispatcher
       
     </nav>
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         
         Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a
+          href="https://squidfunk.github.io/mkdocs-material/"
+          target="_blank" rel="noopener"
+        >
           Material for MkDocs
         </a>
         
       </div>
+
+      <!-- Social links -->
       
     </div>
   </div>
 </footer>
+
       
     </div>
     <div class="md-dialog" data-md-component="dialog">

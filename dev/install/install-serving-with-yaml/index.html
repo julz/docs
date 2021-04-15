@@ -2772,12 +2772,12 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 <ol>
 <li>
 <p>Install the required custom resources:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-crds.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-crds.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the core components of Knative Serving:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-core.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-core.yaml
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2797,7 +2797,7 @@ Follow the procedure for the networking layer of your choice:</p>
 <ol>
 <li>
 <p>Install the Knative Kourier controller:
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-kourier/releases/download/v0.20.0/kourier.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-kourier/releases/download/v0.21.0/kourier.yaml
 </code></pre></div></p>
 </li>
 <li>
@@ -2869,13 +2869,13 @@ Follow the procedure for the networking layer of your choice:</p>
 <ol>
 <li>
 <p>Install a properly configured Contour:</p>
-<p><div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/contour.yaml
+<p><div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.21.0/contour.yaml
 </code></pre></div>
     <!-- TODO(https://github.com/knative-sandbox/net-contour/issues/11): We need a guide on how to use/modify a pre-existing install. --></p>
 </li>
 <li>
 <p>Install the Knative Contour controller:
-  <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.20.0/net-contour.yaml
+  <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.21.0/net-contour.yaml
 </code></pre></div></p>
 </li>
 <li>
@@ -2935,12 +2935,12 @@ in the Gloo documentation.</em></p>
 <ol>
 <li>
 <p>Install a properly configured Istio (<a href="../installing-istio/">Advanced installation</a>)</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.20.0/istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.21.0/istio.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Knative Istio controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.20.0/net-istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.21.0/net-istio.yaml
 </code></pre></div>
 </li>
 <li>
@@ -2998,7 +2998,7 @@ Follow the procedure for the DNS of your choice:</p>
 <p>We ship a simple Kubernetes Job called "default domain" that will (see caveats)
 configure Knative Serving to use <a href="http://xip.io">xip.io</a> as the
 default DNS suffix.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.20.0/serving-default-domain.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-default-domain.yaml
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">CAVEAT</p>
@@ -3114,11 +3114,24 @@ should, using the default configuration, be:</p>
       </main>
       
         
+
+<!-- Footer -->
 <footer class="md-footer">
+
+  <!-- Link to previous and/or next page -->
   
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="Footer"
+    >
+
+      <!-- Link to previous page -->
       
-        <a href="../prerequisites/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a
+          href="../prerequisites/"
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -3132,8 +3145,14 @@ should, using the default configuration, be:</p>
           </div>
         </a>
       
+
+      <!-- Link to next page -->
       
-        <a href="../install-eventing-with-yaml/" class="md-footer__link md-footer__link--next" rel="next">
+        <a
+          href="../install-eventing-with-yaml/"
+          class="md-footer__link md-footer__link--next"
+          rel="next"
+        >
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
@@ -3149,20 +3168,30 @@ should, using the default configuration, be:</p>
       
     </nav>
   
+
+  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
+
+      <!-- Copyright and theme information -->
       <div class="md-footer-copyright">
         
         Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+        <a
+          href="https://squidfunk.github.io/mkdocs-material/"
+          target="_blank" rel="noopener"
+        >
           Material for MkDocs
         </a>
         
       </div>
+
+      <!-- Social links -->
       
     </div>
   </div>
 </footer>
+
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
