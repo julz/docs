@@ -8,11 +8,11 @@ But a `Broker` can't do this work alone, `Triggers` help to filter the CloudEven
 ## Examining the Broker
 As part of the `KonK` install, you should have an In-Memory `Broker` already installed (also known as an MT-Channel-based `Broker`). Let's check to see some of the details of the `Broker` that was created using `kn`:
 ```bash
-    kn broker list
+kn broker list
 ```
 
 You should get:
-```bash
+```{ .optional-language-as-class .no-copy }
 NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
 default   <broker-url>                                                               5m    5 OK / 5     True    
 ```
