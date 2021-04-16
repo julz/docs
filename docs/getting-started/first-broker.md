@@ -12,7 +12,7 @@ kn broker list
 ```
 
 You should get:
-```{ .optional-language-as-class .no-copy }
+```{ .bash .no-copy }
 NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
 default   <broker-url>                                                               5m    5 OK / 5     True    
 ```

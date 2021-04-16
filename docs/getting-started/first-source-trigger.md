@@ -10,7 +10,7 @@ kn source list
 ```
 
 You should get:
-```{ .optional-language-as-class .no-copy }
+```{ .bash .no-copy }
 No sources found.
 ```
 
@@ -23,7 +23,7 @@ kn service create cloudevents-player \
 Where `<broker-url>` is the URL of your In-Memory Broker which we discovered in the previous step.
 
 You should get:
-```{ .optional-language-as-class .no-copy }
+```{ .bash .no-copy }
 ... 'cloudevents-player-xxxxx-``' is available at URL: <service-url>
 ```
 Where `<service-url>` is the location where your Knative Service is hosted.
@@ -63,7 +63,7 @@ kn trigger create cloudevents-player --sink cloudevents-player
 Notice that you specified a `Sink` in the creation of our `Trigger` which tells Knative where to put the Events this `Trigger` is listening for.
 
 You should see:
-```{ .optional-language-as-class .no-copy }
+```{ .bash .no-copy }
 Trigger 'cloudevents-player' successfully created in namespace 'default'.
 ```
 
