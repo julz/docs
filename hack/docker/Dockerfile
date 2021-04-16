@@ -1,2 +1,2 @@
-FROM quay.io/cloudnativetoolkit/mkdocs
+FROM squidfunk/mkdocs-material
 RUN pip install --no-cache-dir mkdocs-macros-plugin

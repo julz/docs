@@ -4,16 +4,16 @@
 
 Build the container image
 ```bash
-./dev/build.sh
+./hack/docker/build.sh
 ```
 
 Run the livereload site
 ```bash
-./dev/run.sh
+./hack/docker/run.sh
 ```
 
 Remove the container
 ```bash
-./dev/clean.sh
+./hack/docker/clean.sh
 ```
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-IMAGE=${$1:-mkdocs}
+IMAGE=${1:-mkdocs}
 
 
 SCRIPT_DIR=$(cd $(dirname $0); pwd -P)
