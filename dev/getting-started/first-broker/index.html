@@ -2738,10 +2738,10 @@
 <p>But a <code>Broker</code> can't do this work alone, <code>Triggers</code> help to filter the CloudEvents to the correct place but more on that later.</p>
 <h2 id="examining-the-broker">Examining the Broker<a class="headerlink" href="#examining-the-broker" title="Permanent link">&para;</a></h2>
 <p>As part of the <code>KonK</code> install, you should have an in-memory <code>Broker</code> already installed.
-<div class="highlight"><pre><span></span><code>    kn broker list
+<div class="highlight"><pre><span></span><code>kn broker list
 </code></pre></div></p>
 <p>You should get:
-<div class="highlight"><pre><span></span><code>NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
+<div class="no-copy highlight"><pre><span></span><code>NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
 default   &lt;broker-url&gt;                                                               5m    <span class="m">5</span> OK / <span class="m">5</span>     True    
 </code></pre></div>
 Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>.</p>

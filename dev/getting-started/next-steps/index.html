@@ -2698,6 +2698,61 @@
                 
                 <h1 id="next-steps">Next Steps<a class="headerlink" href="#next-steps" title="Permanent link">&para;</a></h1>
 <p>//TODO </p>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Test</label><div class="tabbed-content">
+<h1 id="installing-the-knative-cli">Installing the Knative CLI<a class="headerlink" href="#installing-the-knative-cli" title="Permanent link">&para;</a></h1>
+<h2 id="recommended-kn">(Recommended) <code>kn</code><a class="headerlink" href="#recommended-kn" title="Permanent link">&para;</a></h2>
+<p><strong>The Knative CLI provides a quick and easy interface for creating Knative resources</strong> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
+<div class="admonition example">
+<p class="admonition-title">Installing the <code>kn</code> CLI</p>
+<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Using Homebrew</label><div class="tabbed-content">
+<p>For macOS, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.</p>
+<div class="highlight"><pre><span></span><code>brew install knative/client/kn
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Using a binary</label><div class="tabbed-content">
+<p>You can install <code>kn</code> by downloading the executable binary for your system and placing it in the system path.</p>
+<p>A link to the latest stable binary release is available on the <a href="https://github.com/knative/client/releases" target="_blank"><code>kn</code> release page</a>.</p>
+</div>
+<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Installing kn using Go</label><div class="tabbed-content">
+<ol>
+<li>
+<p>Check out the <code>kn</code> client repository:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/knative/client.git
+cd client/
+</code></pre></div>
+</li>
+<li>
+<p>Build an executable binary:</p>
+<div class="highlight"><pre><span></span><code>hack/build.sh -f
+</code></pre></div>
+</li>
+<li>
+<p>Move <code>kn</code> into your system path, and verify that <code>kn</code> commands are working properly. For example:</p>
+<div class="highlight"><pre><span></span><code>kn version
+</code></pre></div>
+</li>
+</ol>
+</div>
+<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Running kn using container images</label><div class="tabbed-content">
+<p><strong>WARNING:</strong> Nightly container images include features which may not be included in the latest Knative release and are not considered to be stable.</p>
+<p>Links to images are available here:</p>
+<ul>
+<li><a href="https://gcr.io/knative-releases/knative.dev/client/cmd/kn" target="_blank">Latest release</a></li>
+<li><a href="https://gcr.io/knative-nightly/knative.dev/client/cmd/kn" target="_blank">Nightly container image</a></li>
+</ul>
+<p>You can run <code>kn</code> from a container image. For example:</p>
+<div class="highlight"><pre><span></span><code>docker run --rm -v &quot;$HOME/.kube/config:/root/.kube/config&quot; gcr.io/knative-releases/knative.dev/client/cmd/kn:latest service list
+</code></pre></div>
+<p><strong>NOTE:</strong> Running <code>kn</code> from a container image does not place the binary on a permanent path. This procedure must be repeated each time you want to use <code>kn</code>.</p>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more complex installations, such as nightly releases, see <a href="../../client/install-kn/">Install <code>kn</code></a></p>
+</div>
+</div>
+</div>
                 
                   
                 

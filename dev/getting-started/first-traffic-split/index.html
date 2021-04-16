@@ -2771,7 +2771,7 @@ Once you've edited your existing YAML file:
 </div>
 </div>
 <p>As before, Knative spits out some helpful information to the CLI:
-<div class="highlight"><pre><span></span><code>Service hello created to latest revision <span class="s1">&#39;hello-knative&#39;</span> is available at URL:
+<div class="no-copy highlight"><pre><span></span><code>Service hello created to latest revision <span class="s1">&#39;hello-knative&#39;</span> is available at URL:
 &lt;service-url&gt;
 </code></pre></div></p>
 <p>Note, since we are updating an existing Knative Service, the URL doesn't change, but your new <code>Revision</code> should have the new name "hello-knative"</p>
@@ -2779,7 +2779,7 @@ Once you've edited your existing YAML file:
 <div class="highlight"><pre><span></span><code>curl &lt;service-url&gt;
 </code></pre></div></p>
 <p><strong>The output should be:</strong>
-<div class="highlight"><pre><span></span><code>Hello Knative!
+<div class="no-copy highlight"><pre><span></span><code>Hello Knative!
 </code></pre></div></p>
 <h2 id="splitting-traffic-between-revisions">Splitting Traffic between Revisions<a class="headerlink" href="#splitting-traffic-between-revisions" title="Permanent link">&para;</a></h2>
 <p>You may at this point be wondering, "where did 'Hello world!' go?" <code>Revisions</code> are a stateless snapshot-in-time of application code and configuration so your "hello-world" <code>Revision</code> is still available to you.</p>
@@ -2795,7 +2795,7 @@ Once you've edited your existing YAML file:
 <p><strong>The output should be:</strong></p>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code>NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
+<div class="no-copy highlight"><pre><span></span><code>NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
 hello-knative   hello     <span class="m">100</span>%             <span class="m">2</span>            30s   <span class="m">3</span> OK / <span class="m">4</span>     True    
 hello-world     hello                      <span class="m">1</span>            5m    <span class="m">3</span> OK / <span class="m">4</span>     True    
 </code></pre></div>
@@ -2826,9 +2826,10 @@ Once you've edited your existing YAML file:
 </div>
 </div>
 <p>Now when we curl our Knative Service URL...
-<div class="highlight"><pre><span></span><code>      curl &lt;service-url&gt;
+<div class="no-copy highlight"><pre><span></span><code>curl &lt;service-url&gt;
 Hello Knative!
-      curl &lt;service-url&gt;
+
+curl &lt;service-url&gt;
 Hello world!
 </code></pre></div></p>
 <p>Congratulations, <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> you've successfully split traffic between 2 different <code>Revisions</code>. Up next, Knative Eventing!</p>

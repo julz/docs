@@ -2743,19 +2743,19 @@
 <p>Now that we have a <code>Broker</code>, let's send some CloudEvents to using a <code>Source</code>.</p>
 <p>A <code>Source</code> is a Kubernetes custom resource (CR) that emits CloudEvents to a specified location (in our case, a <code>Broker</code>). Basically, a <code>Source</code> is exactly what it sounds like: it's a "source" of CloudEvents.</p>
 <p>You can check the current state of sources in your deployment by running the following command:</p>
-<div class="highlight"><pre><span></span><code>    kn <span class="nb">source</span> list
+<div class="highlight"><pre><span></span><code>kn <span class="nb">source</span> list
 </code></pre></div>
 <p>You should get:
-<div class="highlight"><pre><span></span><code>    No sources found.
+<div class="no-copy highlight"><pre><span></span><code>No sources found.
 </code></pre></div></p>
 <p>You haven't deployed any <code>Sources</code> to your Knative deployment, so there shouldn't be any present when <code>kn</code> checks for them. <strong>Let's remedy this by creating our first Knative <code>Source</code>.</strong>
-<div class="highlight"><pre><span></span><code>    kn service create cloudevents-player <span class="se">\</span>
-    --image ruromero/cloudevents-player:latest <span class="se">\</span>
-    --env <span class="nv">BROKER_URL</span><span class="o">=</span>&lt;broker-url&gt;
+<div class="highlight"><pre><span></span><code>kn service create cloudevents-player <span class="se">\</span>
+--image ruromero/cloudevents-player:latest <span class="se">\</span>
+--env <span class="nv">BROKER_URL</span><span class="o">=</span>&lt;broker-url&gt;
 </code></pre></div>
 Where <code>&lt;broker-url&gt;</code> is the URL of your In-Memory Broker which we discovered in the previous step.</p>
 <p>You should get:
-<div class="highlight"><pre><span></span><code>    ... <span class="s1">&#39;cloudevents-player-xxxxx-``&#39;</span> is available at URL: &lt;service-url&gt;
+<div class="no-copy highlight"><pre><span></span><code>... <span class="s1">&#39;cloudevents-player-xxxxx-``&#39;</span> is available at URL: &lt;service-url&gt;
 </code></pre></div>
 Where <code>&lt;service-url&gt;</code> is the location where your Knative Service is hosted.</p>
 <p>The <a href="https://github.com/ruromero/cloudevents-player">CloudEvents Player</a> is a very useful web app that we can use to send and receive CloudEvents. If you open this url in your browser, you should be greeted by a slick UI which includes a form titled "Create Event."</p>
@@ -2802,11 +2802,11 @@ Where <code>&lt;service-url&gt;</code> is the location where your Knative Servic
 <h2 id="creating-your-first-trigger">Creating your first <code>Trigger</code><a class="headerlink" href="#creating-your-first-trigger" title="Permanent link">&para;</a></h2>
 <p>A <a href="../eventing/triggers/"><code>Trigger</code></a> represents a desire to subscribe to events from a specific broker.</p>
 <p>If, for example, you wanted to intake the CloudEvents our CloudEvents Player was emitting to our <code>Broker</code> you could create a <code>Trigger</code>, like so:</p>
-<p><div class="highlight"><pre><span></span><code>    kn trigger create cloudevents-player --sink cloudevents-player
+<p><div class="highlight"><pre><span></span><code>kn trigger create cloudevents-player --sink cloudevents-player
 </code></pre></div>
 Notice that you specified a <code>Sink</code> in the creation of our <code>Trigger</code> which tells Knative where to put the Events this <code>Trigger</code> is listening for.</p>
 <p>You should see:
-<div class="highlight"><pre><span></span><code>Trigger <span class="s1">&#39;cloudevents-player&#39;</span> successfully created <span class="k">in</span> namespace <span class="s1">&#39;default&#39;</span>.
+<div class="no-copy highlight"><pre><span></span><code>Trigger <span class="s1">&#39;cloudevents-player&#39;</span> successfully created <span class="k">in</span> namespace <span class="s1">&#39;default&#39;</span>.
 </code></pre></div></p>
 <details class="question"><summary>What CloudEvents is my <code>Trigger</code> listening for?</summary><p>Since we didn't specify a <code>--filter</code> in our <code>kn</code> command, our Trigger is listening for any CloudEvents coming into the <code>Broker</code>.</p>
 </details>
