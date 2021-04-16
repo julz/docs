@@ -467,7 +467,7 @@
   
     <li class="md-nav__item">
       <a href="../install-cli/" class="md-nav__link">
-        Installing a CLI
+        Installing the Knative CLI
       </a>
     </li>
   
@@ -2740,7 +2740,18 @@
 <h2 id="pre-requisites">Pre-Requisites<a class="headerlink" href="#pre-requisites" title="Permanent link">&para;</a></h2>
 <ul>
 <li>You will need to have <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind installed</a>.</li>
+<li>You will need to have <code>kubectl</code> installed.</li>
 </ul>
+<details class="todo"><summary>Installing the <code>kubectl</code> CLI</summary><div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
+<p>If you are on macOS and using <a href="brew.sh">Homebrew</a> package manager, you can install kubectl with Homebrew.
+<div class="highlight"><pre><span></span><code>brew install kubectl
+</code></pre></div></p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">From the Kubernetes Website</label><div class="tabbed-content">
+<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">Install and Set Up <code>kubectl</code></a>.</p>
+</div>
+</div>
+</details>
 <div class="admonition success">
 <p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
 <div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
@@ -2820,7 +2831,7 @@ Or follow the "Kind" link in the Pre-Requisites above</p>
               <span class="md-footer__direction">
                 Next
               </span>
-              Installing a CLI
+              Installing the Knative CLI
             </div>
           </div>
           <div class="md-footer__button md-icon">

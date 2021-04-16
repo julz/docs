@@ -18,7 +18,7 @@
     
     
       
-        <title>Installing a CLI - Knative</title>
+        <title>Installing the Knative CLI - Knative</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-a-command-line-interface-cli-tools" class="md-skip">
+        <a href="#installing-the-knative-cli" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing a CLI
+              Installing the Knative CLI
             
           </span>
         </div>
@@ -430,12 +430,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installing a CLI
+          Installing the Knative CLI
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installing a CLI
+        Installing the Knative CLI
       </a>
       
         
@@ -450,13 +450,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#required-kubectl" class="md-nav__link">
-    (Required) kubectl
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#recommended-kn" class="md-nav__link">
@@ -2734,35 +2727,21 @@
                   </a>
                 
                 
-                <h1 id="installing-a-command-line-interface-cli-tools">Installing a Command Line Interface (CLI) Tools<a class="headerlink" href="#installing-a-command-line-interface-cli-tools" title="Permanent link">&para;</a></h1>
-<h2 id="required-kubectl">(Required) kubectl<a class="headerlink" href="#required-kubectl" title="Permanent link">&para;</a></h2>
-<p>You can use <code>kubectl</code> to apply the YAML files required to install Knative components, and also to create Knative resources, such as Knative Services and event sources using YAML.</p>
-<div class="admonition example">
-<p class="admonition-title">Installing the <code>kubectl</code> CLI</p>
-<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
-<p>If you are on macOS and using <a href="brew.sh">Homebrew</a> package manager, you can install kubectl with Homebrew.
-<div class="highlight"><pre><span></span><code>brew install kubectl
-</code></pre></div></p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">From the Kubernetes Website</label><div class="tabbed-content">
-<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">Install and Set Up <code>kubectl</code></a>.</p>
-</div>
-</div>
-</div>
-<h2 id="recommended-kn">(Recommended) kn<a class="headerlink" href="#recommended-kn" title="Permanent link">&para;</a></h2>
-<p><strong><code>kn</code> provides a quick and easy interface for creating Knative resources</strong> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
+                <h1 id="installing-the-knative-cli">Installing the Knative CLI<a class="headerlink" href="#installing-the-knative-cli" title="Permanent link">&para;</a></h1>
+<h2 id="recommended-kn">(Recommended) <code>kn</code><a class="headerlink" href="#recommended-kn" title="Permanent link">&para;</a></h2>
+<p><strong>The Knative CLI provides a quick and easy interface for creating Knative resources</strong> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
 <div class="admonition example">
 <p class="admonition-title">Installing the <code>kn</code> CLI</p>
-<div class="tabbed-set" data-tabs="2:4"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Using Homebrew</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
 <p>For macOS, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.</p>
 <div class="highlight"><pre><span></span><code>brew install knative/client/kn
 </code></pre></div>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Using a binary</label><div class="tabbed-content">
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Using a binary</label><div class="tabbed-content">
 <p>You can install <code>kn</code> by downloading the executable binary for your system and placing it in the system path.</p>
 <p>A link to the latest stable binary release is available on the <a href="https://github.com/knative/client/releases" target="_blank"><code>kn</code> release page</a>.</p>
 </div>
-<input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Installing kn using Go</label><div class="tabbed-content">
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Installing kn using Go</label><div class="tabbed-content">
 <ol>
 <li>
 <p>Check out the <code>kn</code> client repository:</p>
@@ -2782,7 +2761,7 @@ cd client/
 </li>
 </ol>
 </div>
-<input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Running kn using container images</label><div class="tabbed-content">
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Running kn using container images</label><div class="tabbed-content">
 <p><strong>WARNING:</strong> Nightly container images include features which may not be included in the latest Knative release and are not considered to be stable.</p>
 <p>Links to images are available here:</p>
 <ul>

@@ -420,7 +420,7 @@
   
     <li class="md-nav__item">
       <a href="../install-cli/" class="md-nav__link">
-        Installing a CLI
+        Installing the Knative CLI
       </a>
     </li>
   
@@ -2733,18 +2733,18 @@
                   <h1>Examining the Broker</h1>
                 
                 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>In the previous step, we talked a bit about CloudEvents and their role in Knative, specifically their ability to transport bits of information within our Knative deployment. But how does a CloudEvent get where it needs to go? If you "emit" (produce) a CloudEvent, how can you ensure that it arrives at its destination?</p>
+<p>In the previous step, we talked a bit about CloudEvents and their role in Knative, specifically their ability to transport bits of information within our Knative deployment. If one of your Knative Services produces a CloudEvent, how can you ensure that it arrives at its destination?</p>
 <p>That's where <code>Brokers</code> come in. <code>Brokers</code> are a fault-tolerant way to intake CloudEvents from <code>Sources</code> (which emit CloudEvents) and send them to the correct <code>Sink</code> (which consume CloudEvents).</p>
-<p>But a <code>Broker</code> can't do this work alone, <code>Triggers</code> help to filter the CloudEvents to the correct place (but more on that later).</p>
+<p>But a <code>Broker</code> can't do this work alone, <code>Triggers</code> help to filter the CloudEvents to the correct place but more on that later.</p>
 <h2 id="examining-the-broker">Examining the Broker<a class="headerlink" href="#examining-the-broker" title="Permanent link">&para;</a></h2>
-<p>As part of the <code>KonK</code> install, you should have an In-Memory <code>Broker</code> already installed (also known as an MT-Channel-based <code>Broker</code>). Let's check to see some of the details of the <code>Broker</code> that was created using <code>kn</code>:
+<p>As part of the <code>KonK</code> install, you should have an in-memory <code>Broker</code> already installed.
 <div class="highlight"><pre><span></span><code>    kn broker list
 </code></pre></div></p>
 <p>You should get:
 <div class="highlight"><pre><span></span><code>NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
 default   &lt;broker-url&gt;                                                               5m    <span class="m">5</span> OK / <span class="m">5</span>     True    
 </code></pre></div>
-Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>. (You'll need this later!)</p>
+Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In-Memory Brokers are for development use only and must not be used in a production deployment.</p>
