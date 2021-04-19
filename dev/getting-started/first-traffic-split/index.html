@@ -2817,10 +2817,12 @@ Once you've edited your existing YAML file:
 </div>
 </div>
 <p>Now when we curl our Knative Service URL...
-```{ .bash .no-copy }
+<div class="no-copy highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
+Hello Knative!
+
 curl http://hello.default.127.0.0.1.nip.io
-Hello Knative!</p>
-<p>curl http://hello.default.127.0.0.1.nip.io</p>
+Hello World!
+</code></pre></div></p>
 <p>Congratulations, <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> you've successfully split traffic between 2 different <code>Revisions</code>. Up next, Knative Eventing!</p>
                 
               
