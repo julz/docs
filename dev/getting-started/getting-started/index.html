@@ -444,6 +444,26 @@
     Before you begin
   </a>
   
+    <nav class="md-nav" aria-label="Before you begin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-kind" class="md-nav__link">
+    Install Kind.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-kubectl" class="md-nav__link">
+    Install kubectl
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2724,31 +2744,46 @@
                 
                 <h1 id="installing-knative-with-konk-knative-on-kind">Installing Knative with KonK (Knative on Kind)<a class="headerlink" href="#installing-knative-with-konk-knative-on-kind" title="Permanent link">&para;</a></h1>
 <h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
-<ul>
-<li>You will need to have <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind installed</a>.</li>
-</ul>
-<details class="todo"><summary>Installing Kind</summary><div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
+<h3 id="install-kind">Install <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind</a>.<a class="headerlink" href="#install-kind" title="Permanent link">&para;</a></h3>
+<details class="todo" open="open"><summary>Installing Kind</summary><div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">macOS</label><div class="tabbed-content">
+<p>Use Homebrew
 <div class="highlight"><pre><span></span><code>brew install kind
 </code></pre></div>
+Or
+<div class="highlight"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-darwin-amd64
+</code></pre></div></p>
 </div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Upgrade Kind using Homebrew</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>brew upgrade kind
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /some-dir-in-your-PATH/kind
 </code></pre></div>
 </div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">From the Kind website</label><div class="tabbed-content">
-<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for other installation options.</p>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Windows</label><div class="tabbed-content">
+<p><div class="highlight"><pre><span></span><code>curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.10.0/kind-windows-amd64
+Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
+</code></pre></div>
+Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
 </div>
 </div>
 </details>
-<ul>
-<li>You will need to have <code>kubectl</code> installed.</li>
-</ul>
-<details class="todo"><summary>Installing the <code>kubectl</code> CLI</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Using Homebrew</label><div class="tabbed-content">
+<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for other installation options.</p>
+<details class="question"><summary>Need to upgrade Kind?</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Upgrade Kind using Homebrew</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>brew upgrade kind
+</code></pre></div>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Other Upgrade Options</label><div class="tabbed-content">
+<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for other upgrade options.</p>
+</div>
+</div>
+</details>
+<h3 id="install-kubectl">Install <code>kubectl</code><a class="headerlink" href="#install-kubectl" title="Permanent link">&para;</a></h3>
+<details class="todo" open="open"><summary>Installing the <code>kubectl</code> CLI</summary><div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Using Homebrew</label><div class="tabbed-content">
 <p>If you are on macOS and using <a href="http://brew.sh">Homebrew</a> package manager, you can install kubectl with Homebrew.
 <div class="highlight"><pre><span></span><code>brew install kubectl
 </code></pre></div></p>
 </div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">From the Kubernetes website</label><div class="tabbed-content">
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">From the Kubernetes website</label><div class="tabbed-content">
 <p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">the Kubernetes docs</a> for other installation options.</p>
 </div>
 </div>

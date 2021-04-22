@@ -2717,9 +2717,8 @@
 <p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pods</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
 <h4 id="check-the-knative-pods">Check the Knative Pods<a class="headerlink" href="#check-the-knative-pods" title="Permanent link">&para;</a></h4>
 <p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser or by using <code>open</code> instead of <code>curl</code> in your CLI.
-<div class="highlight"><pre><span></span><code>open &lt;service-url&gt;
-</code></pre></div>
-Where <code>&lt;service-url&gt;</code> is the URL where your Knative Service was deployed (same as the <code>&lt;service-url&gt;</code> in the last step).</p>
+<div class="highlight"><pre><span></span><code>open http://hello.default.127.0.0.1.nip.io
+</code></pre></div></p>
 <p>You can watch the pods and see how they scale down to zero after http traffic stops to the url
 <div class="highlight"><pre><span></span><code>kubectl get pod -l serving.knative.dev/service<span class="o">=</span>hello -w
 </code></pre></div></p>
