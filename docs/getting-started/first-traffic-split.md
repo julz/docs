@@ -5,7 +5,7 @@ Splitting traffic is useful for a number of very common modern infrastructure ne
 
 You may have noticed that when your Knative Service was created, Knative returned both a URL and a 'latest revision' for your Knative Service. But what happens if you make a change to your Service?
 
-??? question "What is a `Revisions`?""
+??? question "What is a `Revision`?""
     You can think of a `Revision` as a stateless, autoscaling snapshot-in-time of application code and configuration. A new `Revision` will get created each and every time you make changes to your Knative Service. Knative Serving splits traffic between different `Revisions` of your Knative Service.
 
 
@@ -118,6 +118,8 @@ By default, when Knative creates a brand new `Revision` it directs 100% of traff
     ``` bash
     kubectl apply -f hello.yaml
     ```
+
+
 
 Now when we curl our Knative Service URL...
 ```{ .bash .no-copy }
