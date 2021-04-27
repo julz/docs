@@ -11,7 +11,7 @@ For those of you familiar with other **source-to-url** tools, this may seem fami
     kn service create hello \
     --image gcr.io/knative-samples/helloworld-go \
     --port 8080 \
-    --env TARGET=world \
+    --env TARGET=World \
     --revision-name=world
     ```
 
@@ -24,6 +24,8 @@ For those of you familiar with other **source-to-url** tools, this may seem fami
       name: hello
     spec:
       template:
+        metadata:
+          name: world
         spec:
           containers:
             - image: gcr.io/knative-samples/helloworld-go
@@ -31,7 +33,7 @@ For those of you familiar with other **source-to-url** tools, this may seem fami
                 - containerPort: 8080
               env:
                 - name: TARGET
-                  value: "world"
+                  value: "World"
     ```
     Once you've created your YAML file (named something like "hello.yaml"):
     ``` bash
@@ -54,7 +56,7 @@ curl http://hello.default.127.0.0.1.nip.io
 
 **The output should be:**
 ```{ .bash .no-copy }
-Hello world!
+Hello World!
 ```
 
 Congratulations :tada:, you've just created your first Knative Service!
