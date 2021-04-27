@@ -1,15 +1,14 @@
-# Installing Knative with KonK (Knative on Kind) and `kn`
+# Installing Knative and CLI
 
-## Installing Knative on Kind (KonK)
-==**The fastest way to get started with Knative locally** is to use the <a href= "https://konk.dev" target="blank_">Konk (Knative-on-kind) script.</a>==
+## Installing Knative (sandbox)
+==**The fastest way to get started with Knative locally** is to use [kind](https://kind.sigs.k8s.io/){target=_blank}==
 
 !!! todo "Install Knative and Kubernetes on a local Docker Daemon using Konk"
     ```
     curl -sL install.konk.dev | bash
     ```
 
-??? question "What does the KonK script actually do?"
-    Knative on Kind (KonK) is a shell script which:
+??? question "What does the script actually do?"
 
       1. Checks to see that you have Kind installed and creates a Cluster called "knative" via **[`01-kind.sh`](https://github.com/csantanapr/knative-kind/blob/master/01-kind.sh)**
 
