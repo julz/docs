@@ -172,7 +172,6 @@ theme:
     - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
-    - toc.integrate
 
 plugins:
   - search
