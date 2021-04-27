@@ -40,21 +40,21 @@ For those of you familiar with other **source-to-url** tools, this may seem fami
     kubectl apply -f hello.yaml
     ```
 
-### Expected Output
 After Knative has successfully created your service, you should see the following:
-```bash{ .bash .no-copy }
-Service hello created to latest revision 'hello-world' is available at URL: http://hello.default.127.0.0.1.nip.io
+```{ .bash .no-copy }
+Service hello created to latest revision 'hello-world' is available at URL:
+http://hello.default.127.0.0.1.nip.io
 ```
 
-Note that the name "world" which you passed in as "revision-name" is being used to create the `Revision`'s name "hello-world" (we'll talk more about `Revisions` later).
+??? question "Why did I pass in `revision-name`?"
+    Note that the name "world" which you passed in as "revision-name" is being used to create the `Revision`'s name (`latest revision "hello-world"...`). This will help you to more easily identify this particular `Revision`, but don't worry, we'll talk more about `Revisions` later.
 
-### Testing your deployment
-
+### Test your Knative Service
 ```
 curl http://hello.default.127.0.0.1.nip.io
 ```
 
-**The output should be:**
+### Expected Output
 ```{ .bash .no-copy }
 Hello World!
 ```
