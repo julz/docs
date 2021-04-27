@@ -13,10 +13,10 @@ nav:
         - Before you begin: getting-started/getting-started.md
         - Installing Knative: getting-started/install-konk-and-cli.md
         - Getting Started with Serverless:
-          - Deploying your first Knative Service: getting-started/first-service.md
+          - First Knative Service: getting-started/first-service.md
           - Scaling to Zero: getting-started/first-autoscale.md
           - Traffic Splitting: getting-started/first-traffic-split.md
-        - Getting Started with Event-Driven Applications:
+        - Getting Started with Event-Driven Apps:
           - Background and CloudEvents: getting-started/first-cloud-event.md
           - Examining the Broker: getting-started/first-broker.md
           - Routing CloudEvents with Sources, Brokers and Triggers: getting-started/first-source-trigger.md
