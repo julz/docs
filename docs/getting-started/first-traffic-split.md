@@ -21,7 +21,7 @@ Instead of "world," let's have our Knative Service "hello" greet "Knative." You 
     ```
 
 === "YAML"
-    //TODO Update revision name
+
     ``` bash
     apiVersion: serving.knative.dev/v1
     kind: Service
@@ -29,6 +29,8 @@ Instead of "world," let's have our Knative Service "hello" greet "Knative." You 
       name: hello
     spec:
       template:
+        metadata:
+          name: knative
         spec:
           containers:
             - image: gcr.io/knative-samples/helloworld-go

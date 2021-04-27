@@ -4,7 +4,7 @@
 
 
 #### Check the Knative Pods
-Let's run our "Hello world!" Service just one more time. This time, try the Knative Service `URL` in your browser or by using `open` instead of `curl` in your CLI.
+Let's run our "Hello world!" Service just one more time. This time, try the Knative Service `URL` in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io) or by using `open` instead of `curl` in your CLI.
 ```bash
 open http://hello.default.127.0.0.1.nip.io
 ```
