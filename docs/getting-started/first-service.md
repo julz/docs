@@ -41,7 +41,8 @@ For those of you familiar with other **source-to-url** tools, this may seem fami
 ### Expected Output
 After Knative has successfully created your service, you should see the following:
 ```bash{ .bash .no-copy }
-Service hello created to latest revision 'hello-world' is available at URL: http://hello.default.127.0.0.1.nip.io
+Service hello created to latest revision 'hello-world' is available at URL:
+http://hello.default.127.0.0.1.nip.io
 ```
 
 Note that the name "world" which you passed in as "revision-name" is being used to create the `Revision`'s name "hello-world" (we'll talk more about `Revisions` later).
