@@ -5,21 +5,27 @@ on:
     branches: [ mkdocs ]
 
 jobs:
-  publish:
-
+  api-docs:
     runs-on: ubuntu-latest
-
-    env:
-      NODE_VERSION: 12.x
-      TITLE: Knative
-      ANALYTICS_ID: ""
-
     steps:
       - uses: actions/checkout@v2
-      - name: generate site
-        uses: ./.github/actions/
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: "3.8"
+
+      - name: Install dependencies
+        run: |
+          pip install mkdocs mkdocs-macros-plugin mkdocs-exclude mike
+
+      - name: Setup doc deploy
+        run: |
+          git config --global user.name Docs deploy
+          git config --global user.email docs@dummy.bot.com
+
+      - name: Build docs 
+        run: |
+          mike deploy v.0.23 latest
