@@ -2720,14 +2720,20 @@
 <p>With Knative Serving, we have a powerful tool which can take our containerized code and deploy it with relative ease. <strong>With Knative Eventing, you gain a few new super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> that allow you to build Event-Driven Applications.</strong></p>
 <details class="question"><summary>What are Event Driven Applications?</summary><p>Event-driven applications are designed to detect events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.</p>
 </details>
-<p>Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include: <a href="../../eventing/sources/apiserversource/">creating and responding to Kubernetes API events</a>, <a href="https://www.youtube.com/watch?v=DrmOpjAunlQ">creating an image processing pipeline</a>, or <a href="https://www.youtube.com/watch?v=lVfJ5WEQ5_s">facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects</a>.</p>
+<p>Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include:</p>
+<ol>
+<li><a href="../../eventing/sources/apiserversource/">Creating and responding to Kubernetes API events</a></li>
+<li><a href="https://www.youtube.com/watch?v=DrmOpjAunlQ">Creating an image processing pipeline</a></li>
+<li><a href="https://www.youtube.com/watch?v=lVfJ5WEQ5_s">Facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects</a>.</li>
+</ol>
 <h2 id="sources-brokers-triggers-sinks-oh-my">Sources, Brokers, Triggers, Sinks, oh my!<a class="headerlink" href="#sources-brokers-triggers-sinks-oh-my" title="Permanent link">&para;</a></h2>
-<p>For the purposes of this tutorial, we'll keep it simple. You will focus on four components for building this communication infrastructure <strong>(<code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code>)</strong>.</p>
+<p>For the purposes of this tutorial, we'll keep it simple. You will focus on four main components: <strong><code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code></strong>.</p>
 <figure>
   <img src="https://user-images.githubusercontent.com/16281246/116248768-1fe56080-a73a-11eb-9a85-8bdccb82d16c.png" draggable="false">
-  <figcaption>A basic implementation</figcaption>
+  <figcaption>A basic implementation of 2 Sources, a Broker, 2 Triggers, and 2 Sinks</figcaption>
 </figure>
 
+<p>In the above Figure, we see <code>Source 1</code> and <code>Source 2</code> are transimitting some data to the <code>Broker</code>, which then gets filtered by <code>Triggers</code> to the desired <code>Sink</code>.</p>
 <p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
 <details class="question"><summary>What our CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
 <ol>
