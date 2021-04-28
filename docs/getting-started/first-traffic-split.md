@@ -47,7 +47,9 @@ Instead of `TARGET`="World," let's update the environment variable `TARGET` on o
     kubectl apply -f hello.yaml
     ```
 
-As before, Knative spits out some helpful information to the CLI:
+As before, Knative prints. out some helpful information to the CLI.
+
+**Expected output:**
 ```{ .bash .no-copy }
 Service hello created to latest revision 'hello-knative' is available at URL:
 http://hello.default.127.0.0.1.nip.io
@@ -60,7 +62,7 @@ Let's access our Knative Service again on the browser [http://hello.default.127.
 curl http://hello.default.127.0.0.1.nip.io
 ```
 
-New Revision output
+**Expected output:**
 ```{ .bash .no-copy }
 Hello Knative!
 ```
@@ -83,7 +85,7 @@ We can easily see a list of our existing revisions with the `kn` CLI:
     kubectl get revisions
     ```
 
-List of revisions:
+**Expected output:**
 ```{ .bash .no-copy }
 NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
 hello-knative   hello     100%             2            30s   3 OK / 4     True    
@@ -136,7 +138,9 @@ Verify traffic split configure correctly by listing the revisions again.
     kubectl get revisions
     ```
 
-List of revisions split 50%,50%:
+List of revisions split 50%,50%.
+
+**Expected output:**
 ```{ .bash .no-copy }
 NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
 hello-knative   hello     50%              2            10m   3 OK / 4     True
@@ -150,6 +154,8 @@ curl http://hello.default.127.0.0.1.nip.io
 ```
 
 On the terminal you will see the output from the both revisions.
+
+**Expected output:**
 ```{ .bash .no-copy }
 curl http://hello.default.127.0.0.1.nip.io
 Hello Knative!

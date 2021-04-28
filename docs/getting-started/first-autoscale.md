@@ -17,7 +17,7 @@ You can watch the pods and see how they ==scale to zero== after traffic stops go
 kubectl get pod -l serving.knative.dev/service=hello -w
 ```
 
-### Scale down your Knative Service
+**Expected output:**
 ```{ .bash .no-copy }
 NAME                                     READY   STATUS
 hello-world                              2/2     Running
@@ -29,6 +29,7 @@ hello-world                              0/2     Terminating
 ### Scale up your Knative Service
 Try to rerun the Knative Service in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io){target=_blank}, and you will see a new pod running again.
 
+**Expected output:**
 ```{ .bash .no-copy }
 NAME                                     READY   STATUS
 hello-world                              0/2     Pending
