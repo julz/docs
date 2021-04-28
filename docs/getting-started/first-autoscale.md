@@ -2,7 +2,7 @@
 **Remember those super powers :rocket: we talked about?** One of Knative Serving's powers is automatic scaling or simply "autoscaling" out-of-the-box! This means your Knative Service will only "spin up" your application to perform its job (in this case, saying "Hello world!") if it is needed; otherwise, it will =="scale to zero"== by spinning down and waiting for a new request to come in.
 
 ??? question "What about scaling up to meet increased demand?"
-    Knative Autoscaling also allows you to easily configure your service to scale up (horizontal autoscaling) to meet increased demand as well as control the number of instances which spin up using <a href= "../../serving/autoscaling/concurrency/" target="_blank"> "concurrency limits and other options,"</a> but that's beyond the scope of this tutorial.
+    Knative Autoscaling also allows you to easily configure your service to scale up (horizontal autoscaling) to meet increased demand as well as control the number of instances that spin up using <a href= "../../serving/autoscaling/concurrency/" target="_blank"> "concurrency limits and other options,"</a> but that's beyond the scope of this tutorial.
 
 **Let's see this in action!** We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pod</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.
 
