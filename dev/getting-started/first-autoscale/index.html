@@ -11,18 +11,18 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/getting-started/first-autoscale/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-autoscale/">
       
       <link rel="icon" href="../../images/knative-sm.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
-        <title>Autoscaling in Action - Knative</title>
+        <title>Scaling to Zero - Knative</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#check-the-knative-pods" class="md-skip">
+        <a href="#scaling-to-zero" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Autoscaling in Action
+              Scaling to Zero
             
           </span>
         </div>
@@ -181,18 +181,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
-  
-
   
 
       
@@ -313,13 +306,11 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     Knative
@@ -385,49 +376,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      <label class="md-nav__link" for="__nav_2_1">
-        Installing Knative
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Installing Knative
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Installing Knative Serving and Eventing
+        Before you begin
       </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install-cli/" class="md-nav__link">
-        Installing the Knative CLI
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -445,13 +397,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
-        Getting Started with Knative Serving
+        Serverless
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+      <nav class="md-nav" aria-label="Serverless" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Serving
+          Serverless
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -478,18 +430,24 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Autoscaling in Action
+          Scaling to Zero
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Autoscaling in Action
+        Scaling to Zero
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
+  
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -501,6 +459,13 @@
         <li class="md-nav__item">
   <a href="#check-the-knative-pods" class="md-nav__link">
     Check the Knative Pods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    Expected Output
   </a>
   
 </li>
@@ -542,13 +507,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       <label class="md-nav__link" for="__nav_2_3">
-        Getting Started with Knative Eventing
+        Event-Driven Applications
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+      <nav class="md-nav" aria-label="Event-Driven Applications" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Eventing
+          Event-Driven Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2701,6 +2666,45 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#check-the-knative-pods" class="md-nav__link">
+    Check the Knative Pods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2711,24 +2715,25 @@
                   </a>
                 
                 
-                  <h1>Autoscaling in Action</h1>
-                
-                <p><strong>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about?</strong> One of Knative Serving's powers is autoscaling. This means your Knative Service will only "spin up" to preform its job (in this case, saying "Hello world!") if it is needed, otherwise, it will spin down and wait for a new request to come in.</p>
-<p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pods</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
+                <h1 id="scaling-to-zero">Scaling to Zero<a class="headerlink" href="#scaling-to-zero" title="Permanent link">&para;</a></h1>
+<p><strong>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about?</strong> One of Knative Serving's powers is automatic scaling or simply "autoscaling" out-of-the-box! This means your Knative Service will only "spin up" to preform its job (in this case, saying "Hello world!") if it is needed, otherwise, it will <mark>"scale to zero"</mark> by spinning down and waiting for a new request to come in.</p>
+<details class="question"><summary>What about scaling up to meet increased demand?</summary><p>Knative Autoscaling also allows you to easily configure your service to scale up (horizontal autoscaling) to meet increased demand as well as control the number of instances which spin up using <a href= "../../serving/autoscaling/concurrency/" target="_blank"> "concurrency limits,"</a> but that's beyond the scope of this tutorial.</p>
+</details>
+<p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pod</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
 <h4 id="check-the-knative-pods">Check the Knative Pods<a class="headerlink" href="#check-the-knative-pods" title="Permanent link">&para;</a></h4>
-<p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser or by using <code>open</code> instead of <code>curl</code> in your CLI.
-<div class="highlight"><pre><span></span><code>open http://hello.default.127.0.0.1.nip.io
+<p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser <a href="http://hello.default.127.0.0.1.nip.io">http://hello.default.127.0.0.1.nip.io</a>.
+<div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
-<p>You can watch the pods and see how they scale down to zero after http traffic stops to the url
+<p>You can watch the pods and see how they <mark>scale to zero</mark> after traffic stops going to the URL.
 <div class="highlight"><pre><span></span><code>kubectl get pod -l serving.knative.dev/service<span class="o">=</span>hello -w
 </code></pre></div></p>
-<p>The output should look like this:
+<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
 <div class="no-copy highlight"><pre><span></span><code>NAME                                     READY   STATUS
 hello-world                              <span class="m">2</span>/2     Running
 hello-world                              <span class="m">2</span>/2     Terminating
 hello-world                              <span class="m">1</span>/2     Terminating
 hello-world                              <span class="m">0</span>/2     Terminating
-</code></pre></div></p>
+</code></pre></div>
 <p>Try to access the url again, and you will see a new pod running again.
 <div class="no-copy highlight"><pre><span></span><code>NAME                                     READY   STATUS
 hello-world                              <span class="m">0</span>/2     Pending
@@ -2737,6 +2742,8 @@ hello-world                              <span class="m">1</span>/2     Running
 hello-world                              <span class="m">2</span>/2     Running
 </code></pre></div></p>
 <p>Some people call this <strong>Serverless</strong> <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
+<details class="question"><summary>Want to go deeper on Autoscaling?</summary><p>Interested in getting in the weeds with Knative Autoscaling? Check out the <a href= "../../serving/autoscaling/" target="_blank"> autoscaling page</a> for concepts, samples, and more!</p>
+</details>
                 
               
               
@@ -2867,10 +2874,10 @@ hello-world                              <span class="m">2</span>/2     Running
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

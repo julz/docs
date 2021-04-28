@@ -11,10 +11,10 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/getting-started/first-traffic-split/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-traffic-split/">
       
       <link rel="icon" href="../../images/knative-sm.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -78,7 +78,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -181,18 +181,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
-  
-
   
 
       
@@ -313,13 +306,11 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     Knative
@@ -385,49 +376,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      <label class="md-nav__link" for="__nav_2_1">
-        Installing Knative
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Installing Knative
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Installing Knative Serving and Eventing
+        Before you begin
       </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install-cli/" class="md-nav__link">
-        Installing the Knative CLI
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -445,13 +397,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
-        Getting Started with Knative Serving
+        Serverless
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+      <nav class="md-nav" aria-label="Serverless" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Serving
+          Serverless
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -473,7 +425,7 @@
   
     <li class="md-nav__item">
       <a href="../first-autoscale/" class="md-nav__link">
-        Autoscaling in Action
+        Scaling to Zero
       </a>
     </li>
   
@@ -488,6 +440,7 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
       
         
       
@@ -505,6 +458,7 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
@@ -519,12 +473,45 @@
     Creating a new Revision
   </a>
   
+    <nav class="md-nav" aria-label="Creating a new Revision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
   <a href="#splitting-traffic-between-revisions" class="md-nav__link">
     Splitting Traffic between Revisions
   </a>
+  
+    <nav class="md-nav" aria-label="Splitting Traffic between Revisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_1" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_2" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -553,13 +540,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       <label class="md-nav__link" for="__nav_2_3">
-        Getting Started with Knative Eventing
+        Event-Driven Applications
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+      <nav class="md-nav" aria-label="Event-Driven Applications" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Eventing
+          Event-Driven Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2712,6 +2699,78 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-new-revision" class="md-nav__link">
+    Creating a new Revision
+  </a>
+  
+    <nav class="md-nav" aria-label="Creating a new Revision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-output" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#splitting-traffic-between-revisions" class="md-nav__link">
+    Splitting Traffic between Revisions
+  </a>
+  
+    <nav class="md-nav" aria-label="Splitting Traffic between Revisions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_1" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#expected-output_2" class="md-nav__link">
+    Expected Output
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2724,12 +2783,14 @@
                 
                 <h1 id="basics-of-traffic-splitting">Basics of Traffic Splitting<a class="headerlink" href="#basics-of-traffic-splitting" title="Permanent link">&para;</a></h1>
 <p>The last super power <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> of Knative Serving we'll go over in this tutorial is traffic splitting.</p>
-<p>Splitting traffic is useful for a number of very common modern infrastructure needs, such as <mark><strong><a href= "https://martinfowler.com/bliki/BlueGreenDeployment.html" target="blank_">blue/green deployments</a> and <a href="https://martinfowler.com/bliki/CanaryRelease.html" target="blank_">canary deployments</a>.</strong></mark> Bringing these industry standards to bear on Kubernetes is <strong>as simple as a single CLI command on Knative</strong> or YAML tweak, let's see how!</p>
-<p>You may have noticed that when your Knative Service was created, Knative returned both a URL and a 'latest revision' for your Knative Service. But what happens if you make a change to your Service?</p>
-<details class="question"><summary>What is a <code>Revisions</code>?"</summary><p>You can think of a <code>Revision</code> as a stateless, autoscaling snapshot-in-time of application code and configuration. A new <code>Revision</code> will get created each and every time you make changes to your Knative Service. Knative Serving splits traffic between different <code>Revisions</code> of your Knative Service.</p>
+<details class="question"><summary>What are some common traffic splitting use-cases?</summary><p>Splitting traffic is useful for a number of very common modern infrastructure needs, such as <strong><a href= "https://martinfowler.com/bliki/BlueGreenDeployment.html" target="blank_">blue/green deployments</a> and <a href="https://martinfowler.com/bliki/CanaryRelease.html" target="blank_">canary deployments</a>.</strong> Bringing these industry standards to bear on Kubernetes is <strong>as simple as a single CLI command on Knative</strong> or YAML tweak, let's see how!</p>
 </details>
 <h2 id="creating-a-new-revision">Creating a new Revision<a class="headerlink" href="#creating-a-new-revision" title="Permanent link">&para;</a></h2>
-<p>Instead of "world," let's have our Knative Service "hello" greet "Knative." You can accomplish this by using the <code>kn</code> CLI or by editing the YAML file you made earlier.</p>
+<p>You may have noticed that when you created your Knative Service you assigned it a <code>revision-name</code>, "world". When your Service was created, Knative returned both a URL and a 'latest revision' name for your Knative Service. <strong>But what happens if you make a change to your Service?</strong></p>
+<details class="question"><summary>What exactly is a <code>Revision</code>?"</summary><p>You can think of a <a href="../../serving/#serving-resources" target ="blank_"><code>Revision</code> </a> as a stateless, autoscaling snapshot-in-time of application code and configuration.</p>
+<p>A new <code>Revision</code> will get created each and every time you make changes to your Knative Service, whether you assign it a name or not. When splitting traffic, Knative splits traffic between different <code>Revisions</code> of your Knative Service.</p>
+</details>
+<p>Instead of "world," let's have our Knative Service "hello" greet "Knative."</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn service update hello <span class="se">\</span>
 --env <span class="nv">TARGET</span><span class="o">=</span>Knative <span class="se">\</span>
@@ -2737,13 +2798,14 @@
 </code></pre></div>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
-<p>//TODO Update revision name
-<div class="highlight"><pre><span></span><code>apiVersion: serving.knative.dev/v1
+<p><div class="highlight"><pre><span></span><code>apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   name: hello
 spec:
   template:
+    metadata:
+      name: knative
     spec:
       containers:
         - image: gcr.io/knative-samples/helloworld-go
@@ -2766,9 +2828,9 @@ http://hello.default.127.0.0.1.nip.io
 <p>Let's ping our Knative Service again to see the change:
 <div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
-<p><strong>The output should be:</strong>
+<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
 <div class="no-copy highlight"><pre><span></span><code>Hello Knative!
-</code></pre></div></p>
+</code></pre></div>
 <h2 id="splitting-traffic-between-revisions">Splitting Traffic between Revisions<a class="headerlink" href="#splitting-traffic-between-revisions" title="Permanent link">&para;</a></h2>
 <p>You may at this point be wondering, "where did 'Hello world!' go?" <code>Revisions</code> are a stateless snapshot-in-time of application code and configuration so your "hello-world" <code>Revision</code> is still available to you.</p>
 <p>We can easily see a list of our existing revisions with the <code>kn</code> CLI:</p>
@@ -2782,14 +2844,14 @@ http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
 </div>
 </div>
-<p><strong>The output should be:</strong>
+<h3 id="expected-output_1">Expected Output<a class="headerlink" href="#expected-output_1" title="Permanent link">&para;</a></h3>
 <div class="no-copy highlight"><pre><span></span><code>NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
 hello-knative   hello     <span class="m">100</span>%             <span class="m">2</span>            30s   <span class="m">3</span> OK / <span class="m">4</span>     True    
 hello-world     hello                      <span class="m">1</span>            5m    <span class="m">3</span> OK / <span class="m">4</span>     True    
-</code></pre></div></p>
+</code></pre></div>
 <p>The column most relevant for our purposes is "TRAFFIC". It looks like 100% of traffic is going to our latest <code>Revision</code> ("hello-knative") and 0% of traffic is going to the <code>Revision</code> we configured earlier ("hello-world")</p>
 <p>By default, when Knative creates a brand new <code>Revision</code> it directs 100% of traffic to the latest <code>Revision</code> of your service. <strong>We can change this default behavior by specifying how much traffic we want each of our <code>Revisions</code> to receive.</strong></p>
-<div class="admonition info inline">
+<div class="admonition info inline end">
 <p class="admonition-title">Info</p>
 <p><code>@latest</code> will always point to our "latest" <code>Revision</code> which, at the moment, is <code>hello-knative</code>.</p>
 </div>
@@ -2816,6 +2878,7 @@ Once you've edited your existing YAML file:
 </code></pre></div></p>
 </div>
 </div>
+<h3 id="expected-output_2">Expected Output<a class="headerlink" href="#expected-output_2" title="Permanent link">&para;</a></h3>
 <p>Now when we curl our Knative Service URL...
 <div class="no-copy highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 Hello Knative!
@@ -2868,7 +2931,7 @@ Hello World!
               <span class="md-footer__direction">
                 Previous
               </span>
-              Autoscaling in Action
+              Scaling to Zero
             </div>
           </div>
         </a>
@@ -2954,10 +3017,10 @@ Hello World!
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

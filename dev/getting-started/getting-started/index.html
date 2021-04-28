@@ -11,18 +11,18 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/getting-started/getting-started/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/getting-started/">
       
       <link rel="icon" href="../../images/knative-sm.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
-        <title>Installing Knative Serving and Eventing - Knative</title>
+        <title>Before you begin - Knative</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-knative-with-konk-knative-on-kind" class="md-skip">
+        <a href="#before-you-begin" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing Knative Serving and Eventing
+              Before you begin
             
           </span>
         </div>
@@ -181,18 +181,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
-  
-
   
 
       
@@ -313,13 +306,11 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     Knative
@@ -387,47 +378,26 @@
     
   
   
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
-      
-      <label class="md-nav__link" for="__nav_2_1">
-        Installing Knative
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Installing Knative
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-    
-  
-  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
       
         
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Installing Knative Serving and Eventing
+          Before you begin
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Installing Knative Serving and Eventing
+        Before you begin
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -440,16 +410,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#before-you-begin" class="md-nav__link">
-    Before you begin
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
   </a>
   
-    <nav class="md-nav" aria-label="Before you begin">
+    <nav class="md-nav" aria-label="Prerequisites">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#install-kind" class="md-nav__link">
-    Install Kind.
+    Install kind.
   </a>
   
 </li>
@@ -467,9 +437,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#installing-knative-with-konk-knative-on-kind-and-kn" class="md-nav__link">
+    Installing Knative with KonK (Knative on Kind) and kn
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Knative with KonK (Knative on Kind) and kn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#installing-knative-on-kind-konk" class="md-nav__link">
     Installing Knative on Kind (KonK)
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-kn" class="md-nav__link">
+    Install kn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -485,24 +475,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../install-cli/" class="md-nav__link">
-        Installing the Knative CLI
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-          
-            
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
@@ -510,13 +482,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
-        Getting Started with Knative Serving
+        Serverless
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+      <nav class="md-nav" aria-label="Serverless" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Serving
+          Serverless
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -538,7 +510,7 @@
   
     <li class="md-nav__item">
       <a href="../first-autoscale/" class="md-nav__link">
-        Autoscaling in Action
+        Scaling to Zero
       </a>
     </li>
   
@@ -573,13 +545,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
       
       <label class="md-nav__link" for="__nav_2_3">
-        Getting Started with Knative Eventing
+        Event-Driven Applications
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+      <nav class="md-nav" aria-label="Event-Driven Applications" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Eventing
+          Event-Driven Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -2732,6 +2704,85 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-kind" class="md-nav__link">
+    Install kind.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-kubectl" class="md-nav__link">
+    Install kubectl
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-knative-with-konk-knative-on-kind-and-kn" class="md-nav__link">
+    Installing Knative with KonK (Knative on Kind) and kn
+  </a>
+  
+    <nav class="md-nav" aria-label="Installing Knative with KonK (Knative on Kind) and kn">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-knative-on-kind-konk" class="md-nav__link">
+    Installing Knative on Kind (KonK)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-kn" class="md-nav__link">
+    Install kn
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2742,54 +2793,17 @@
                   </a>
                 
                 
-                <h1 id="installing-knative-with-konk-knative-on-kind">Installing Knative with KonK (Knative on Kind)<a class="headerlink" href="#installing-knative-with-konk-knative-on-kind" title="Permanent link">&para;</a></h1>
-<h2 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h2>
-<h3 id="install-kind">Install <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind</a>.<a class="headerlink" href="#install-kind" title="Permanent link">&para;</a></h3>
-<details class="todo" open="open"><summary>Installing Kind</summary><div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">macOS</label><div class="tabbed-content">
-<p>Use Homebrew
-<div class="highlight"><pre><span></span><code>brew install kind
-</code></pre></div>
-Or
-<div class="highlight"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-darwin-amd64
-</code></pre></div></p>
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Linux</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.10.0/kind-linux-amd64
-chmod +x ./kind
-mv ./kind /some-dir-in-your-PATH/kind
-</code></pre></div>
-</div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Windows</label><div class="tabbed-content">
-<p><div class="highlight"><pre><span></span><code>curl.exe -Lo kind-windows-amd64.exe https://kind.sigs.k8s.io/dl/v0.10.0/kind-windows-amd64
-Move-Item .\kind-windows-amd64.exe c:\some-dir-in-your-PATH\kind.exe
-</code></pre></div>
-Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
-</div>
-</div>
-</details>
-<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for other installation options.</p>
-<details class="question"><summary>Need to upgrade Kind?</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Upgrade Kind using Homebrew</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>brew upgrade kind
-</code></pre></div>
-</div>
-<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Other Upgrade Options</label><div class="tabbed-content">
-<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for other upgrade options.</p>
-</div>
-</div>
-</details>
+                <h1 id="before-you-begin">Before you begin<a class="headerlink" href="#before-you-begin" title="Permanent link">&para;</a></h1>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="install-kind">Install <code>kind</code>.<a class="headerlink" href="#install-kind" title="Permanent link">&para;</a></h3>
+<p><code>kind</code> (Kubernetes in Docker) is a tool for running local Kubernetes clusters using Docker container “nodes”. <code>kind</code> was primarily designed for testing Kubernetes itself, but may be used for local development.</p>
+<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for installation options.</p>
 <h3 id="install-kubectl">Install <code>kubectl</code><a class="headerlink" href="#install-kubectl" title="Permanent link">&para;</a></h3>
-<details class="todo" open="open"><summary>Installing the <code>kubectl</code> CLI</summary><div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Using Homebrew</label><div class="tabbed-content">
-<p>If you are on macOS and using <a href="http://brew.sh">Homebrew</a> package manager, you can install kubectl with Homebrew.
-<div class="highlight"><pre><span></span><code>brew install kubectl
-</code></pre></div></p>
-</div>
-<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">From the Kubernetes website</label><div class="tabbed-content">
-<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">the Kubernetes docs</a> for other installation options.</p>
-</div>
-</div>
-</details>
-<h2 id="installing-knative-on-kind-konk">Installing Knative on Kind (KonK)<a class="headerlink" href="#installing-knative-on-kind-konk" title="Permanent link">&para;</a></h2>
-<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use the <a href= "https://konk.dev" target="blank_">Konk (Knative-on-kind) script.</a></mark></p>
+<p>The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.</p>
+<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">the Kubernetes docs</a> for installation options.</p>
+<h2 id="installing-knative-with-konk-knative-on-kind-and-kn">Installing Knative with KonK (Knative on Kind) and <code>kn</code><a class="headerlink" href="#installing-knative-with-konk-knative-on-kind-and-kn" title="Permanent link">&para;</a></h2>
+<h3 id="installing-knative-on-kind-konk">Installing Knative on Kind (KonK)<a class="headerlink" href="#installing-knative-on-kind-konk" title="Permanent link">&para;</a></h3>
+<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use the Konk (Knative-on-kind) script.</mark></p>
 <div class="admonition todo">
 <p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
 <div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
@@ -2808,6 +2822,54 @@ Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
 </li>
 </ol>
 </details>
+<h3 id="install-kn">Install <code>kn</code><a class="headerlink" href="#install-kn" title="Permanent link">&para;</a></h3>
+<p><mark><strong>The Knative CLI provides a quick and easy interface for creating Knative resources</strong></mark> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
+<div class="admonition todo">
+<p class="admonition-title">Installing the <code>kn</code> CLI</p>
+<div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
+<p>For macOS, you can install <code>kn</code> by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.</p>
+<div class="highlight"><pre><span></span><code>brew install knative/client/kn
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Using a binary</label><div class="tabbed-content">
+<p>You can install <code>kn</code> by downloading the executable binary for your system and placing it in the system path.</p>
+<p>A link to the latest stable binary release is available on the <a href="https://github.com/knative/client/releases" target="_blank"><code>kn</code> release page</a>.</p>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Installing kn using Go</label><div class="tabbed-content">
+<ol>
+<li>
+<p>Check out the <code>kn</code> client repository:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/knative/client.git
+cd client/
+</code></pre></div>
+</li>
+<li>
+<p>Build an executable binary:</p>
+<div class="highlight"><pre><span></span><code>hack/build.sh -f
+</code></pre></div>
+</li>
+<li>
+<p>Move <code>kn</code> into your system path, and verify that <code>kn</code> commands are working properly. For example:</p>
+<div class="highlight"><pre><span></span><code>kn version
+</code></pre></div>
+</li>
+</ol>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">Running kn using container images</label><div class="tabbed-content">
+<p><strong>WARNING:</strong> Nightly container images include features which may not be included in the latest Knative release and are not considered to be stable.</p>
+<p>Links to images are available here:</p>
+<ul>
+<li><a href="https://gcr.io/knative-releases/knative.dev/client/cmd/kn" target="_blank">Latest release</a></li>
+<li><a href="https://gcr.io/knative-nightly/knative.dev/client/cmd/kn" target="_blank">Nightly container image</a></li>
+</ul>
+<p>You can run <code>kn</code> from a container image. For example:</p>
+<div class="highlight"><pre><span></span><code>docker run --rm -v &quot;$HOME/.kube/config:/root/.kube/config&quot; gcr.io/knative-releases/knative.dev/client/cmd/kn:latest service list
+</code></pre></div>
+<p><strong>NOTE:</strong> Running <code>kn</code> from a container image does not place the binary on a permanent path. This procedure must be repeated each time you want to use <code>kn</code>.</p>
+</div>
+</div>
+<p>For more complex installations, such as nightly releases, see <a href="../../client/install-kn/">Install <code>kn</code></a></p>
+</div>
                 
               
               
@@ -2861,7 +2923,7 @@ Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
       <!-- Link to next page -->
       
         <a
-          href="../install-cli/"
+          href="../first-service/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -2870,7 +2932,7 @@ Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
               <span class="md-footer__direction">
                 Next
               </span>
-              Installing the Knative CLI
+              Deploying your first Knative Service
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -2938,10 +3000,10 @@ Use <a href="https://chocolatey.org/packages/kind">Chocolatey</a></p>
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>

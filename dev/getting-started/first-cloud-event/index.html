@@ -11,10 +11,10 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/docs/getting-started/first-cloud-event/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-cloud-event/">
       
       <link rel="icon" href="../../images/knative-sm.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.33e2939f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eventing-background-and-cloudevents" class="md-skip">
+        <a href="#introducing-the-cloudevents-player" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Knative" class="md-header__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -181,18 +181,11 @@
   
   
   
-    
-
-  
-  
-  
     <li class="md-tabs__item">
       <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
-  
-
   
 
       
@@ -313,13 +306,11 @@
   
 
 
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Knative" class="md-nav__button md-logo" aria-label="Knative" data-md-component="logo">
       
-  <img src="../../images/knative-sm.png" alt="logo">
+  <img src="../../images/logo/rgb/knative-logo-rgb.png" alt="logo">
 
     </a>
     Knative
@@ -385,49 +376,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
-      
-      <label class="md-nav__link" for="__nav_2_1">
-        Installing Knative
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Installing Knative" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_1">
-          <span class="md-nav__icon md-icon"></span>
-          Installing Knative
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-  
-  
-  
     <li class="md-nav__item">
       <a href="../getting-started/" class="md-nav__link">
-        Installing Knative Serving and Eventing
+        Before you begin
       </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../install-cli/" class="md-nav__link">
-        Installing the Knative CLI
-      </a>
-    </li>
-  
-
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -443,13 +395,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
-        Getting Started with Knative Serving
+        Serverless
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Serving" data-md-level="2">
+      <nav class="md-nav" aria-label="Serverless" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_2">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Serving
+          Serverless
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -471,7 +423,7 @@
   
     <li class="md-nav__item">
       <a href="../first-autoscale/" class="md-nav__link">
-        Autoscaling in Action
+        Scaling to Zero
       </a>
     </li>
   
@@ -508,13 +460,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" checked>
       
       <label class="md-nav__link" for="__nav_2_3">
-        Getting Started with Knative Eventing
+        Event-Driven Applications
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Getting Started with Knative Eventing" data-md-level="2">
+      <nav class="md-nav" aria-label="Event-Driven Applications" data-md-level="2">
         <label class="md-nav__title" for="__nav_2_3">
           <span class="md-nav__icon md-icon"></span>
-          Getting Started with Knative Eventing
+          Event-Driven Applications
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -527,6 +479,7 @@
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
       
         
       
@@ -542,6 +495,7 @@
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
@@ -561,8 +515,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introducing-cloudevents" class="md-nav__link">
-    Introducing CloudEvents
+  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
+    Sources, Brokers, Triggers, Sinks, oh my!
   </a>
   
 </li>
@@ -2712,6 +2666,45 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#background" class="md-nav__link">
+    Background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
+    Sources, Brokers, Triggers, Sinks, oh my!
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -2722,22 +2715,30 @@
                   </a>
                 
                 
-                <h1 id="eventing-background-and-cloudevents">Eventing Background and CloudEvents<a class="headerlink" href="#eventing-background-and-cloudevents" title="Permanent link">&para;</a></h1>
+                <h1 id="introducing-the-cloudevents-player">Introducing the CloudEvents Player<a class="headerlink" href="#introducing-the-cloudevents-player" title="Permanent link">&para;</a></h1>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p><strong>With Knative Serving, we have a powerful tool which can take our containerized code and deploy it with relative ease.</strong> With Knative Eventing, you gain a few new super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" />.</p>
-<p>Namely, the ability to easily communicate between Knative Services, plug external data sources into your Kubernetes cluster and even create your own "Functions as a Service" on top of Kubernetes. <strong>In short, Knative Eventing provides a scalable, fault-tolerant infrastructure for communication between workloads.</strong></p>
-<p>For the purposes of this tutorial, we will focus on four components for building this communication infrastructure <strong>(<code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code>)</strong>, but there are many other tools in the Knative Eventing toolbox.</p>
-<details class="question"><summary>What other components exist in Knative Eventing?</summary><p>If you want to find out more about the different components of Knative Eventing, like Channels, Sequences, Parallels, etc. check out <a href="../../eventing/">"Eventing Components."</a></p>
+<p>With Knative Serving, we have a powerful tool which can take our containerized code and deploy it with relative ease. <strong>With Knative Eventing, you gain a few new super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> that allow you to build Event-Driven Applications.</strong></p>
+<details class="question"><summary>What are Event Driven Applications?</summary><p>Event-driven applications are designed to detect events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.</p>
 </details>
-<h2 id="introducing-cloudevents">Introducing CloudEvents<a class="headerlink" href="#introducing-cloudevents" title="Permanent link">&para;</a></h2>
-<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> to communicate between workloads.</p>
-<p>For our purposes, the only thing you need to know about CloudEvents are:</p>
+<p>Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include: <a href="../../eventing/sources/apiserversource/">creating and responding to Kubernetes API events</a>, <a href="https://www.youtube.com/watch?v=DrmOpjAunlQ">creating an image processing pipeline</a>, or <a href="https://www.youtube.com/watch?v=lVfJ5WEQ5_s">facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects</a>.</p>
+<h2 id="sources-brokers-triggers-sinks-oh-my">Sources, Brokers, Triggers, Sinks, oh my!<a class="headerlink" href="#sources-brokers-triggers-sinks-oh-my" title="Permanent link">&para;</a></h2>
+<p>For the purposes of this tutorial, we'll keep it simple. You will focus on four components for building this communication infrastructure <strong>(<code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code>)</strong>.</p>
+<figure>
+  <img src="https://user-images.githubusercontent.com/16281246/116248768-1fe56080-a73a-11eb-9a85-8bdccb82d16c.png" draggable="false">
+  <figcaption>A basic implementation</figcaption>
+</figure>
+
+<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
+<details class="question"><summary>What our CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
 <ol>
 <li>CloudEvents follow the <a href = "https://github.com/cloudevents/spec" target="_blank">CloudEvents 1.0 Specification</a>, with required and optional attributes.</li>
 <li>CloudEvents can be "emitted" by almost anything and can be transported to anywhere in your deployment.  </li>
 <li>CloudEvents can carry some attributes (things like <code>id</code>, <code>source</code>, <code>type</code>, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).</li>
 </ol>
 <details class="question"><summary>Want to find out more about CloudEvents?</summary><p>Check out the <a href="https://cloudevents.io/">CloudEvents website</a>!</p>
+</details>
+</details>
+<details class="question"><summary>What other components exist in Knative Eventing?</summary><p>If you want to find out more about the different components of Knative Eventing, like Channels, Sequences, Parallels, etc. check out <a href="../eventing/README.md" target="blank_">"Eventing Components."</a></p>
 </details>
                 
               
@@ -2869,10 +2870,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top", "toc.integrate"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.instant", "navigation.tracking", "navigation.tabs.sticky", "navigation.indexes", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../../assets/javascripts/workers/search.fe42c31b.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d892486b.min.js"></script>
+      <script src="../../assets/javascripts/bundle.4ea5477f.min.js"></script>
       
     
   </body>
