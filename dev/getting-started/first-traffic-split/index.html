@@ -413,7 +413,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        Deploying your first Knative Service
+        First Knative Service
       </a>
     </li>
   
@@ -473,45 +473,12 @@
     Creating a new Revision
   </a>
   
-    <nav class="md-nav" aria-label="Creating a new Revision">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#splitting-traffic-between-revisions" class="md-nav__link">
-    Splitting Traffic between Revisions
+  <a href="#splitting-traffic" class="md-nav__link">
+    Splitting Traffic
   </a>
-  
-    <nav class="md-nav" aria-label="Splitting Traffic between Revisions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output_1" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-output_2" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2722,45 +2689,12 @@
     Creating a new Revision
   </a>
   
-    <nav class="md-nav" aria-label="Creating a new Revision">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
-  <a href="#splitting-traffic-between-revisions" class="md-nav__link">
-    Splitting Traffic between Revisions
+  <a href="#splitting-traffic" class="md-nav__link">
+    Splitting Traffic
   </a>
-  
-    <nav class="md-nav" aria-label="Splitting Traffic between Revisions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#expected-output_1" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-output_2" class="md-nav__link">
-    Expected Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2790,7 +2724,7 @@
 <details class="question"><summary>What exactly is a <code>Revision</code>?"</summary><p>You can think of a <a href="../../serving/#serving-resources" target ="blank_"><code>Revision</code> </a> as a stateless, autoscaling snapshot-in-time of application code and configuration.</p>
 <p>A new <code>Revision</code> will get created each and every time you make changes to your Knative Service, whether you assign it a name or not. When splitting traffic, Knative splits traffic between different <code>Revisions</code> of your Knative Service.</p>
 </details>
-<p>Instead of "world," let's have our Knative Service "hello" greet "Knative."</p>
+<p>Instead of <code>TARGET</code>="World," let's update the environment variable <code>TARGET</code> on our Knative Service <code>hello</code> to greet "Knative". Lets name this new revision <code>hello-knative</code></p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn service update hello <span class="se">\</span>
 --env <span class="nv">TARGET</span><span class="o">=</span>Knative <span class="se">\</span>
@@ -2820,19 +2754,20 @@ Once you've edited your existing YAML file:
 </code></pre></div></p>
 </div>
 </div>
-<p>As before, Knative spits out some helpful information to the CLI:
+<p>As before, Knative prints. out some helpful information to the CLI.</p>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>Service hello created to latest revision <span class="s1">&#39;hello-knative&#39;</span> is available at URL:
 http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
-<p>Note, since we are updating an existing Knative Service, the URL doesn't change, but your new <code>Revision</code> should have the new name "hello-knative"</p>
-<p>Let's ping our Knative Service again to see the change:
+<p>Note, since we are updating an existing Knative Service <code>hello</code>, the URL doesn't change, but our new <code>Revision</code> should have the new name "hello-knative"</p>
+<p>Let's access our Knative Service again on the browser <a href="http://hello.default.127.0.0.1.nip.io" target="_blank">http://hello.default.127.0.0.1.nip.io</a> to see the change, or use <code>curl</code> in your terminal:
 <div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
-<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>Hello Knative!
-</code></pre></div>
-<h2 id="splitting-traffic-between-revisions">Splitting Traffic between Revisions<a class="headerlink" href="#splitting-traffic-between-revisions" title="Permanent link">&para;</a></h2>
-<p>You may at this point be wondering, "where did 'Hello world!' go?" <code>Revisions</code> are a stateless snapshot-in-time of application code and configuration so your "hello-world" <code>Revision</code> is still available to you.</p>
+</code></pre></div></p>
+<h2 id="splitting-traffic">Splitting Traffic<a class="headerlink" href="#splitting-traffic" title="Permanent link">&para;</a></h2>
+<p>You may at this point be wondering, "where did 'Hello World!' go?" <code>Revisions</code> are a stateless snapshot-in-time of application code and configuration so your "hello-world" <code>Revision</code> is still available to you.</p>
 <p>We can easily see a list of our existing revisions with the <code>kn</code> CLI:</p>
 <div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn revisions list
@@ -2844,21 +2779,21 @@ http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
 </div>
 </div>
-<h3 id="expected-output_1">Expected Output<a class="headerlink" href="#expected-output_1" title="Permanent link">&para;</a></h3>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
 hello-knative   hello     <span class="m">100</span>%             <span class="m">2</span>            30s   <span class="m">3</span> OK / <span class="m">4</span>     True    
 hello-world     hello                      <span class="m">1</span>            5m    <span class="m">3</span> OK / <span class="m">4</span>     True    
-</code></pre></div>
+</code></pre></div></p>
 <p>The column most relevant for our purposes is "TRAFFIC". It looks like 100% of traffic is going to our latest <code>Revision</code> ("hello-knative") and 0% of traffic is going to the <code>Revision</code> we configured earlier ("hello-world")</p>
-<p>By default, when Knative creates a brand new <code>Revision</code> it directs 100% of traffic to the latest <code>Revision</code> of your service. <strong>We can change this default behavior by specifying how much traffic we want each of our <code>Revisions</code> to receive.</strong></p>
+<p>By default, when Knative creates a brand new <code>Revision</code> it directs 100% of traffic to the latest <code>Revision</code> of your service. <strong>We can change this default behavior by specifying how much traffic we want each of our <code>Revisions</code> to receive.</strong> Lets split traffic in half, using a percentage of 50%.</p>
 <div class="admonition info inline end">
 <p class="admonition-title">Info</p>
 <p><code>@latest</code> will always point to our "latest" <code>Revision</code> which, at the moment, is <code>hello-knative</code>.</p>
 </div>
 <div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn service update hello <span class="se">\</span>
---traffic @latest<span class="o">=</span><span class="m">50</span> <span class="se">\</span>
---traffic hello-world<span class="o">=</span><span class="m">50</span>
+--traffic hello-world<span class="o">=</span><span class="m">50</span> <span class="se">\</span>
+--traffic @latest<span class="o">=</span><span class="m">50</span>
 </code></pre></div>
 </div>
 <input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">YAML</label><div class="tabbed-content">
@@ -2878,8 +2813,28 @@ Once you've edited your existing YAML file:
 </code></pre></div></p>
 </div>
 </div>
-<h3 id="expected-output_2">Expected Output<a class="headerlink" href="#expected-output_2" title="Permanent link">&para;</a></h3>
-<p>Now when we curl our Knative Service URL...
+<p>Verify traffic split configure correctly by listing the revisions again.</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">kn</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>kn revisions list
+</code></pre></div>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">kubectl</label><div class="tabbed-content">
+<p>Though the following example doesn't cover it, you can peak under the hood to Kubernetes to see the revisions as Kubernetes sees them.<br />
+<div class="highlight"><pre><span></span><code>kubectl get revisions
+</code></pre></div></p>
+</div>
+</div>
+<p><mark><strong>Expected output:</strong></mark>
+<div class="no-copy highlight"><pre><span></span><code>NAME            SERVICE   TRAFFIC   TAGS   GENERATION   AGE   CONDITIONS   READY   REASON
+hello-knative   hello     <span class="m">50</span>%              <span class="m">2</span>            10m   <span class="m">3</span> OK / <span class="m">4</span>     True
+hello-world     hello     <span class="m">50</span>%              <span class="m">1</span>            36m   <span class="m">3</span> OK / <span class="m">4</span>     True 
+</code></pre></div></p>
+<p>Access the Knative service on the browser again <a href="http://hello.default.127.0.0.1.nip.io" target="_blank">http://hello.default.127.0.0.1.nip.io</a>, and refresh multiple times to see the different output being served by each revision.
+You can use curl to access multiple times.
+<div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
+</code></pre></div></p>
+<p>On the terminal you will see the output from the both revisions.</p>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 Hello Knative!
 

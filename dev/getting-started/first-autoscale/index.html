@@ -413,7 +413,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        Deploying your first Knative Service
+        First Knative Service
       </a>
     </li>
   
@@ -457,15 +457,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#check-the-knative-pods" class="md-nav__link">
-    Check the Knative Pods
+  <a href="#run-your-knative-service" class="md-nav__link">
+    Run your Knative Service
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
+  <a href="#scale-up-your-knative-service" class="md-nav__link">
+    Scale up your Knative Service
   </a>
   
 </li>
@@ -2685,15 +2685,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#check-the-knative-pods" class="md-nav__link">
-    Check the Knative Pods
+  <a href="#run-your-knative-service" class="md-nav__link">
+    Run your Knative Service
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
+  <a href="#scale-up-your-knative-service" class="md-nav__link">
+    Scale up your Knative Service
   </a>
   
 </li>
@@ -2716,31 +2716,34 @@
                 
                 
                 <h1 id="scaling-to-zero">Scaling to Zero<a class="headerlink" href="#scaling-to-zero" title="Permanent link">&para;</a></h1>
-<p><strong>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about?</strong> One of Knative Serving's powers is automatic scaling or simply "autoscaling" out-of-the-box! This means your Knative Service will only "spin up" to preform its job (in this case, saying "Hello world!") if it is needed, otherwise, it will <mark>"scale to zero"</mark> by spinning down and waiting for a new request to come in.</p>
-<details class="question"><summary>What about scaling up to meet increased demand?</summary><p>Knative Autoscaling also allows you to easily configure your service to scale up (horizontal autoscaling) to meet increased demand as well as control the number of instances which spin up using <a href= "../../serving/autoscaling/concurrency/" target="_blank"> "concurrency limits,"</a> but that's beyond the scope of this tutorial.</p>
+<p><strong>Remember those super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> we talked about?</strong> One of Knative Serving's powers is automatic scaling or simply "autoscaling" out-of-the-box! This means your Knative Service will only "spin up" your application to perform its job (in this case, saying "Hello world!") if it is needed; otherwise, it will <mark>"scale to zero"</mark> by spinning down and waiting for a new request to come in.</p>
+<details class="question"><summary>What about scaling up to meet increased demand?</summary><p>Knative Autoscaling also allows you to easily configure your service to scale up (horizontal autoscaling) to meet increased demand as well as control the number of instances that spin up using <a href= "../../serving/autoscaling/concurrency/" target="_blank"> "concurrency limits and other options,"</a> but that's beyond the scope of this tutorial.</p>
 </details>
 <p><strong>Let's see this in action!</strong> We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pod</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.</p>
-<h4 id="check-the-knative-pods">Check the Knative Pods<a class="headerlink" href="#check-the-knative-pods" title="Permanent link">&para;</a></h4>
-<p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser <a href="http://hello.default.127.0.0.1.nip.io">http://hello.default.127.0.0.1.nip.io</a>.
+<h3 id="run-your-knative-service">Run your Knative Service<a class="headerlink" href="#run-your-knative-service" title="Permanent link">&para;</a></h3>
+<p>Let's run our "Hello world!" Service just one more time. This time, try the Knative Service <code>URL</code> in your browser <a href="http://hello.default.127.0.0.1.nip.io" target="_blank">http://hello.default.127.0.0.1.nip.io</a>, or you can use your terminal with <code>curl</code>.
 <div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
 <p>You can watch the pods and see how they <mark>scale to zero</mark> after traffic stops going to the URL.
 <div class="highlight"><pre><span></span><code>kubectl get pod -l serving.knative.dev/service<span class="o">=</span>hello -w
 </code></pre></div></p>
-<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>NAME                                     READY   STATUS
 hello-world                              <span class="m">2</span>/2     Running
 hello-world                              <span class="m">2</span>/2     Terminating
 hello-world                              <span class="m">1</span>/2     Terminating
 hello-world                              <span class="m">0</span>/2     Terminating
-</code></pre></div>
-<p>Try to access the url again, and you will see a new pod running again.
+</code></pre></div></p>
+<h3 id="scale-up-your-knative-service">Scale up your Knative Service<a class="headerlink" href="#scale-up-your-knative-service" title="Permanent link">&para;</a></h3>
+<p>Try to rerun the Knative Service in your browser <a href="http://hello.default.127.0.0.1.nip.io" target="_blank">http://hello.default.127.0.0.1.nip.io</a>, and you will see a new pod running again.</p>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>NAME                                     READY   STATUS
 hello-world                              <span class="m">0</span>/2     Pending
 hello-world                              <span class="m">0</span>/2     ContainerCreating
 hello-world                              <span class="m">1</span>/2     Running
 hello-world                              <span class="m">2</span>/2     Running
-</code></pre></div></p>
+</code></pre></div>
+Exit the watch command with <code>Ctrl+c</code>.</p>
 <p>Some people call this <strong>Serverless</strong> <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
 <details class="question"><summary>Want to go deeper on Autoscaling?</summary><p>Interested in getting in the weeds with Knative Autoscaling? Check out the <a href= "../../serving/autoscaling/" target="_blank"> autoscaling page</a> for concepts, samples, and more!</p>
 </details>
@@ -2788,7 +2791,7 @@ hello-world                              <span class="m">2</span>/2     Running
               <span class="md-footer__direction">
                 Previous
               </span>
-              Deploying your first Knative Service
+              First Knative Service
             </div>
           </div>
         </a>

@@ -18,7 +18,7 @@
     
     
       
-        <title>Deploying your first Knative Service - Knative</title>
+        <title>First Knative Service - Knative</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploying your first Knative Service
+              First Knative Service
             
           </span>
         </div>
@@ -422,12 +422,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Deploying your first Knative Service
+          First Knative Service
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Deploying your first Knative Service
+        First Knative Service
       </a>
       
         
@@ -445,29 +445,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploying-your-first-knative-service-hello-world" class="md-nav__link">
-    Deploying your first Knative Service: "Hello world!"
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying your first Knative Service: "Hello world!"">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-your-knative-service" class="md-nav__link">
-    Test your Knative Service
+  <a href="#knative-service-hello-world" class="md-nav__link">
+    Knative Service: "Hello world!"
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
+      
+        <li class="md-nav__item">
+  <a href="#run-your-knative-service" class="md-nav__link">
+    Run your Knative Service
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2698,29 +2685,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#deploying-your-first-knative-service-hello-world" class="md-nav__link">
-    Deploying your first Knative Service: "Hello world!"
-  </a>
-  
-    <nav class="md-nav" aria-label="Deploying your first Knative Service: "Hello world!"">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#test-your-knative-service" class="md-nav__link">
-    Test your Knative Service
+  <a href="#knative-service-hello-world" class="md-nav__link">
+    Knative Service: "Hello world!"
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#expected-output" class="md-nav__link">
-    Expected Output
+      
+        <li class="md-nav__item">
+  <a href="#run-your-knative-service" class="md-nav__link">
+    Run your Knative Service
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2746,9 +2720,10 @@
 <p class="admonition-title">Tip</p>
 <p>Hit <span class="keys"><kbd>n</kbd></span> / <span class="keys"><kbd>.</kbd></span> on your keyboard to move forward in the tutorial. Use <span class="keys"><kbd>p</kbd></span> / <span class="keys"><kbd>,</kbd></span> to go back at any time.</p>
 </div>
-<p><mark><strong>In this tutorial, we are going to use <a href="https://konk.dev">KonK</a> to deploy a "Hello world" Service!</strong></mark> This service will accept an environment variable, <code>TARGET</code>, and print "<code>Hello $TARGET</code>."</p>
+<p><mark><strong>In this tutorial, we are going to deploy a "Hello world" Service!</strong></mark> 
+This service will accept an environment variable, <code>TARGET</code>, and print "<code>Hello ${TARGET}!</code>."</p>
 <p>For those of you familiar with other <strong>source-to-url</strong> tools, this may seem familiar. However, since our "Hello world" Service is being deployed as a Knative Service, it gets some <strong>super powers (scale-to-zero, traffic-splitting) out of the box</strong> <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" />.</p>
-<h2 id="deploying-your-first-knative-service-hello-world">Deploying your first Knative Service: "Hello world!"<a class="headerlink" href="#deploying-your-first-knative-service-hello-world" title="Permanent link">&para;</a></h2>
+<h2 id="knative-service-hello-world">Knative Service: "Hello world!"<a class="headerlink" href="#knative-service-hello-world" title="Permanent link">&para;</a></h2>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn service create hello <span class="se">\</span>
 --image gcr.io/knative-samples/helloworld-go <span class="se">\</span>
@@ -2786,12 +2761,12 @@ http://hello.default.127.0.0.1.nip.io
 </code></pre></div></p>
 <details class="question"><summary>Why did I pass in <code>revision-name</code>?</summary><p>Note that the name "world" which you passed in as "revision-name" is being used to create the <code>Revision</code>'s name (<code>latest revision "hello-world"...</code>). This will help you to more easily identify this particular <code>Revision</code>, but don't worry, we'll talk more about <code>Revisions</code> later.</p>
 </details>
-<h3 id="test-your-knative-service">Test your Knative Service<a class="headerlink" href="#test-your-knative-service" title="Permanent link">&para;</a></h3>
+<h2 id="run-your-knative-service">Run your Knative Service<a class="headerlink" href="#run-your-knative-service" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code>curl http://hello.default.127.0.0.1.nip.io
 </code></pre></div>
-<h3 id="expected-output">Expected Output<a class="headerlink" href="#expected-output" title="Permanent link">&para;</a></h3>
+<p><mark><strong>Expected output:</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>Hello World!
-</code></pre></div>
+</code></pre></div></p>
 <p>Congratulations <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" />, you've just created your first Knative Service!</p>
                 
               

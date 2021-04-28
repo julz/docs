@@ -431,26 +431,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-knative-with-konk-knative-on-kind-and-kn" class="md-nav__link">
-    Installing Knative with KonK (Knative on Kind) and kn
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing Knative with KonK (Knative on Kind) and kn">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-knative-on-kind-konk" class="md-nav__link">
-    Installing Knative on Kind (KonK)
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#install-kn" class="md-nav__link">
     Install kn
@@ -460,6 +440,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-knative-sandbox" class="md-nav__link">
+    Installing Knative (sandbox)
+  </a>
   
 </li>
       
@@ -498,7 +485,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        Deploying your first Knative Service
+        First Knative Service
       </a>
     </li>
   
@@ -2744,26 +2731,6 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#installing-knative-with-konk-knative-on-kind-and-kn" class="md-nav__link">
-    Installing Knative with KonK (Knative on Kind) and kn
-  </a>
-  
-    <nav class="md-nav" aria-label="Installing Knative with KonK (Knative on Kind) and kn">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#installing-knative-on-kind-konk" class="md-nav__link">
-    Installing Knative on Kind (KonK)
-  </a>
-  
-</li>
-        
           <li class="md-nav__item">
   <a href="#install-kn" class="md-nav__link">
     Install kn
@@ -2773,6 +2740,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-knative-sandbox" class="md-nav__link">
+    Installing Knative (sandbox)
+  </a>
   
 </li>
       
@@ -2797,33 +2771,12 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <h3 id="install-kind">Install <code>kind</code>.<a class="headerlink" href="#install-kind" title="Permanent link">&para;</a></h3>
 <p><code>kind</code> (Kubernetes in Docker) is a tool for running local Kubernetes clusters using Docker container “nodes”. <code>kind</code> was primarily designed for testing Kubernetes itself, but may be used for local development.</p>
-<p>See <a href= "https://kind.sigs.k8s.io/docs/user/quick-start/" target="blank_">Kind website</a> for installation options.</p>
+<p>See <a href="https://kind.sigs.k8s.io/docs/user/quick-start" target="_blank">Kind website</a> for installation options.</p>
 <h3 id="install-kubectl">Install <code>kubectl</code><a class="headerlink" href="#install-kubectl" title="Permanent link">&para;</a></h3>
 <p>The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.</p>
-<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">the Kubernetes docs</a> for installation options.</p>
-<h2 id="installing-knative-with-konk-knative-on-kind-and-kn">Installing Knative with KonK (Knative on Kind) and <code>kn</code><a class="headerlink" href="#installing-knative-with-konk-knative-on-kind-and-kn" title="Permanent link">&para;</a></h2>
-<h3 id="installing-knative-on-kind-konk">Installing Knative on Kind (KonK)<a class="headerlink" href="#installing-knative-on-kind-konk" title="Permanent link">&para;</a></h3>
-<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use the Konk (Knative-on-kind) script.</mark></p>
-<div class="admonition todo">
-<p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
-<div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
-</code></pre></div>
-</div>
-<details class="question"><summary>What does the KonK script actually do?</summary><p>Knative on Kind (KonK) is a shell script which:</p>
-<ol>
-<li>
-<p>Checks to see that you have Kind installed and creates a Cluster called "knative" via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/01-kind.sh"><code>01-kind.sh</code></a></strong></p>
-</li>
-<li>
-<p>Installs <strong>Knative Serving</strong> with <strong>Kourier</strong> as the networking layer and <strong>nip.io</strong> as the DNS + some port-forwarding magic on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/02-serving.sh"><code>02-serving.sh</code></a></strong></p>
-</li>
-<li>
-<p>Installs <strong>Knative Eventing</strong> with an In-Memory <strong>Channels</strong> and In-Memory <strong>Broker</strong> on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/04-eventing.sh"><code>04-eventing.sh</code></a></strong></p>
-</li>
-</ol>
-</details>
+<p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl" target="_blank">the Kubernetes docs</a> for installation options.</p>
 <h3 id="install-kn">Install <code>kn</code><a class="headerlink" href="#install-kn" title="Permanent link">&para;</a></h3>
-<p><mark><strong>The Knative CLI provides a quick and easy interface for creating Knative resources</strong></mark> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
+<p><mark><strong>The Knative CLI <code>kn</code> provides a quick and easy interface for creating Knative resources</strong></mark> such as Knative Services and event sources, without the need to create or modify YAML files directly. <code>kn</code> also simplifies completion of otherwise complex procedures such as autoscaling and traffic splitting.</p>
 <div class="admonition todo">
 <p class="admonition-title">Installing the <code>kn</code> CLI</p>
 <div class="tabbed-set" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Using Homebrew</label><div class="tabbed-content">
@@ -2870,6 +2823,26 @@ cd client/
 </div>
 <p>For more complex installations, such as nightly releases, see <a href="../../client/install-kn/">Install <code>kn</code></a></p>
 </div>
+<h2 id="installing-knative-sandbox">Installing Knative (sandbox)<a class="headerlink" href="#installing-knative-sandbox" title="Permanent link">&para;</a></h2>
+<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use a Knative on Kind (konk)</mark></p>
+<div class="admonition todo">
+<p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
+<div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
+</code></pre></div>
+</div>
+<details class="question"><summary>What does the KonK script actually do?</summary><p>Knative on Kind (KonK) is a shell script which:</p>
+<ol>
+<li>
+<p>Checks to see that you have Kind installed and creates a Cluster called "knative" via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/01-kind.sh"><code>01-kind.sh</code></a></strong></p>
+</li>
+<li>
+<p>Installs <strong>Knative Serving</strong> with <strong>Kourier</strong> as the networking layer and <strong>nip.io</strong> as the DNS + some port-forwarding magic on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/02-serving.sh"><code>02-serving.sh</code></a></strong></p>
+</li>
+<li>
+<p>Installs <strong>Knative Eventing</strong> with an In-Memory <strong>Channels</strong> and In-Memory <strong>Broker</strong> on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/04-eventing.sh"><code>04-eventing.sh</code></a></strong></p>
+</li>
+</ol>
+</details>
                 
               
               
@@ -2932,7 +2905,7 @@ cd client/
               <span class="md-footer__direction">
                 Next
               </span>
-              Deploying your first Knative Service
+              First Knative Service
             </div>
           </div>
           <div class="md-footer__button md-icon">
