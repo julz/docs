@@ -6,7 +6,11 @@ With Knative Serving, we have a powerful tool which can take our containerized c
 ??? question "What are Event Driven Applications?"
     Event-driven applications are designed to detect events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.
 
-Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include: [creating and responding to Kubernetes API events](../../eventing/sources/apiserversource/), [creating an image processing pipeline](https://www.youtube.com/watch?v=DrmOpjAunlQ), or [facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects](https://www.youtube.com/watch?v=lVfJ5WEQ5_s).
+Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include:
+
+1. [Creating and responding to Kubernetes API events](../../eventing/sources/apiserversource/)
+1. [Creating an image processing pipeline](https://www.youtube.com/watch?v=DrmOpjAunlQ)
+1. [Facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects](https://www.youtube.com/watch?v=lVfJ5WEQ5_s).
 
 ## Sources, Brokers, Triggers, Sinks, oh my!
 For the purposes of this tutorial, we'll keep it simple. You will focus on four components for building this communication infrastructure **(`Source`, `Trigger`, `Broker`, and `Sink`)**.
