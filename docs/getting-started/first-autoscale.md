@@ -6,9 +6,8 @@
 
 **Let's see this in action!** We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pod</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.
 
-
-### Check the Knative Pods
-Let's run our "Hello world!" Service just one more time.
+#### Check the Knative Pods
+Let's run our "Hello world!" Service just one more time. This time, try the Knative Service `URL` in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io).
 ```bash
 curl http://hello.default.127.0.0.1.nip.io
 ```

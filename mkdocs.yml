@@ -160,7 +160,7 @@ nav:
 
 theme:
   name: material
-  logo: images/knative-sm.png
+  logo: images/logo/rgb/knative-logo-rgb.png
   favicon: images/knative-sm.png
   custom_dir: overrides
   features:
@@ -170,7 +170,6 @@ theme:
     - navigation.tabs.sticky
     - navigation.indexes
     - navigation.top
-    - toc.integrate
 
 plugins:
   - search
