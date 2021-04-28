@@ -20,7 +20,7 @@
      <lastmod>2021-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/dev/getting-started/first-cloud-event/</loc>
+     <loc>https://knative.dev/dev/getting-started/getting-started-eventing/</loc>
      <lastmod>2021-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
@@ -28,7 +28,11 @@
      <lastmod>2021-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://knative.dev/dev/getting-started/first-source-trigger/</loc>
+     <loc>https://knative.dev/dev/getting-started/first-source/</loc>
+     <lastmod>2021-04-28</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://knative.dev/dev/getting-started/first-trigger/</loc>
      <lastmod>2021-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>

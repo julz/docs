@@ -18,7 +18,7 @@
     
     
       
-        <title>Examining the Broker - Knative</title>
+        <title>Sources, Brokers, Triggers, Sinks - Knative</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#background" class="md-skip">
+        <a href="#sources-brokers-triggers-sinks-oh-my" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Examining the Broker
+              Sources, Brokers, Triggers, Sinks
             
           </span>
         </div>
@@ -475,8 +475,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-cloud-event/" class="md-nav__link">
-        Background and CloudEvents
+      <a href="../getting-started-eventing/" class="md-nav__link">
+        Introducing Knative Eventing
       </a>
     </li>
   
@@ -495,12 +495,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Examining the Broker
+          Sources, Brokers, Triggers, Sinks
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Examining the Broker
+        Sources, Brokers, Triggers, Sinks
       </a>
       
         
@@ -516,9 +516,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
+    Sources, Brokers, Triggers, Sinks, oh my!
   </a>
+  
+    <nav class="md-nav" aria-label="Sources, Brokers, Triggers, Sinks, oh my!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudevents" class="md-nav__link">
+    CloudEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -542,8 +555,20 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-source-trigger/" class="md-nav__link">
-        Routing CloudEvents with Sources, Brokers and Triggers
+      <a href="../first-source/" class="md-nav__link">
+        Introducing the CloudEvents Player
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-trigger/" class="md-nav__link">
+        Creating your first Trigger
       </a>
     </li>
   
@@ -2679,9 +2704,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
+    Sources, Brokers, Triggers, Sinks, oh my!
   </a>
+  
+    <nav class="md-nav" aria-label="Sources, Brokers, Triggers, Sinks, oh my!">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudevents" class="md-nav__link">
+    CloudEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2709,25 +2747,70 @@
                   </a>
                 
                 
-                  <h1>Examining the Broker</h1>
+                  <h1>Sources, Brokers, Triggers, Sinks</h1>
                 
-                <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>In the previous step, we talked a bit about CloudEvents and their role in Knative, specifically their ability to transport bits of information within our Knative deployment. If one of your Knative Services produces a CloudEvent, how can you ensure that it arrives at its destination?</p>
-<p>That's where <code>Brokers</code> come in. <code>Brokers</code> are a fault-tolerant way to intake CloudEvents from <code>Sources</code> (which emit CloudEvents) and send them to the correct <code>Sink</code> (which consume CloudEvents).</p>
-<p>But a <code>Broker</code> can't do this work alone, <code>Triggers</code> help to filter the CloudEvents to the correct place but more on that later.</p>
+                <h2 id="sources-brokers-triggers-sinks-oh-my">Sources, Brokers, Triggers, Sinks, oh my!<a class="headerlink" href="#sources-brokers-triggers-sinks-oh-my" title="Permanent link">&para;</a></h2>
+<p>For the purposes of this tutorial, let's keep it simple. You will focus on four powerful Eventing components: <code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code>.</p>
+<p>Let's take a look at how these components interact:</p>
+<figure>
+  <img src="https://user-images.githubusercontent.com/16281246/116248768-1fe56080-a73a-11eb-9a85-8bdccb82d16c.png" draggable="false">
+  <figcaption> Source 1 and Source 2 are transmitting some data (1's and 2's) to the Broker, which then gets filtered by Triggers to the desired Sink.</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">Component</th>
+<th align="center">Basic Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Source</code></td>
+<td align="center"><img alt="ℹ" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/2139.svg" title=":information_source:" />  A Kubernetes Custom Resource which emits events to the Broker.</td>
+</tr>
+<tr>
+<td align="center"><code>Broker</code></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 13v6h-1l-2-2h-8V9H5l-2 2H2V5h1l2 2h8v8h6l2-2z"/></svg></span> A "hub" for events in your infrastructure; a central location to send events for delivery.</td>
+</tr>
+<tr>
+<td align="center"><code>Trigger</code></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 7v6a9 9 0 0 0 9 9 9 9 0 0 0 9-9V7h-4v6a5 5 0 0 1-5 5 5 5 0 0 1-5-5V7m10-2h4V2h-4M3 5h4V2H3m10-.5L9 9h2v5.5L15 7h-2V1.5z"/></svg></span> Acts as a filter for events entering the broker, can be configured with desired event attributes.</td>
+</tr>
+<tr>
+<td align="center"><code>Sink</code></td>
+<td align="center"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 20h14v-2H5m14-9h-4V3H9v6H5l7 7 7-7z"/></svg></span>  A destination for events.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">A note on <code>Sources</code> and <code>Sinks</code></p>
+<p>A Knative Service can act as both a <code>Source</code> and a <code>Sink</code> for events, and for good reason. You may want to consume events from the <code>Broker</code> and send modified events back to the <code>Broker</code>, as you would in any pipeline use-case.</p>
+</div>
+<h3 id="cloudevents">CloudEvents<a class="headerlink" href="#cloudevents" title="Permanent link">&para;</a></h3>
+<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
+<details class="question"><summary>What are CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
+<ol>
+<li>CloudEvents follow the <a href = "https://github.com/cloudevents/spec" target="_blank">CloudEvents 1.0 Specification</a>, with required and optional attributes.</li>
+<li>CloudEvents can be "emitted" by almost anything and can be transported to anywhere in your deployment.  </li>
+<li>CloudEvents can carry some attributes (things like <code>id</code>, <code>source</code>, <code>type</code>, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).</li>
+</ol>
+<p>To find out more about CloudEvents, check out the <a href="https://cloudevents.io/">CloudEvents website</a>!</p>
+</details>
 <h2 id="examining-the-broker">Examining the Broker<a class="headerlink" href="#examining-the-broker" title="Permanent link">&para;</a></h2>
 <p>As part of the <code>KonK</code> install, you should have an in-memory <code>Broker</code> already installed.
 <div class="highlight"><pre><span></span><code>kn broker list
 </code></pre></div></p>
-<p>You should get:
-<div class="no-copy highlight"><pre><span></span><code>NAME      URL                                                                        AGE   CONDITIONS   READY   REASON
-default   &lt;broker-url&gt;                                                               5m    <span class="m">5</span> OK / <span class="m">5</span>     True    
-</code></pre></div>
-Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>.</p>
+<p><mark><strong>Expected Output</strong></mark>
+<div class="no-copy highlight"><pre><span></span><code>NAME             URL                                                                          AGE   CONDITIONS   READY   REASON
+example-broker   http://broker-ingress.knative-eventing.svc.cluster.local/default/default     5m    <span class="m">5</span> OK / <span class="m">5</span>     True    
+</code></pre></div></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>In-Memory Brokers are for development use only and must not be used in a production deployment.</p>
 </div>
+<details class="question"><summary>What other components exist in Knative Eventing?</summary><p>If you want to find out more about the different components of Knative Eventing, like Channels, Sequences, Parallels, etc. check out <a href="../eventing/README.md" target="blank_">"Eventing Components."</a></p>
+</details>
                 
               
               
@@ -2760,7 +2843,7 @@ Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>
       <!-- Link to previous page -->
       
         <a
-          href="../first-cloud-event/"
+          href="../getting-started-eventing/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -2772,7 +2855,7 @@ Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>
               <span class="md-footer__direction">
                 Previous
               </span>
-              Background and CloudEvents
+              Introducing Knative Eventing
             </div>
           </div>
         </a>
@@ -2781,7 +2864,7 @@ Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>
       <!-- Link to next page -->
       
         <a
-          href="../first-source-trigger/"
+          href="../first-source/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -2790,7 +2873,7 @@ Where <code>&lt;broker-url&gt;</code> is the location of the <code>Broker</code>
               <span class="md-footer__direction">
                 Next
               </span>
-              Routing CloudEvents with Sources, Brokers and Triggers
+              Introducing the CloudEvents Player
             </div>
           </div>
           <div class="md-footer__button md-icon">

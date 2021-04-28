@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-source-trigger/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-trigger/">
       
       <link rel="icon" href="../../images/knative-sm.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
-        <title>Routing CloudEvents with Sources, Brokers and Triggers - Knative</title>
+        <title>Creating your first Trigger - Knative</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-your-first-source" class="md-skip">
+        <a href="#creating-your-first-trigger" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Routing CloudEvents with Sources, Brokers and Triggers
+              Creating your first Trigger
             
           </span>
         </div>
@@ -475,8 +475,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-cloud-event/" class="md-nav__link">
-        Background and CloudEvents
+      <a href="../getting-started-eventing/" class="md-nav__link">
+        Introducing Knative Eventing
       </a>
     </li>
   
@@ -488,7 +488,19 @@
   
     <li class="md-nav__item">
       <a href="../first-broker/" class="md-nav__link">
-        Examining the Broker
+        Sources, Brokers, Triggers, Sinks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-source/" class="md-nav__link">
+        Introducing the CloudEvents Player
       </a>
     </li>
   
@@ -507,12 +519,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Routing CloudEvents with Sources, Brokers and Triggers
+          Creating your first Trigger
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Routing CloudEvents with Sources, Brokers and Triggers
+        Creating your first Trigger
       </a>
       
         
@@ -526,20 +538,6 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#creating-your-first-source" class="md-nav__link">
-    Creating your first Source
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-your-first-cloudevent" class="md-nav__link">
-    Sending your first CloudEvent
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#creating-your-first-trigger" class="md-nav__link">
@@ -2686,20 +2684,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#creating-your-first-source" class="md-nav__link">
-    Creating your first Source
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#sending-your-first-cloudevent" class="md-nav__link">
-    Sending your first CloudEvent
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#creating-your-first-trigger" class="md-nav__link">
     Creating your first Trigger
   </a>
@@ -2718,97 +2702,41 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/first-source-trigger.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/first-trigger.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                  <h1>Routing CloudEvents with Sources, Brokers and Triggers</h1>
+                  <h1>Creating your first Trigger</h1>
                 
-                <h2 id="creating-your-first-source">Creating your first Source<a class="headerlink" href="#creating-your-first-source" title="Permanent link">&para;</a></h2>
-<p>Now that we have a <code>Broker</code>, let's send some CloudEvents to using a <code>Source</code>.</p>
-<p>A <code>Source</code> is a Kubernetes custom resource (CR) that emits CloudEvents to a specified location (in our case, a <code>Broker</code>). Basically, a <code>Source</code> is exactly what it sounds like: it's a "source" of CloudEvents.</p>
-<p>You can check the current state of sources in your deployment by running the following command:</p>
-<div class="highlight"><pre><span></span><code>kn <span class="nb">source</span> list
+                <h2 id="creating-your-first-trigger">Creating your first <code>Trigger</code><a class="headerlink" href="#creating-your-first-trigger" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>kn trigger create cloudevents-player --sink cloudevents-player
 </code></pre></div>
-<p>You should get:
-<div class="no-copy highlight"><pre><span></span><code>No sources found.
-</code></pre></div></p>
-<p>You haven't deployed any <code>Sources</code> to your Knative deployment, so there shouldn't be any present when <code>kn</code> checks for them. <strong>Let's remedy this by creating our first Knative <code>Source</code>.</strong>
-<div class="highlight"><pre><span></span><code>kn service create cloudevents-player <span class="se">\</span>
---image ruromero/cloudevents-player:latest <span class="se">\</span>
---env <span class="nv">BROKER_URL</span><span class="o">=</span>&lt;broker-url&gt;
-</code></pre></div>
-Where <code>&lt;broker-url&gt;</code> is the URL of your In-Memory Broker which we discovered in the previous step.</p>
-<p>You should get:
-<div class="no-copy highlight"><pre><span></span><code>... <span class="s1">&#39;cloudevents-player-xxxxx-``&#39;</span> is available at URL: &lt;service-url&gt;
-</code></pre></div>
-Where <code>&lt;service-url&gt;</code> is the location where your Knative Service is hosted.</p>
-<p>The <a href="https://github.com/ruromero/cloudevents-player">CloudEvents Player</a> is a very useful web app that we can use to send and receive CloudEvents. If you open this url in your browser, you should be greeted by a slick UI which includes a form titled "Create Event."</p>
-<h2 id="sending-your-first-cloudevent">Sending your first CloudEvent<a class="headerlink" href="#sending-your-first-cloudevent" title="Permanent link">&para;</a></h2>
-<p>In the "Create Event" form, we are greeted by a number of fields, all of which are required.</p>
-<table>
-<thead>
-<tr>
-<th>Field</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Event ID</code></td>
-<td>A unique ID (generally a <a href="https://en.wikipedia.org/wiki/Universally_unique_identifier#:~:text=A%20universally%20unique%20identifier%20(UUID,%2C%20for%20practical%20purposes%2C%20unique.)">UUID</a>. Click the loop icon to generate a new one.</td>
-</tr>
-<tr>
-<td><code>Event Type</code></td>
-<td>An event type.</td>
-</tr>
-<tr>
-<td><code>Event Source</code></td>
-<td>An event source.</td>
-</tr>
-<tr>
-<td><code>Specversion</code></td>
-<td>Demarcates which CloudEvents spec you're using (should always be 1.0).</td>
-</tr>
-<tr>
-<td><code>Message</code></td>
-<td>The <code>data</code> section of the CloudEvent, a payload which is carrying the data you care to be delivered.</td>
-</tr>
-</tbody>
-</table>
-<p>Fill out the form with whatever you data you would like to and hit the "SEND EVENT" button.</p>
-<p>You should see this:
-<img alt="screencapture-cloudevents-player-default-127-0-0-1-nip-io-2021-04-14-07_42_26" src="https://user-images.githubusercontent.com/16281246/114704777-fcabc180-9cf4-11eb-8cd8-ae85ca32101e.png" /></p>
-<div class="admonition tip">
-<p class="admonition-title">Tip: Clicking the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></span> will show you the CloudEvent as the <code>Broker</code> sees it.</p>
 </div>
-<p>The <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2 21 21-9L2 3v7l15 2-15 2v7z"/></svg></span> icon in the "Status" column implies that the event has been sent to our <code>Broker</code> which we specified through the environment variable <code>BROKER_URL</code>. But where has the event gone? Well, right now, nowhere!</p>
-<p>A <code>Broker</code> is simply a receptacle for events. In order for your events to be sent somewhere, you must create a <code>Trigger</code> which listens for your events and places them somewhere.</p>
-<h2 id="creating-your-first-trigger">Creating your first <code>Trigger</code><a class="headerlink" href="#creating-your-first-trigger" title="Permanent link">&para;</a></h2>
-<p>A <a href="../eventing/triggers/"><code>Trigger</code></a> represents a desire to subscribe to events from a specific broker.</p>
-<p>If, for example, you wanted to intake the CloudEvents our CloudEvents Player was emitting to our <code>Broker</code> you could create a <code>Trigger</code>, like so:</p>
-<p><div class="highlight"><pre><span></span><code>kn trigger create cloudevents-player --sink cloudevents-player
-</code></pre></div>
-Notice that you specified a <code>Sink</code> in the creation of our <code>Trigger</code> which tells Knative where to put the Events this <code>Trigger</code> is listening for.</p>
-<p>You should see:
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
+<p>//TODO</p>
+</div>
+</div>
+<p><mark><strong>Expected Output</strong></mark>
 <div class="no-copy highlight"><pre><span></span><code>Trigger <span class="s1">&#39;cloudevents-player&#39;</span> successfully created <span class="k">in</span> namespace <span class="s1">&#39;default&#39;</span>.
 </code></pre></div></p>
 <details class="question"><summary>What CloudEvents is my <code>Trigger</code> listening for?</summary><p>Since we didn't specify a <code>--filter</code> in our <code>kn</code> command, our Trigger is listening for any CloudEvents coming into the <code>Broker</code>.</p>
 </details>
-<p>Now, when we go back to the CloudEvents Player and send an Event, we see that CloudEvents are both sent and received:</p>
-<p><img alt="screencapture-cloudevents-player-default-127-0-0-1-nip-io-2021-04-14-07_39_08" src="https://user-images.githubusercontent.com/16281246/114704377-8909b480-9cf4-11eb-9db0-815223199b5b.png" /></p>
+<p>Now, when we go back to the CloudEvents Player and send an Event, we see that CloudEvents are both sent and received by the CloudEvents Player:</p>
+<figure>
+  <img src="https://user-images.githubusercontent.com/16281246/116411017-4f13d480-a803-11eb-9982-cd9012781fe6.png" draggable="false">
+  <figcaption>You may need to refresh the page to see your changes</figcaption>
+</figure>
+
 <details class="question"><summary>What if I want to filter on CloudEvent attributes?</summary><p>First, delete your existing Trigger:
 <div class="highlight"><pre><span></span><code>  kn trigger delete cloudevents-player
 </code></pre></div>
 Now let's add a Trigger that listens for a certain CloudEvent Type
-<div class="highlight"><pre><span></span><code>  kn trigger create cloudevents-player --sink cloudevents-player --filter <span class="nv">type</span><span class="o">=</span>com.example
+<div class="highlight"><pre><span></span><code>  kn trigger create cloudevents-player --sink cloudevents-player --filter <span class="nv">type</span><span class="o">=</span>some-type
 </code></pre></div></p>
-<p>If you send a CloudEvent with type "com.example," it will be reflected in the CloudEvents Player UI. Any other types will be ignored by the <code>Trigger</code>.</p>
+<p>If you send a CloudEvent with type "some-type," it will be reflected in the CloudEvents Player UI. Any other types will be ignored by the <code>Trigger</code>.</p>
 <p>You can filter on any aspect of the CloudEvent you would like to.</p>
-</details>
-<p>In review, you have created a Knative Service (the CloudEvents Player) as your <code>Source</code> of CloudEvents which are sent through the <code>Broker</code>, routed by the <code>Trigger</code> and received by that same Knative Service which is <em>also</em> acting as a <code>Sink</code> for CloudEvents.</p>
-<details class="info"><summary>Architecture Diagram</summary><p>//TODO</p>
 </details>
 <p>Some people call this <strong>"Event-Driven Architecture"</strong> which can be used to create your own <strong>"Functions as a Service"</strong> on Kubernetes <img alt="🎉" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f389.svg" title=":tada:" /> <img alt="🌮" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg" title=":taco:" /> <img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /></p>
                 
@@ -2843,7 +2771,7 @@ Now let's add a Trigger that listens for a certain CloudEvent Type
       <!-- Link to previous page -->
       
         <a
-          href="../first-broker/"
+          href="../first-source/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -2855,7 +2783,7 @@ Now let's add a Trigger that listens for a certain CloudEvent Type
               <span class="md-footer__direction">
                 Previous
               </span>
-              Examining the Broker
+              Introducing the CloudEvents Player
             </div>
           </div>
         </a>

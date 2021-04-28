@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-cloud-event/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/first-source/">
       
       <link rel="icon" href="../../images/knative-sm.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
-        <title>Background and CloudEvents - Knative</title>
+        <title>Introducing the CloudEvents Player - Knative</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introducing-the-cloudevents-player" class="md-skip">
+        <a href="#creating-your-first-source" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Background and CloudEvents
+              Introducing the CloudEvents Player
             
           </span>
         </div>
@@ -473,6 +473,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../getting-started-eventing/" class="md-nav__link">
+        Introducing Knative Eventing
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../first-broker/" class="md-nav__link">
+        Sources, Brokers, Triggers, Sinks
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -481,24 +505,20 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Background and CloudEvents
+          Introducing the CloudEvents Player
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Background and CloudEvents
+        Introducing the CloudEvents Player
       </a>
       
         
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -508,15 +528,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#creating-your-first-source" class="md-nav__link">
+    Creating your first Source
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
-    Sources, Brokers, Triggers, Sinks, oh my!
+  <a href="#examining-the-cloudevents-player" class="md-nav__link">
+    Examining the CloudEvents Player
   </a>
   
 </li>
@@ -534,20 +554,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../first-broker/" class="md-nav__link">
-        Examining the Broker
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../first-source-trigger/" class="md-nav__link">
-        Routing CloudEvents with Sources, Brokers and Triggers
+      <a href="../first-trigger/" class="md-nav__link">
+        Creating your first Trigger
       </a>
     </li>
   
@@ -2675,8 +2683,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2685,15 +2691,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#background" class="md-nav__link">
-    Background
+  <a href="#creating-your-first-source" class="md-nav__link">
+    Creating your first Source
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
-    Sources, Brokers, Triggers, Sinks, oh my!
+  <a href="#examining-the-cloudevents-player" class="md-nav__link">
+    Examining the CloudEvents Player
   </a>
   
 </li>
@@ -2710,42 +2716,91 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/first-cloud-event.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/first-source.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="introducing-the-cloudevents-player">Introducing the CloudEvents Player<a class="headerlink" href="#introducing-the-cloudevents-player" title="Permanent link">&para;</a></h1>
-<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
-<p>With Knative Serving, we have a powerful tool which can take our containerized code and deploy it with relative ease. <strong>With Knative Eventing, you gain a few new super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> that allow you to build Event-Driven Applications.</strong></p>
-<details class="question"><summary>What are Event Driven Applications?</summary><p>Event-driven applications are designed to detect events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.</p>
-</details>
-<p>Knative Eventing acts as the "glue" between the disparate parts of your architecture and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include:</p>
-<ol>
-<li><a href="../../eventing/sources/apiserversource/">Creating and responding to Kubernetes API events</a></li>
-<li><a href="https://www.youtube.com/watch?v=DrmOpjAunlQ">Creating an image processing pipeline</a></li>
-<li><a href="https://www.youtube.com/watch?v=lVfJ5WEQ5_s">Facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects</a>.</li>
-</ol>
-<h2 id="sources-brokers-triggers-sinks-oh-my">Sources, Brokers, Triggers, Sinks, oh my!<a class="headerlink" href="#sources-brokers-triggers-sinks-oh-my" title="Permanent link">&para;</a></h2>
-<p>For the purposes of this tutorial, we'll keep it simple. You will focus on four main components: <strong><code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code></strong>.</p>
+                  <h1>Introducing the CloudEvents Player</h1>
+                
+                <p>In this tutorial, you will be using the <a href="https://github.com/ruromero/cloudevents-player">CloudEvents Player</a> to showcase the core concepts of Knative Eventing. By the end of this tutorial, you should have something that looks like this:</p>
 <figure>
-  <img src="https://user-images.githubusercontent.com/16281246/116248768-1fe56080-a73a-11eb-9a85-8bdccb82d16c.png" draggable="false">
-  <figcaption>A basic implementation of 2 Sources, a Broker, 2 Triggers, and 2 Sinks</figcaption>
+  <img src="https://user-images.githubusercontent.com/16281246/116408922-589c3d00-a801-11eb-9835-5c37ff57c861.png" draggable="false">
+  <figcaption>Figure 6.6 from <a href = "https://www.manning.com/books/knative-in-action" target="_blank">Knative in Action</a> <br>
+Here, the CloudEvents Player is acting as both a <code>Source</code> and a <code>Sink</code> for CloudEvents.
+  </figcaption>
 </figure>
 
-<p>In the above Figure, we see <code>Source 1</code> and <code>Source 2</code> are transimitting some data to the <code>Broker</code>, which then gets filtered by <code>Triggers</code> to the desired <code>Sink</code>.</p>
-<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
-<details class="question"><summary>What our CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
-<ol>
-<li>CloudEvents follow the <a href = "https://github.com/cloudevents/spec" target="_blank">CloudEvents 1.0 Specification</a>, with required and optional attributes.</li>
-<li>CloudEvents can be "emitted" by almost anything and can be transported to anywhere in your deployment.  </li>
-<li>CloudEvents can carry some attributes (things like <code>id</code>, <code>source</code>, <code>type</code>, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).</li>
-</ol>
-<details class="question"><summary>Want to find out more about CloudEvents?</summary><p>Check out the <a href="https://cloudevents.io/">CloudEvents website</a>!</p>
+<h2 id="creating-your-first-source">Creating your first Source<a class="headerlink" href="#creating-your-first-source" title="Permanent link">&para;</a></h2>
+<p>The CloudEvents Player acts as a <code>Source</code> for CloudEvents by intaking the URL of our <code>Broker</code> as an environment variable (<code>BROKER_URL</code>) and sending CloudEvents via the UI.</p>
+<p>Create the CloudEvents Player Service:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>kn service create cloudevents-player <span class="se">\</span>
+--image ruromero/cloudevents-player:latest <span class="se">\</span>
+--env <span class="nv">BROKER_URL</span><span class="o">=</span>http://broker-ingress.knative-eventing.svc.cluster.local/default/default
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">YAML</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>//TODO
+</code></pre></div>
+</div>
+</div>
+<p><mark><strong>Expected Output</strong></mark>
+<div class="no-copy highlight"><pre><span></span><code>Service <span class="s1">&#39;cloudevents-player&#39;</span> created to latest revision <span class="s1">&#39;cloudevents-player-vwybw-1&#39;</span> is available at URL:
+http://cloudevents-player.default.127.0.0.1.nip.io
+</code></pre></div></p>
+<details class="question"><summary>Wait, my <code>Revision</code> is named something different!</summary><p>Since we didn't assign a <code>revision-name</code>, Knative Serving automatically created one for us, it's ok if your <code>Revision</code> is named something different.</p>
 </details>
+<h2 id="examining-the-cloudevents-player">Examining the CloudEvents Player<a class="headerlink" href="#examining-the-cloudevents-player" title="Permanent link">&para;</a></h2>
+<p>We can use the CloudEvents Player to send and receive CloudEvents. If you open the <a href="http://cloudevents-player.default.127.0.0.1.nip.io" target="_blank">Service URL</a> in your browser, you should be greeted by a form titled "Create event."</p>
+<figure>
+  <img src="https://user-images.githubusercontent.com/16281246/116404278-7d41e600-a7fc-11eb-81a3-5f85db9f966a.png" draggable="false">
+  <figcaption>The user interface for the CloudEvents Player</figcaption>
+</figure>
+
+<details class="question"><summary>What do these fields mean?</summary><table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Event ID</code></td>
+<td align="left">A unique ID. Click the loop icon to generate a new one.</td>
+</tr>
+<tr>
+<td align="center"><code>Event Type</code></td>
+<td align="left">An event type.</td>
+</tr>
+<tr>
+<td align="center"><code>Event Source</code></td>
+<td align="left">An event source.</td>
+</tr>
+<tr>
+<td align="center"><code>Specversion</code></td>
+<td align="left">Demarcates which CloudEvents spec you're using (should always be 1.0).</td>
+</tr>
+<tr>
+<td align="center"><code>Message</code></td>
+<td align="left">The <code>data</code> section of the CloudEvent, a payload which is carrying the data you care to be delivered.</td>
+</tr>
+</tbody>
+</table>
+<p>For more information on the CloudEvents Specification, check out the <a href="https://github.com/cloudevents/spec/blob/v1.0.1/spec.md" target="_blank">CloudEvents Spec</a>.</p>
 </details>
-<details class="question"><summary>What other components exist in Knative Eventing?</summary><p>If you want to find out more about the different components of Knative Eventing, like Channels, Sequences, Parallels, etc. check out <a href="../eventing/README.md" target="blank_">"Eventing Components."</a></p>
-</details>
+<p>Fill out the form with whatever you data you would like to and hit the "SEND EVENT" button.</p>
+<figure>
+  <img src="https://user-images.githubusercontent.com/16281246/116407683-04448d80-a800-11eb-9283-ba86fb259053.png" draggable="false">
+  <figcaption>Make sure your Event Source does not contain any spaces! </figcaption>
+</figure>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip: Clicking the <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg></span> will show you the CloudEvent as the <code>Broker</code> sees it.</p>
+</div>
+<p>The <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m2 21 21-9L2 3v7l15 2-15 2v7z"/></svg></span> icon in the "Status" column implies that the event has been sent to our <code>Broker</code>, but where has the event gone? Well, right now, nowhere!</p>
+<p>A <code>Broker</code> is simply a receptacle for events. In order for your events to be sent somewhere, you must create a <code>Trigger</code> which listens for your events and places them somewhere. Let's do that next!</p>
                 
               
               
@@ -2778,7 +2833,7 @@
       <!-- Link to previous page -->
       
         <a
-          href="../first-traffic-split/"
+          href="../first-broker/"
           class="md-footer__link md-footer__link--prev"
           rel="prev"
         >
@@ -2790,7 +2845,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Traffic Splitting
+              Sources, Brokers, Triggers, Sinks
             </div>
           </div>
         </a>
@@ -2799,7 +2854,7 @@
       <!-- Link to next page -->
       
         <a
-          href="../first-broker/"
+          href="../first-trigger/"
           class="md-footer__link md-footer__link--next"
           rel="next"
         >
@@ -2808,7 +2863,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              Examining the Broker
+              Creating your first Trigger
             </div>
           </div>
           <div class="md-footer__button md-icon">
