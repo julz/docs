@@ -7,7 +7,7 @@
 **Let's see this in action!** We're going to peek under the hood at the <a href= "https://kubernetes.io/docs/concepts/workloads/pods/" target="blank_">Pod</a> in Kubernetes where our Knative Service is running to watch our "Hello world!" Service scale up and down.
 
 ### Run your Knative Service
-Let's run our "Hello world!" Service just one more time. This time, try the Knative Service `URL` in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io){target=_blank} or you can use your terminal with `curl`.
+Let's run our "Hello world!" Service just one more time. This time, try the Knative Service `URL` in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io){target=_blank}, or you can use your terminal with `curl`.
 ```bash
 curl http://hello.default.127.0.0.1.nip.io
 ```
@@ -27,7 +27,7 @@ hello-world                              0/2     Terminating
 ```
 
 ### Scale up your Knative Service
-Try to rerun the Knative Service again in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io){target=_blank}, and you will see a new pod running again.
+Try to rerun the Knative Service in your browser [http://hello.default.127.0.0.1.nip.io](http://hello.default.127.0.0.1.nip.io){target=_blank}, and you will see a new pod running again.
 
 ```{ .bash .no-copy }
 NAME                                     READY   STATUS
@@ -36,6 +36,7 @@ hello-world                              0/2     ContainerCreating
 hello-world                              1/2     Running
 hello-world                              2/2     Running
 ```
+Exit the watch command with `Ctrl+c`.
 
 Some people call this **Serverless** :tada: :taco: :fire:
 
