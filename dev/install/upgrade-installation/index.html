@@ -2775,7 +2775,7 @@ you upgrade your Knative components.</p>
 <p>In some upgrades there are some steps that must happen before the actual
 upgrade, and these are identified in the release notes. For example, upgrading
 from v0.15.0 to v0.16.0 for Eventing you have to run:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative/eventing/releases/download/v0.21.0/eventing-pre-install-jobs.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-pre-install-jobs.yaml
 </code></pre></div>
 <h3 id="upgrade-existing-resources-to-the-latest-stored-version">Upgrade existing resources to the latest stored version<a class="headerlink" href="#upgrade-existing-resources-to-the-latest-stored-version" title="Permanent link">&para;</a></h3>
 <p>Our custom resources are stored within Kubernetes at a particular version.
@@ -2785,7 +2785,7 @@ will succeed when upgrading.</p>
 <p>For the various subprojects - we have a K8s job to help operators perform this migration.
 The release notes for each release will explicitly whether a migration is required.</p>
 <p>ie.
-<div class="highlight"><pre><span></span><code>kubectl create --filename http://github.com/knative/serving/releases/download/v0.21.0/serving-post-install-jobs.yaml
+<div class="highlight"><pre><span></span><code>kubectl create --filename https://storage.googleapis.com/knative-nightly/serving/latest/serving-post-install-jobs.yaml
 </code></pre></div></p>
 <h2 id="performing-the-upgrade">Performing the upgrade<a class="headerlink" href="#performing-the-upgrade" title="Permanent link">&para;</a></h2>
 <p>To upgrade, apply the <code>.yaml</code> files for the subsequent minor versions of all
@@ -2800,7 +2800,7 @@ following command upgrades the installation to v0.16.0:</p>
 <p>In some upgrades there are some steps that must happen after the actual
 upgrade, and these are identified in the release notes. For example, after
 upgrading from v0.15.0 to v0.16.0 for Eventing you should run:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative/eventing/releases/download/v0.21.0/eventing-post-install-jobs.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-post-install-jobs.yaml
 </code></pre></div>
 <h2 id="verifying-the-upgrade">Verifying the upgrade<a class="headerlink" href="#verifying-the-upgrade" title="Permanent link">&para;</a></h2>
 <p>To confirm that your components and plugins have successfully upgraded, view the status of their pods in the relevant namespaces.

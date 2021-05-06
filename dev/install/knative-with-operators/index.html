@@ -2991,7 +2991,7 @@ for development or test purposes only.</p>
 <h2 id="installing-the-latest-release">Installing the latest release<a class="headerlink" href="#installing-the-latest-release" title="Permanent link">&para;</a></h2>
 <p>You can find information about the different released versions of the Knative Operator on the <a href="https://github.com/knative/operator/releases">Releases page</a>.</p>
 <p>Install the latest stable Operator release:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/operator/releases/download/{&#39;provider&#39;: &#39;mike&#39;}/operator.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/operator/latest/operator.yaml
 </code></pre></div>
 <h2 id="verify-your-installation">Verify your installation<a class="headerlink" href="#verify-your-installation" title="Permanent link">&para;</a></h2>
 <p>Verify your installation:</p>
@@ -3203,7 +3203,7 @@ Knative Serving with different ingresses:</p>
 <ol>
 <li>
 <p>Install a properly configured Contour:
-  <div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative/net-contour/releases/download/<span class="o">{</span><span class="s1">&#39;provider&#39;</span>: <span class="s1">&#39;mike&#39;</span><span class="o">}</span>/contour.yaml
+  <div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/net-contour/latest/contour.yaml
 </code></pre></div></p>
 </li>
 <li>
@@ -3341,7 +3341,7 @@ in the Gloo documentation.</em></p>
 <p>We ship a simple Kubernetes Job called "default domain" that will (see caveats)
   configure Knative Serving to use <a href="http://xip.io">xip.io</a> as the
   default DNS suffix.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply --filename http://github.com/knative/serving/releases/download/<span class="o">{</span><span class="s1">&#39;provider&#39;</span>: <span class="s1">&#39;mike&#39;</span><span class="o">}</span>/serving-default-domain.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply --filename https://storage.googleapis.com/knative-nightly/serving/latest/serving-default-domain.yaml
 </code></pre></div>
 <p><strong>Caveat</strong>: This will only work if the cluster LoadBalancer service exposes an
 IPv4 address or hostname, so it will not work with IPv6 clusters or local setups
@@ -3559,7 +3559,7 @@ successfully removed, all the CRDs in Knative are still kept in the cluster. All
 can still work.</p>
 <h3 id="removing-the-knative-operator">Removing the Knative Operator:<a class="headerlink" href="#removing-the-knative-operator" title="Permanent link">&para;</a></h3>
 <p>If you have installed Knative using the Release page, remove the operator using the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl delete -f http://github.com/knative/operator/releases/download/{&#39;provider&#39;: &#39;mike&#39;}/operator.yaml
+<div class="highlight"><pre><span></span><code>kubectl delete -f https://storage.googleapis.com/knative-nightly/operator/latest/operator.yaml
 </code></pre></div>
 <p>If you have installed Knative from source, uninstall it using the following command while in the root directory
 for the source:</p>

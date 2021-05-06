@@ -2770,7 +2770,7 @@ and <a href="../install-eventing-with-yaml/">Installing Eventing using YAML file
 <p>Knative also supports the use of the Kubernetes Horizontal Pod Autoscaler (HPA)
 for driving autoscaling decisions. The following command will install the
 components needed to support HPA-class autoscaling:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-hpa.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-hpa.yaml
 </code></pre></div>
 <!-- TODO(https://github.com/knative/docs/issues/2152): Link to a more in-depth guide on HPA-class autoscaling -->
 </div>
@@ -2786,7 +2786,7 @@ via cert-manager.</p>
 </li>
 <li>
 <p>Next, install the component that integrates Knative with cert-manager:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-certmanager/releases/download/v0.21.0/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-certmanager/latest/release.yaml
 </code></pre></div>
 </li>
 <li>
@@ -2802,7 +2802,7 @@ support that.</p>
 <ol>
 <li>
 <p>First, install the <code>net-http01</code> controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-http01/releases/download/v0.21.0/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-http01/latest/release.yaml
 </code></pre></div>
 </li>
 <li>
@@ -2829,7 +2829,7 @@ wildcard certificates (e.g. cert-manager with a DNS01 issuer), then the most
 efficient way to provision certificates is with the namespace wildcard
 certificate controller. The following command will install the components needed
 to provision wildcard certificates in each namespace:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-nscert.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-nscert.yaml
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -2840,8 +2840,8 @@ options.</p>
 <input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5">DomainMapping CRD</label><div class="tabbed-content">
 <p>The <code>DomainMapping</code> CRD allows a user to map a Domain Name that they own to a
 specific Knative Service.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-domainmapping-crds.yaml
-kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-domainmapping.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping-crds.yaml
+kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-domainmapping.yaml
 </code></pre></div>
 </div>
 </div>
@@ -2853,12 +2853,12 @@ kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/ser
 <ol>
 <li>
 <p>Install the Kafka controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-controller.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Kafka Sink data plane:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-sink.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-sink.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -2867,7 +2867,7 @@ kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/ser
 <input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Sugar Controller</label><div class="tabbed-content">
 <!-- Unclear when this feature came in -->
 <p>The following command installs the Eventing Sugar Controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/eventing/releases/download/v0.21.0/eventing-sugar-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-sugar-controller.yaml
 </code></pre></div>
 <p>The Knative Eventing Sugar Controller will react to special labels and
 annotations and produce Eventing resources. For example:</p>
@@ -2885,11 +2885,11 @@ annotations and produce Eventing resources. For example:</p>
 </div>
 <input id="__tabbed_2_3" name="__tabbed_2" type="radio" /><label for="__tabbed_2_3">Github Source</label><div class="tabbed-content">
 <p>The following command installs the single-tenant Github source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-github/releases/download/v0.21.0/github.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/github.yaml
 </code></pre></div>
 <p>The single-tenant GitHub source creates one Knative service per GitHub source.</p>
 <p>The following command installs the multi-tenant GitHub source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-github/releases/download/v0.21.0/mt-github.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-github/latest/mt-github.yaml
 </code></pre></div>
 <p>The multi-tenant GitHub source creates only one Knative service handling all
 GitHub sources in the cluster. This source does not support logging or tracing
@@ -2899,14 +2899,14 @@ configuration yet.</p>
 </div>
 <input id="__tabbed_2_4" name="__tabbed_2" type="radio" /><label for="__tabbed_2_4">Apache Camel-K Source</label><div class="tabbed-content">
 <p>The following command installs the Apache Camel-K Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-camel/releases/download/v0.21.0/camel.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-camel/latest/camel.yaml
 </code></pre></div>
 <p>To learn more about the Apache Camel-K source, try
 <a href="../../eventing/samples/apache-camel-source/">our sample</a></p>
 </div>
 <input id="__tabbed_2_5" name="__tabbed_2" type="radio" /><label for="__tabbed_2_5">Apache Kafka Source</label><div class="tabbed-content">
 <p>The following command installs the Apache Kafka Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-kafka/releases/download/v0.21.0/source.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka/latest/source.yaml
 </code></pre></div>
 <p>To learn more about the Apache Kafka source, try
 <a href="../../eventing/samples/kafka/source/">our sample</a></p>
@@ -2914,7 +2914,7 @@ configuration yet.</p>
 <input id="__tabbed_2_6" name="__tabbed_2" type="radio" /><label for="__tabbed_2_6">GCP Sources</label><div class="tabbed-content">
 <p>The following command installs the GCP Sources:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># This installs both the Sources and the Channel.</span>
-kubectl apply -f http://github.com/google/knative-gcp/releases/download/v0.21.0/cloud-run-events.yaml
+kubectl apply -f https://storage.googleapis.com/google-nightly/knative-gcp/latest/cloud-run-events.yaml
 </code></pre></div>
 <p>To learn more about the Cloud Pub/Sub source, try
 <a href="../../eventing/samples/cloud-pubsub-source/">our sample</a>.</p>
@@ -2927,13 +2927,13 @@ kubectl apply -f http://github.com/google/knative-gcp/releases/download/v0.21.0/
 </div>
 <input id="__tabbed_2_7" name="__tabbed_2" type="radio" /><label for="__tabbed_2_7">Apache CouchDB Source</label><div class="tabbed-content">
 <p>The following command installs the Apache CouchDB Source:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-couchdb/releases/download/v0.21.0/couchdb.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-couchdb/latest/couchdb.yaml
 </code></pre></div>
 <p>To learn more about the Apache CouchDB source, read the <a href="https://github.com/knative-sandbox/eventing-couchdb/blob/main/source/README.md">documentation</a>.</p>
 </div>
 <input id="__tabbed_2_8" name="__tabbed_2" type="radio" /><label for="__tabbed_2_8">VMware Sources and Bindings</label><div class="tabbed-content">
 <p>The following command installs the VMware Sources and Bindings:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/vmware-tanzu/sources-for-knative/releases/download/v0.21.0/release.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/vmware-tanzu-nightly/sources-for-knative/latest/release.yaml
 </code></pre></div>
 <p>To learn more about the VMware sources and bindings, try
 <a href="https://github.com/vmware-tanzu/sources-for-knative/tree/master/samples/README.md">our samples</a>.</p>

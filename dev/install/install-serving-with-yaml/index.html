@@ -2793,12 +2793,12 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 <ol>
 <li>
 <p>Install the required custom resources:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-crds.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-crds.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the core components of Knative Serving:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-core.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-core.yaml
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2818,7 +2818,7 @@ Follow the procedure for the networking layer of your choice:</p>
 <ol>
 <li>
 <p>Install the Knative Kourier controller:
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-kourier/releases/download/v0.21.0/kourier.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-kourier/latest/kourier.yaml
 </code></pre></div></p>
 </li>
 <li>
@@ -2890,13 +2890,13 @@ Follow the procedure for the networking layer of your choice:</p>
 <ol>
 <li>
 <p>Install a properly configured Contour:</p>
-<p><div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.21.0/contour.yaml
+<p><div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-contour/latest/contour.yaml
 </code></pre></div>
     <!-- TODO(https://github.com/knative-sandbox/net-contour/issues/11): We need a guide on how to use/modify a pre-existing install. --></p>
 </li>
 <li>
 <p>Install the Knative Contour controller:
-  <div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-contour/releases/download/v0.21.0/net-contour.yaml
+  <div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-contour/latest/net-contour.yaml
 </code></pre></div></p>
 </li>
 <li>
@@ -2956,12 +2956,12 @@ in the Gloo documentation.</em></p>
 <ol>
 <li>
 <p>Install a properly configured Istio (<a href="../installing-istio/">Advanced installation</a>)</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.21.0/istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-istio/latest/istio.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Knative Istio controller:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/net-istio/releases/download/v0.21.0/net-istio.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/net-istio/latest/net-istio.yaml
 </code></pre></div>
 </li>
 <li>
@@ -3019,7 +3019,7 @@ Follow the procedure for the DNS of your choice:</p>
 <p>We ship a simple Kubernetes Job called "default domain" that will (see caveats)
 configure Knative Serving to use <a href="http://xip.io">xip.io</a> as the
 default DNS suffix.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/serving/releases/download/v0.21.0/serving-default-domain.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/serving/latest/serving-default-domain.yaml
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">CAVEAT</p>

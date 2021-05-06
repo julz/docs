@@ -2793,12 +2793,12 @@ See <a href="../prerequisites/">Knative Prerequisites</a>.</p>
 <ol>
 <li>
 <p>Install the required custom resource definitions (CRDs):</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/eventing/releases/download/v0.21.0/eventing-crds.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-crds.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the core components of Eventing:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/eventing/releases/download/v0.21.0/eventing-core.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/eventing-core.yaml
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -2824,7 +2824,7 @@ Follow the procedure for the channel of your choice:</p>
 </li>
 <li>
 <p>Then install the Apache Kafka channel:</p>
-<div class="highlight"><pre><span></span><code>curl -L <span class="s2">&quot;http://github.com/knative-sandbox/eventing-kafka/releases/download/v0.21.0/channel-consolidated.yaml&quot;</span> <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>curl -L <span class="s2">&quot;https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka/latest/channel-consolidated.yaml&quot;</span> <span class="se">\</span>
   <span class="p">|</span> sed <span class="s1">&#39;s/REPLACE_WITH_CLUSTER_URL/my-cluster-kafka-bootstrap.kafka:9092/&#39;</span> <span class="se">\</span>
   <span class="p">|</span> kubectl apply -f -
 </code></pre></div>
@@ -2841,7 +2841,7 @@ Follow the procedure for the channel of your choice:</p>
 <li>
 <p>Install the Google Cloud Pub/Sub channel:</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># This installs both the Channel and the GCP Sources.</span>
-kubectl apply -f http://github.com/google/knative-gcp/releases/download/v0.21.0/cloud-run-events.yaml
+kubectl apply -f https://storage.googleapis.com/google-nightly/knative-gcp/latest/cloud-run-events.yaml
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip<p>To learn more about the Google Cloud Pub/Sub channel, try
@@ -2854,7 +2854,7 @@ kubectl apply -f http://github.com/google/knative-gcp/releases/download/v0.21.0/
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">In-Memory (standalone)</label><div class="tabbed-content">
 <p>The following command installs an implementation of channel that runs in-memory.
 This implementation is nice because it is simple and standalone, but it is</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/eventing/releases/download/v0.21.0/in-memory-channel.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/in-memory-channel.yaml
 </code></pre></div>
 </div>
 <input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4">NATS Channel</label><div class="tabbed-content">
@@ -2865,7 +2865,7 @@ This implementation is nice because it is simple and standalone, but it is</p>
 </li>
 <li>
 <p>Then install the NATS Streaming channel:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-natss/releases/download/v0.21.0/300-natss-channel.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-natss/latest/300-natss-channel.yaml
 </code></pre></div>
 <!-- TODO(https://github.com/knative/docs/issues/2153): Add more Channels here -->
 </li>
@@ -2882,12 +2882,12 @@ Follow the procedure for the broker of your choice:</p>
 <ol>
 <li>
 <p>Install the Kafka controller by entering the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-controller.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-controller.yaml
 </code></pre></div>
 </li>
 <li>
 <p>Install the Kafka broker data plane by entering the following command:</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative-sandbox/eventing-kafka-broker/releases/download/v0.21.0/eventing-kafka-broker.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-sandbox-nightly/eventing-kafka-broker/latest/eventing-kafka-broker.yaml
 </code></pre></div>
 </li>
 </ol>
@@ -2897,7 +2897,7 @@ Follow the procedure for the broker of your choice:</p>
 <p>The following command installs an implementation of broker that utilizes
 channels and runs event routing components in a System Namespace, providing a
 smaller and simpler installation.</p>
-<div class="highlight"><pre><span></span><code>kubectl apply -f http://github.com/knative/eventing/releases/download/v0.21.0/mt-channel-broker.yaml
+<div class="highlight"><pre><span></span><code>kubectl apply -f https://storage.googleapis.com/knative-nightly/eventing/latest/mt-channel-broker.yaml
 </code></pre></div>
 <p>To customize which broker channel implementation is used, update the following
 ConfigMap to specify which configurations are used for which namespaces:</p>
