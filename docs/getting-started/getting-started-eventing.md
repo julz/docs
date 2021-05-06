@@ -25,3 +25,4 @@ Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/p
     1. CloudEvents can carry some attributes (things like `id`, `source`, `type`, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).
 
     To find out more about CloudEvents, check out the [CloudEvents website](https://cloudevents.io/)!
+
