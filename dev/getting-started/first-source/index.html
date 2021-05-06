@@ -182,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+      <a href="../before-you-begin/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../before-you-begin/" class="md-nav__link">
         Before you begin
       </a>
     </li>
@@ -411,7 +411,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        First Knative Service
+        Create your first Knative Service
       </a>
     </li>
   
@@ -2732,7 +2732,7 @@ Here, the CloudEvents Player is acting as both a <code>Source</code> and a <code
 </figure>
 
 <h2 id="creating-your-first-source">Creating your first Source<a class="headerlink" href="#creating-your-first-source" title="Permanent link">&para;</a></h2>
-<p>The CloudEvents Player acts as a <code>Source</code> for CloudEvents by intaking the URL of our <code>Broker</code> as an environment variable (<code>BROKER_URL</code>) and sending CloudEvents via the UI.</p>
+<p>The CloudEvents Player acts as a <code>Source</code> for CloudEvents by intaking the URL of our <code>Broker</code> as an environment variable and sending CloudEvents via the UI. In the previous step, you used  <code>kn broker list</code> to get the URL of your <code>Broker</code>, you'll now pass that URL to a Knative <code>Service</code> called the "CloudEvents Player."</p>
 <p>Create the CloudEvents Player Service:</p>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">kn</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>kn service create cloudevents-player <span class="se">\</span>

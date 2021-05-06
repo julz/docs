@@ -182,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+      <a href="../before-you-begin/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../before-you-begin/" class="md-nav__link">
         Before you begin
       </a>
     </li>
@@ -411,7 +411,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        First Knative Service
+        Create your first Knative Service
       </a>
     </li>
   
@@ -511,6 +511,19 @@
   <a href="#background" class="md-nav__link">
     Background
   </a>
+  
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudevents" class="md-nav__link">
+    CloudEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2694,6 +2707,19 @@
     Background
   </a>
   
+    <nav class="md-nav" aria-label="Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cloudevents" class="md-nav__link">
+    CloudEvents
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -2716,7 +2742,7 @@
                 <h1 id="introducing-the-knative-eventing">Introducing the Knative Eventing<a class="headerlink" href="#introducing-the-knative-eventing" title="Permanent link">&para;</a></h1>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>With Knative Serving, we have a powerful tool which can take our containerized code and deploy it with relative ease. <strong>With Knative Eventing, you gain a few new super powers <img alt="🚀" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f680.svg" title=":rocket:" /> that allow you to build Event-Driven Applications.</strong></p>
-<details class="question"><summary>What are Event Driven Applications?</summary><p>Event-driven applications are designed to detect events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.</p>
+<details class="question"><summary>What are Event Driven Applications?</summary><p>Event-driven applications are designed to react to events as they occur, and then deal with them using some event-handling procedure. Producing "events" to detect and consuming events with an "event-handling procedure" is precisely what Knative Eventing enables.</p>
 </details>
 <p><mark><strong>Knative Eventing acts as the "glue" between the disparate parts of your architecture</strong></mark> and allows you to easily communicate between those parts in a fault-tolerant way. Some examples include:</p>
 <ol>
@@ -2725,6 +2751,16 @@
 <li><a href="https://www.youtube.com/watch?v=lVfJ5WEQ5_s">Facilitating AI workloads at the edge in large-scale, drone-powered sustainable agriculture projects</a>.</li>
 </ol>
 <p>As you can see by the examples above, <strong>Knative Eventing implementations can range from the dead simple to extremely complex</strong>, the concepts you'll learn will be a great starting point to accomplish either.</p>
+<h3 id="cloudevents">CloudEvents<a class="headerlink" href="#cloudevents" title="Permanent link">&para;</a></h3>
+<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
+<details class="question"><summary>What are CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
+<ol>
+<li>CloudEvents follow the <a href = "https://github.com/cloudevents/spec" target="_blank">CloudEvents 1.0 Specification</a>, with required and optional attributes.</li>
+<li>CloudEvents can be "emitted" by almost anything and can be transported to anywhere in your deployment.  </li>
+<li>CloudEvents can carry some attributes (things like <code>id</code>, <code>source</code>, <code>type</code>, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).</li>
+</ol>
+<p>To find out more about CloudEvents, check out the <a href="https://cloudevents.io/">CloudEvents website</a>!</p>
+</details>
                 
               
               

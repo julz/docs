@@ -11,7 +11,7 @@
       
       
       
-        <link rel="canonical" href="https://knative.dev/dev/getting-started/getting-started/">
+        <link rel="canonical" href="https://knative.dev/dev/getting-started/before-you-begin/">
       
       <link rel="icon" href="../../images/knative-sm.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
@@ -444,8 +444,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-knative-sandbox" class="md-nav__link">
-    Installing Knative (sandbox)
+  <a href="#installing-the-knative-sandbox" class="md-nav__link">
+    Installing the Knative Sandbox
   </a>
   
 </li>
@@ -485,7 +485,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        First Knative Service
+        Create your first Knative Service
       </a>
     </li>
   
@@ -2756,8 +2756,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installing-knative-sandbox" class="md-nav__link">
-    Installing Knative (sandbox)
+  <a href="#installing-the-knative-sandbox" class="md-nav__link">
+    Installing the Knative Sandbox
   </a>
   
 </li>
@@ -2774,7 +2774,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/getting-started.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/knative/docs/edit/main/docs/getting-started/before-you-begin.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -2783,7 +2783,7 @@
 <h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
 <h3 id="install-kind">Install <code>kind</code>.<a class="headerlink" href="#install-kind" title="Permanent link">&para;</a></h3>
 <p><code>kind</code> (Kubernetes in Docker) is a tool for running local Kubernetes clusters using Docker container “nodes”. <code>kind</code> was primarily designed for testing Kubernetes itself, but may be used for local development.</p>
-<p>See <a href="https://kind.sigs.k8s.io/docs/user/quick-start" target="_blank">Kind website</a> for installation options.</p>
+<p>See <a href="https://kind.sigs.k8s.io/docs/user/quick-start#installation" target="_blank">Kind website</a> for installation options.</p>
 <h3 id="install-kubectl">Install <code>kubectl</code><a class="headerlink" href="#install-kubectl" title="Permanent link">&para;</a></h3>
 <p>The Kubernetes command-line tool, kubectl, allows you to run commands against Kubernetes clusters. You can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.</p>
 <p>See <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl" target="_blank">the Kubernetes docs</a> for installation options.</p>
@@ -2825,7 +2825,6 @@ cd client/
 <p>Links to images are available here:</p>
 <ul>
 <li><a href="https://gcr.io/knative-releases/knative.dev/client/cmd/kn" target="_blank">Latest release</a></li>
-<li><a href="https://gcr.io/knative-nightly/knative.dev/client/cmd/kn" target="_blank">Nightly container image</a></li>
 </ul>
 <p>You can run <code>kn</code> from a container image. For example:</p>
 <div class="highlight"><pre><span></span><code>docker run --rm -v &quot;$HOME/.kube/config:/root/.kube/config&quot; gcr.io/knative-releases/knative.dev/client/cmd/kn:latest service list
@@ -2835,23 +2834,26 @@ cd client/
 </div>
 <p>For more complex installations, such as nightly releases, see <a href="../../client/install-kn/">Install <code>kn</code></a></p>
 </div>
-<h2 id="installing-knative-sandbox">Installing Knative (sandbox)<a class="headerlink" href="#installing-knative-sandbox" title="Permanent link">&para;</a></h2>
-<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use a Knative on Kind (konk)</mark></p>
+<h2 id="installing-the-knative-sandbox">Installing the Knative Sandbox<a class="headerlink" href="#installing-the-knative-sandbox" title="Permanent link">&para;</a></h2>
+<p><mark><strong>The fastest way to get started with Knative locally</strong> is to use the Knative on Kind (konk) script.</mark> We call this the "Knative Sandbox" and it's perfect for local deployments and general hacking.</p>
 <div class="admonition todo">
-<p class="admonition-title">Install Knative and Kubernetes on a local Docker Daemon using Konk</p>
+<p class="admonition-title">Install the Knative Sandbox</p>
 <div class="highlight"><pre><span></span><code>curl -sL install.konk.dev | bash
 </code></pre></div>
 </div>
-<details class="question"><summary>What does the KonK script actually do?</summary><p>Knative on Kind (KonK) is a shell script which:</p>
+<details class="question"><summary>What does the Knative Sandbox script do?</summary><p><strong>Below is a description of each of the scripts which are run by the Knative Sandbox</strong>, we've also provided each script as an independent <code>curl</code> command.</p>
 <ol>
 <li>
-<p>Checks to see that you have Kind installed and creates a Cluster called "knative" via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/01-kind.sh"><code>01-kind.sh</code></a></strong></p>
+<p>Checks to see that you have Kind installed and creates a Cluster called "knative" + some port-forwarding magic to simplify local DNS via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/01-kind.sh"><code>01-kind.sh</code></a></strong>
+  <br><code>curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/01-kind.sh | sh</code></p>
 </li>
 <li>
-<p>Installs <strong>Knative Serving</strong> with <strong>Kourier</strong> as the networking layer and <strong>nip.io</strong> as the DNS + some port-forwarding magic on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/02-serving.sh"><code>02-serving.sh</code></a></strong></p>
+<p>Installs <strong>Knative Serving</strong> with <strong>Kourier</strong> as the networking layer and <strong>nip.io</strong> as the DNS <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/02-serving.sh"><code>02-serving.sh</code></a></strong>
+  <br><code>curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/02-serving.sh | sh</code></p>
 </li>
 <li>
-<p>Installs <strong>Knative Eventing</strong> with an In-Memory <strong>Channels</strong> and In-Memory <strong>Broker</strong> on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/04-eventing.sh"><code>04-eventing.sh</code></a></strong></p>
+<p>Installs <strong>Knative Eventing</strong> with an In-Memory <strong>Channels</strong> and In-Memory <strong>Broker</strong> on the "knative" Cluster via <strong><a href="https://github.com/csantanapr/knative-kind/blob/master/04-eventing.sh"><code>04-eventing.sh</code></a></strong>
+  <br><code>curl -sL https://raw.githubusercontent.com/csantanapr/knative-kind/master/03-eventing.sh | sh</code></p>
 </li>
 </ol>
 </details>
@@ -2917,7 +2919,7 @@ cd client/
               <span class="md-footer__direction">
                 Next
               </span>
-              First Knative Service
+              Create your first Knative Service
             </div>
           </div>
           <div class="md-footer__button md-icon">

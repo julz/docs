@@ -182,7 +182,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../getting-started/" class="md-tabs__link md-tabs__link--active">
+      <a href="../before-you-begin/" class="md-tabs__link md-tabs__link--active">
         Getting Started
       </a>
     </li>
@@ -377,7 +377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../getting-started/" class="md-nav__link">
+      <a href="../before-you-begin/" class="md-nav__link">
         Before you begin
       </a>
     </li>
@@ -411,7 +411,7 @@
   
     <li class="md-nav__item">
       <a href="../first-service/" class="md-nav__link">
-        First Knative Service
+        Create your first Knative Service
       </a>
     </li>
   
@@ -519,19 +519,6 @@
   <a href="#sources-brokers-triggers-sinks-oh-my" class="md-nav__link">
     Sources, Brokers, Triggers, Sinks, oh my!
   </a>
-  
-    <nav class="md-nav" aria-label="Sources, Brokers, Triggers, Sinks, oh my!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudevents" class="md-nav__link">
-    CloudEvents
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2708,19 +2695,6 @@
     Sources, Brokers, Triggers, Sinks, oh my!
   </a>
   
-    <nav class="md-nav" aria-label="Sources, Brokers, Triggers, Sinks, oh my!">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cloudevents" class="md-nav__link">
-    CloudEvents
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2750,7 +2724,7 @@
                   <h1>Sources, Brokers, Triggers, Sinks</h1>
                 
                 <h2 id="sources-brokers-triggers-sinks-oh-my">Sources, Brokers, Triggers, Sinks, oh my!<a class="headerlink" href="#sources-brokers-triggers-sinks-oh-my" title="Permanent link">&para;</a></h2>
-<p>For the purposes of this tutorial, let's keep it simple. You will focus on four powerful Eventing components: <code>Source</code>, <code>Trigger</code>, <code>Broker</code>, and <code>Sink</code>.</p>
+<p>For the purposes of this tutorial, let's keep it simple. You will focus on three powerful Eventing components: <code>Source</code>, <code>Trigger</code> and <code>Broker</code>. We'll then bring this all together by using a Knative Service as a <code>Sink</code> for our CloudEvents.</p>
 <p>Let's take a look at how these components interact:</p>
 <figure>
   <img src="https://user-images.githubusercontent.com/16281246/116248768-1fe56080-a73a-11eb-9a85-8bdccb82d16c.png" draggable="false">
@@ -2787,16 +2761,6 @@
 <p class="admonition-title">A note on <code>Sources</code> and <code>Sinks</code></p>
 <p>A Knative Service can act as both a <code>Source</code> and a <code>Sink</code> for events, and for good reason. You may want to consume events from the <code>Broker</code> and send modified events back to the <code>Broker</code>, as you would in any pipeline use-case.</p>
 </div>
-<h3 id="cloudevents">CloudEvents<a class="headerlink" href="#cloudevents" title="Permanent link">&para;</a></h3>
-<p>Knative Eventing uses <a href="https://github.com/cloudevents/spec/blob/master/primer.md" target="blank_">CloudEvents</a> send information back and forth between your Services and these components.</p>
-<details class="question"><summary>What are CloudEvents?</summary><p>For our purposes, the only thing you need to know about CloudEvents are:</p>
-<ol>
-<li>CloudEvents follow the <a href = "https://github.com/cloudevents/spec" target="_blank">CloudEvents 1.0 Specification</a>, with required and optional attributes.</li>
-<li>CloudEvents can be "emitted" by almost anything and can be transported to anywhere in your deployment.  </li>
-<li>CloudEvents can carry some attributes (things like <code>id</code>, <code>source</code>, <code>type</code>, etc) as well as data payloads (JSON, plaintext, reference to data that lives elsewhere, etc).</li>
-</ol>
-<p>To find out more about CloudEvents, check out the <a href="https://cloudevents.io/">CloudEvents website</a>!</p>
-</details>
 <h2 id="examining-the-broker">Examining the Broker<a class="headerlink" href="#examining-the-broker" title="Permanent link">&para;</a></h2>
 <p>As part of the <code>KonK</code> install, you should have an in-memory <code>Broker</code> already installed.
 <div class="highlight"><pre><span></span><code>kn broker list
