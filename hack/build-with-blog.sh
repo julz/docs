@@ -9,9 +9,23 @@ set -e
 # Echo each line
 set -x
 
-# First, build the main site with mkdocs
+# First, build the main site with mkdocs.
 rm -rf site/
 mkdocs build -d site/docs
+
+# Build the previous versions to the correct directories.
+mkdocs build -f mkdocs.yml -d site/development     # pre-release:    docs => development/
+mkdocs build -f mkdocs-0.23.yml -d site/docs       # latest release: docs-0.23 => docs/
+mkdocs build -f mkdocs-0.23.yml -d site/v0.22-docs # old releases:   docs-N => vN-docs/
+
+# Set up the version file to point to the built docs.
+cat << EOF > site/versions.json
+[
+  {"version": "docs", "title": "v0.23", "aliases": [""]},
+  {"version": "v0.22-docs", "title": "v0.22", "aliases": [""]},
+  {"version": "development", "title": "(Pre-release)", "aliases": [""]}
+]
+EOF
 
 # Re-Clone
 # TODO(jz) Cache this and just do a pull/update for local dev flow.
