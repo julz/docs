@@ -1,14 +1,3 @@
----
-title: "Autoscaling"
-linkTitle: "Autoscaling"
-weight: 20
-type: "docs"
-aliases:
-    - /docs/serving/configuring-autoscaling/
----
-
-# Autoscaling
-
 One of the main features of Knative is automatic scaling of replicas for an application to closely match incoming demand, including scaling applications to zero if no traffic is being received.
 Knative Serving enables this by default, using the Knative Pod Autoscaler (KPA).
 The Autoscaler component watches traffic flow to the application, and scales replicas up or down based on configured metrics.

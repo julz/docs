@@ -1,12 +1,3 @@
----
-title: "Hello World - Golang"
-linkTitle: "GO"
-weight: 20
-type: "docs"
----
-
-# Hello World - Golang
-
 A simple web app written in Go that you can use to test knative eventing. It
 shows how to consume a [CloudEvent](https://cloudevents.io/) in Knative
 eventing, and optionally how to respond back with another CloudEvent in the http
@@ -385,8 +376,8 @@ mesh via the Broker and can be delivered to other services using a Trigger
           spec:
             containers:
               - name: helloworld-go
-                # Source code: https://github.com/knative/eventing/tree/main/cmd/event_display
-                image: gcr.io/knative-releases/knative.dev/eventing/cmd/event_display
+                # Source code: https://github.com/knative/eventing-contrib/tree/main/cmd/event_display
+                image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
       ---
       # Service that exposes event-display app.
       # This will be the subscriber for the Trigger

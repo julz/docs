@@ -128,9 +128,7 @@ Defaults to <code>ReachabilityUnknown</code></p>
 <td>
 <code>protocolType</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/networking/pkg/apis/networking#ProtocolType">
 knative.dev/networking/pkg/apis/networking.ProtocolType
-</a>
 </em>
 </td>
 <td>
@@ -203,9 +201,7 @@ MetricSpec
 <td>
 <code>stableWindow</code><br/>
 <em>
-<a href="https://golang.org/pkg/time/#Duration">
 time.Duration
-</a>
 </em>
 </td>
 <td>
@@ -216,9 +212,7 @@ time.Duration
 <td>
 <code>panicWindow</code><br/>
 <em>
-<a href="https://golang.org/pkg/time/#Duration">
 time.Duration
-</a>
 </em>
 </td>
 <td>
@@ -275,9 +269,7 @@ MetricStatus
 <td>
 <code>stableWindow</code><br/>
 <em>
-<a href="https://golang.org/pkg/time/#Duration">
 time.Duration
-</a>
 </em>
 </td>
 <td>
@@ -288,9 +280,7 @@ time.Duration
 <td>
 <code>panicWindow</code><br/>
 <em>
-<a href="https://golang.org/pkg/time/#Duration">
 time.Duration
-</a>
 </em>
 </td>
 <td>
@@ -330,9 +320,7 @@ string
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -406,9 +394,7 @@ Defaults to <code>ReachabilityUnknown</code></p>
 <td>
 <code>protocolType</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/networking/pkg/apis/networking#ProtocolType">
 knative.dev/networking/pkg/apis/networking.ProtocolType
-</a>
 </em>
 </td>
 <td>
@@ -437,9 +423,7 @@ knative.dev/networking/pkg/apis/networking.ProtocolType
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1207,9 +1191,7 @@ RevisionTemplateSpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1401,9 +1383,7 @@ layer will wait for a request delivered to a container to begin replying
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1656,9 +1636,7 @@ revisions and configurations.</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1706,9 +1684,7 @@ other types can readily consume these fields via duck typing.</p>
 <td>
 <code>url</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -1721,9 +1697,7 @@ It generally has the form http[s]://{route-name}.{route-namespace}.{cluster-leve
 <td>
 <code>address</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Addressable">
 knative.dev/pkg/apis/duck/v1.Addressable
-</a>
 </em>
 </td>
 <td>
@@ -1858,9 +1832,7 @@ defaults).</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -2002,9 +1974,7 @@ that particular Revision or Configuration</p>
 <td>
 <code>url</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2095,9 +2065,7 @@ More info: <a href="https://github.com/kubernetes/community/blob/master/contribu
 <td>
 <code>ref</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -2185,9 +2153,7 @@ string
 <td>
 <code>ref</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -2222,9 +2188,7 @@ Knative Routes, and by Kubernetes Services.</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -2237,9 +2201,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>url</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2251,9 +2213,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>address</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Addressable">
 knative.dev/pkg/apis/duck/v1.Addressable
-</a>
 </em>
 </td>
 <td>

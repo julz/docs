@@ -1,6 +1,6 @@
 ---
 title: "Installing Knative"
-weight: 05
+weight: 01
 type: "docs"
 aliases:
   - /docs/install/knative-with-any-k8s
@@ -22,9 +22,6 @@ showlandingtoc: "false"
 ---
 
 # Installing Knative
-
-!!! tip
-    If you're looking for an easy way to install a local distribution of Knative for prototyping, check out our <a href="https://github.com/csantanapr/knative-kind" target="_blank">Quick Install w/ KonK</a>
 
 You can install the Serving component, Eventing component, or both on your cluster by using one of the following deployment options:
 

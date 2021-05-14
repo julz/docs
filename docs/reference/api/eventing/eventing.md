@@ -229,9 +229,7 @@ global delivery spec.</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -247,9 +245,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -279,9 +275,7 @@ SubscribableStatus
 <td>
 <code>deadLetterChannel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -313,9 +307,7 @@ such as channelable and source.</p>
 <td>
 <code>deadLetterSink</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -387,9 +379,7 @@ For exponential policy, backoff delay is backoffDelay*2^<numberOfRetries>.</p>
 <td>
 <code>deadLetterChannel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -584,9 +574,7 @@ int64
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -598,9 +586,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>replyUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -877,9 +863,7 @@ DeliverySpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -895,9 +879,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -927,9 +909,7 @@ SubscribableStatus
 <td>
 <code>deadLetterChannel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -961,9 +941,7 @@ such as channelable and source.</p>
 <td>
 <code>deadLetterSink</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -1035,9 +1013,7 @@ For exponential policy, backoff delay is backoffDelay*2^<numberOfRetries>.</p>
 <td>
 <code>deadLetterChannel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -1232,9 +1208,7 @@ int64
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -1246,9 +1220,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>replyUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -1417,9 +1389,7 @@ BrokerSpec
 <td>
 <code>config</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -1555,9 +1525,7 @@ filter will be sent to the Subscriber. If not specified, will default to allowin
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -1618,9 +1586,7 @@ date.</p>
 <td>
 <code>config</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -1668,9 +1634,7 @@ global delivery spec.</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1686,9 +1650,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>address</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Addressable">
 knative.dev/pkg/apis/duck/v1.Addressable
-</a>
 </em>
 </td>
 <td>
@@ -1788,9 +1750,7 @@ filter will be sent to the Subscriber. If not specified, will default to allowin
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -1834,9 +1794,7 @@ DeliverySpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -1852,9 +1810,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -1944,9 +1900,7 @@ BrokerSpec
 <td>
 <code>config</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -2065,9 +2019,7 @@ string
 <td>
 <code>source</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2079,9 +2031,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>schema</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2241,9 +2191,7 @@ filter will be sent to the Subscriber. If not specified, will default to allowin
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -2304,9 +2252,7 @@ date.</p>
 <td>
 <code>config</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -2353,9 +2299,7 @@ This includes things like retries, DLQ, etc.</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -2371,9 +2315,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>address</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Addressable">
 knative.dev/pkg/apis/duck/v1.Addressable
-</a>
 </em>
 </td>
 <td>
@@ -2413,9 +2355,7 @@ string
 <td>
 <code>source</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2427,9 +2367,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>schema</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2499,9 +2437,7 @@ string
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -2606,9 +2542,7 @@ filter will be sent to the Subscriber. If not specified, will default to allowin
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -2652,9 +2586,7 @@ DeliverySpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -2670,9 +2602,7 @@ knative.dev/pkg/apis/duck/v1.Status
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -2764,9 +2694,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -2814,9 +2742,7 @@ date.</p>
 <td>
 <code>filter</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -2828,9 +2754,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -2841,9 +2765,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3014,9 +2936,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3047,9 +2967,7 @@ when the case does not have a Reply</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -3092,9 +3010,7 @@ Matches the Spec.Branches array in the order.</p>
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -3225,9 +3141,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3344,9 +3258,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3376,9 +3288,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -3422,9 +3332,7 @@ Matches the Spec.Steps array in the order.</p>
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -3457,9 +3365,7 @@ It generally has the form {channel}.{namespace}.svc.{cluster domain name}</p>
 <td>
 <code>Destination</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3609,9 +3515,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3659,9 +3563,7 @@ date.</p>
 <td>
 <code>filter</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3673,9 +3575,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3686,9 +3586,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3860,9 +3758,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -3893,9 +3789,7 @@ when the case does not have a Reply</p>
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -3938,9 +3832,7 @@ Matches the Spec.Branches array in the order.</p>
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -4071,9 +3963,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -4190,9 +4080,7 @@ for the namespace (or cluster, in case there are no defaults for the namespace).
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -4222,9 +4110,7 @@ knative.dev/pkg/apis/duck/v1.Destination
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -4268,9 +4154,7 @@ Matches the Spec.Steps array in the order.</p>
 <td>
 <code>AddressStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#AddressStatus">
 knative.dev/pkg/apis/duck/v1.AddressStatus
-</a>
 </em>
 </td>
 <td>
@@ -4303,9 +4187,7 @@ It generally has the form {channel}.{namespace}.svc.{cluster domain name}</p>
 <td>
 <code>Destination</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -4679,9 +4561,7 @@ etc.)</p>
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -4695,9 +4575,7 @@ sent to a Destination as specified by the Reply.</p>
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -4828,9 +4706,7 @@ ChannelableStatus
 <td>
 <code>channel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -5001,9 +4877,7 @@ etc.)</p>
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5017,9 +4891,7 @@ sent to a Destination as specified by the Reply.</p>
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5064,9 +4936,7 @@ DeliverySpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -5114,9 +4984,7 @@ Subscription.</p>
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -5127,9 +4995,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>replyUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -5140,9 +5006,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>deadLetterSinkUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -5457,9 +5321,7 @@ etc.)</p>
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5473,9 +5335,7 @@ sent to a Destination as specified by the Reply.</p>
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5606,9 +5466,7 @@ ChannelableStatus
 <td>
 <code>channel</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#KReference">
 knative.dev/pkg/apis/duck/v1.KReference
-</a>
 </em>
 </td>
 <td>
@@ -5779,9 +5637,7 @@ etc.)</p>
 <td>
 <code>subscriber</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5795,9 +5651,7 @@ sent to a Destination as specified by the Reply.</p>
 <td>
 <code>reply</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Destination">
 knative.dev/pkg/apis/duck/v1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -5842,9 +5696,7 @@ DeliverySpec
 <td>
 <code>Status</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#Status">
 knative.dev/pkg/apis/duck/v1.Status
-</a>
 </em>
 </td>
 <td>
@@ -5892,9 +5744,7 @@ Subscription.</p>
 <td>
 <code>subscriberUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -5905,9 +5755,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>replyUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -5918,9 +5766,7 @@ knative.dev/pkg/apis.URL
 <td>
 <code>deadLetterSinkUri</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis#URL">
 knative.dev/pkg/apis.URL
-</a>
 </em>
 </td>
 <td>
@@ -6003,9 +5849,7 @@ ApiServerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6156,9 +6000,7 @@ ContainerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6268,9 +6110,7 @@ SinkBindingSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6288,9 +6128,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#BindingSpec">
 knative.dev/pkg/apis/duck/v1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -6437,9 +6275,7 @@ More info: <a href="http://kubernetes.io/docs/concepts/overview/working-with-obj
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6534,9 +6370,7 @@ source. Defaults to default if not set.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -6574,9 +6408,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6625,9 +6457,7 @@ Kubernetes core/v1.PodTemplateSpec
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -6665,9 +6495,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6685,9 +6513,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#BindingSpec">
 knative.dev/pkg/apis/duck/v1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -6721,9 +6547,7 @@ should be augmented by Binding implementations.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -6839,9 +6663,7 @@ source.</p>
 <td>
 <code>sink</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1beta1#Destination">
 knative.dev/pkg/apis/duck/v1beta1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -6853,9 +6675,7 @@ knative.dev/pkg/apis/duck/v1beta1.Destination
 <td>
 <code>ceOverrides</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#CloudEventOverrides">
 knative.dev/pkg/apis/duck/v1.CloudEventOverrides
-</a>
 </em>
 </td>
 <td>
@@ -6976,9 +6796,7 @@ SinkBindingSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -6991,9 +6809,7 @@ knative.dev/pkg/apis/duck/v1.SourceSpec
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1alpha1#BindingSpec">
 knative.dev/pkg/apis/duck/v1alpha1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -7149,9 +6965,7 @@ source.</p>
 <td>
 <code>sink</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1beta1#Destination">
 knative.dev/pkg/apis/duck/v1beta1.Destination
-</a>
 </em>
 </td>
 <td>
@@ -7163,9 +6977,7 @@ knative.dev/pkg/apis/duck/v1beta1.Destination
 <td>
 <code>ceOverrides</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#CloudEventOverrides">
 knative.dev/pkg/apis/duck/v1.CloudEventOverrides
-</a>
 </em>
 </td>
 <td>
@@ -7225,9 +7037,7 @@ string
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -7265,9 +7075,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -7280,9 +7088,7 @@ knative.dev/pkg/apis/duck/v1.SourceSpec
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1alpha1#BindingSpec">
 knative.dev/pkg/apis/duck/v1alpha1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -7313,9 +7119,7 @@ knative.dev/pkg/apis/duck/v1alpha1.BindingSpec
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -7402,9 +7206,7 @@ ApiServerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -7555,9 +7357,7 @@ ContainerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -7662,9 +7462,7 @@ PingSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -7787,9 +7585,7 @@ SinkBindingSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -7807,9 +7603,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1alpha1#BindingSpec">
 knative.dev/pkg/apis/duck/v1alpha1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -7956,9 +7750,7 @@ More info: <a href="http://kubernetes.io/docs/concepts/overview/working-with-obj
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8053,9 +7845,7 @@ source. Defaults to default if not set.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -8093,9 +7883,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8144,9 +7932,7 @@ Kubernetes core/v1.PodTemplateSpec
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -8184,9 +7970,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8248,9 +8032,7 @@ to &ldquo;application/json&rdquo;.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -8288,9 +8070,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8308,9 +8088,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1alpha1#BindingSpec">
 knative.dev/pkg/apis/duck/v1alpha1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -8344,9 +8122,7 @@ should be augmented by Binding implementations.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -8440,9 +8216,7 @@ ApiServerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8593,9 +8367,7 @@ ContainerSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8700,9 +8472,7 @@ PingSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8839,9 +8609,7 @@ SinkBindingSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -8859,9 +8627,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1beta1#BindingSpec">
 knative.dev/pkg/apis/duck/v1beta1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -9008,9 +8774,7 @@ More info: <a href="http://kubernetes.io/docs/concepts/overview/working-with-obj
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9105,9 +8869,7 @@ source. Defaults to default if not set.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -9145,9 +8907,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9196,9 +8956,7 @@ Kubernetes core/v1.PodTemplateSpec
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -9236,9 +8994,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9314,9 +9070,7 @@ to &ldquo;application/json&rdquo;.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -9354,9 +9108,7 @@ Source.</p>
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9374,9 +9126,7 @@ and modifications of the event sent to the sink.</p>
 <td>
 <code>BindingSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1beta1#BindingSpec">
 knative.dev/pkg/apis/duck/v1beta1.BindingSpec
-</a>
 </em>
 </td>
 <td>
@@ -9410,9 +9160,7 @@ should be augmented by Binding implementations.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>
@@ -9500,9 +9248,7 @@ PingSourceSpec
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9617,9 +9363,7 @@ PingSourceStatus
 <td>
 <code>SourceSpec</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceSpec">
 knative.dev/pkg/apis/duck/v1.SourceSpec
-</a>
 </em>
 </td>
 <td>
@@ -9719,9 +9463,7 @@ Mutually exclusive with Data.</p>
 <td>
 <code>SourceStatus</code><br/>
 <em>
-<a href="https://pkg.go.dev/knative.dev/pkg/apis/duck/v1#SourceStatus">
 knative.dev/pkg/apis/duck/v1.SourceStatus
-</a>
 </em>
 </td>
 <td>

@@ -1,9 +1,6 @@
 # The OWNERS file is used by prow to automatically merge approved PRs.
 
 approvers:
-- eventing-wg-leads
+- eventing-eng-approvers
 reviewers:
-- eventing-wg-leads
-- source-wg-leads
-- channel-wg-leads
-
+- eventing-eng-reviewers

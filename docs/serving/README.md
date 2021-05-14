@@ -2,7 +2,6 @@
 title: "Knative Serving"
 weight: 05
 type: "docs"
-showlandingtoc: "false"
 ---
 
 # Knative Serving
@@ -14,7 +13,7 @@ and scales to support advanced scenarios.
 The Knative Serving project provides middleware primitives that enable:
 
 - Rapid deployment of serverless containers
-- [Automatic scaling up and down to zero](./autoscaling/)
+- [Automatic scaling up and down to zero](./autoscaling/README.md)
 - Routing and network programming for Istio components
 - Point-in-time snapshots of deployed code and configurations
 
@@ -78,10 +77,6 @@ in the Knative Serving repository.
 - [Using a custom domain](./using-a-custom-domain.md)
 - [Assigning a static IP address for Knative on Google Kubernetes Engine](./gke-assigning-static-ip-address.md)
 - [Using subroutes](./using-subroutes.md)
-
-## Observability
-
-- [Serving Metrics API](./metrics.md)
 
 ## Known Issues
 

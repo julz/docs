@@ -1,12 +1,3 @@
----
-title: "Mutual Exclusive Cases"
-linkTitle: "Mutual Exclusivity"
-weight: 20
-type: "docs"
----
-
-# Mutual Exclusive Cases
-
 In this example, we are going to see how we can create a Parallel with mutually
 exclusive branches.
 
@@ -89,7 +80,7 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/knative-releases/knative.dev/eventing/cmd/event_display
+        - image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
 ```
 
 ```shell

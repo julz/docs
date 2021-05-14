@@ -1,3 +1,7 @@
+# Spacer Title
+
+<br>
+
 # Hidden smoketest page
 
 Use this page to test your changes and ensure that there are not any issues,
@@ -26,14 +30,9 @@ Below are a set of site elements that have causes issues in the past.
 The following use the
 [`readfile` shortcode](https://github.com/knative/website/blob/main/layouts/shortcodes/readfile.md)
 
-Shortcode: <code>{<code>{< readfile file="../hack/reference-docs-gen-config.json" code="true" lang="json" >}</code>}</code>
-   renders as:
 {{< readfile file="../hack/reference-docs-gen-config.json" code="true" lang="json" >}}
 
-Shortcode: <code>{<code>{< readfile file="./serving/samples/cloudevents/cloudevents-nodejs/service.yaml" code="true" lang="yaml" >}</code>}</code>
-   renders as:
-{{< readfile file="./serving/samples/cloudevents/cloudevents-nodejs/service.yaml" code="true" lang="yaml" >}}
-
+{{< readfile file="../Gopkg.toml" code="true" lang="toml" >}}
 
 ## Install version numbers and Clone branch commands
 
@@ -43,47 +42,27 @@ added in-line with the
 (uses the define values from
 [config/\_default/params.toml](https://github.com/knative/website/blob/main/config/_default/params.toml))
 
-1. Shortcode: <code>{<code>{< version >}</code>}</code>
-   renders as: {{< version >}}
+1. Shortcode: <code>{<code>{% version %}</code>}</code>
 
    Example:
-   `kubectl apply version/{{< version >}}/is-the-latest/docs-version.yaml`
+   `kubectl apply version/{{% version %}}/is-the-latest/docs-version.yaml`
 
-1. Shortcode: <code>{<code>{< version override="v0.2.2" >}</code>}</code>
-    renders as: {{< version override="v0.2.2" >}}
-
-   Example:
-   `kubectl apply the-version-override/{{< version override="v0.2.2" >}}/is-manually-specified.yaml`
-
-1. Shortcode: <code>{<code>{< version patch=".20" >}</code>}</code>
-    renders as: {{< version patch=".20" >}}
+1. Shortcode: <code>{<code>{% version override="v0.2.2" %}</code>}</code>
 
    Example:
-   `kubectl apply this-is-a-point-release/{{< version patch=".20" >}}/filename.yaml`
+   `kubectl apply the-version-override/{{% version override="v0.2.2" %}}/is-manually-specified.yaml`
 
-1. Shortcode: <code>{<code>{< branch >}</code>}</code>
-    renders as: {{ branch }}
-
-   Example:
-   `git clone -b "{{ branch }}" https://github.com/knative/docs knative-docs`
-
-1. Shortcode: <code>{<code>{< branch override="release-0.NEXT" >}</code>}</code>
-    renders as: {{< branch override="release-0.NEXT" >}}
+1. Shortcode: <code>{<code>{% version patch=".20" %}</code>}</code>
 
    Example:
-   `git clone -b "{{< branch override="release-0.NEXT" >}}" https://github.com/knative/docs knative-docs`
+   `kubectl apply this-is-a-point-release/{{% version patch=".20" %}}/filename.yaml`
 
-## Tabs
+1. Shortcode: <code>{<code>{% branch %}</code>}</code>
 
-How to include tabbed content in your page. Note that you can set a default tab.
+   Example:
+   `git clone -b "{{% branch %}}" https://github.com/knative/docs knative-docs`
 
+1. Shortcode: <code>{<code>{% branch override="release-0.NEXT" %}</code>}</code>
 
-    {{< tab name="Regular example" >}}
-    This is a regular example tab.
-
-
-    {{< tab name="Include example" >}}
-    {{% readfile file="./serving/samples/multi-container/service.yaml" code="true" lang="yaml" %}}
-
-
-
+   Example:
+   `git clone -b "{{% branch override="release-0.NEXT" %}}" https://github.com/knative/docs knative-docs`

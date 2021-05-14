@@ -31,17 +31,17 @@ The ContainerSource source type is enabled by default when you install Knative E
 This example shows how the heartbeats container sends events to the Event Display Service.
 
 ### Preparing the heartbeats image
-Knative [event-sources](https://github.com/knative/eventing) has a
+Knative [event-sources](https://github.com/knative/eventing-contrib) has a
 sample of heartbeats event source. You could clone the source code by
 
 ```
-git clone -b "{{ branch }}" https://github.com/knative/eventing.git
+git clone -b "{{ branch }}" https://github.com/knative/eventing-contrib.git
 ```
 
 And then build a heartbeats image and publish to your image repo with
 
 ```
-ko publish ko://knative.dev/eventing/cmd/heartbeats
+ko publish knative.dev/eventing-contrib/cmd/heartbeats
 ```
 ### Creating a namespace
 
@@ -74,7 +74,7 @@ spec:
     spec:
       containers:
         - name: event-display
-          image: gcr.io/knative-releases/knative.dev/eventing/cmd/event_display
+          image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
 
 ---
 
@@ -113,7 +113,7 @@ spec:
     spec:
       containers:
         # This corresponds to a heartbeats image uri you build and publish in the previous step
-        # e.g. gcr.io/[gcloud-project]/knative.dev/eventing/cmd/heartbeats
+        # e.g. gcr.io/[gcloud-project]/knative.dev/eventing-contrib/cmd/heartbeats
         - image: <heartbeats_image_uri>
           name: heartbeats
           args:
@@ -148,7 +148,7 @@ Validation: valid
 Context Attributes,
   specversion: 1.0
   type: dev.knative.eventing.samples.heartbeat
-  source: https://knative.dev/eventing/cmd/heartbeats/#event-test/mypod
+  source: https://knative.dev/eventing-contrib/cmd/heartbeats/#event-test/mypod
   id: 2b72d7bf-c38f-4a98-a433-608fbcdd2596
   time: 2019-10-18T15:23:20.809775386Z
   contenttype: application/json

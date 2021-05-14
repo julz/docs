@@ -29,6 +29,7 @@ metadata:
 spec:
   version: "0.22"
 EOF
+```
 
 ## Verifying the upgrade
 
@@ -94,7 +95,6 @@ knative-eventing   0.20.0         True
 ```
 
 ## Rollback
-
 If the upgrade fails, you can rollback to restore your Knative to the previous version. For example, if something goes wrong with an upgrade to 0.22, and your previous version is 0.21, you can apply the following custom resources to restore Knative Serving and Eventing to version 0.21.
 
 For Knative Serving:
@@ -109,6 +109,7 @@ metadata:
 spec:
   version: "0.21"
 EOF
+```
 
 For Knative Eventing:
 
@@ -122,3 +123,4 @@ metadata:
 spec:
   version: "0.21"
 EOF
+```

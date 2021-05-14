@@ -14,7 +14,7 @@ This guide provides details about how you can install the Knative `kn` CLI.
 
 For macOS, you can install `kn` by using <a href="https://github.com/knative/homebrew-client" target="_blank">Homebrew</a>.
 
-```
+```bash
 brew install knative/client/kn
 ```
 

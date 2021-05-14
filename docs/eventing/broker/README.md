@@ -1,56 +1,193 @@
----
-title: "Brokers"
-weight: 60
-type: "docs"
-showlandingtoc: "false"
-aliases:
-  - docs/eventing/broker/alternate
----
+Knative provides a multi-tenant, channel-based broker implementation that uses channels for event routing.
 
-# Brokers
+Before you can use the Knative Channel-based Broker, you must install a channel provider, such as InMemoryChannel, Kafka or Nats.
 
-Brokers are Kubernetes [custom resources](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) that define an event mesh for collecting a pool of [CloudEvents](https://cloudevents.io/). Brokers provide a discoverable endpoint, `status.address`, for event ingress, and triggers for event delivery. Event producers can send events to a broker by POSTing the event to the `status.address.url` of the broker.
+**NOTE:** InMemoryChannel channels are for development use only and must not be used in a production deployment.
 
-Event delivery mechanics are an implementation detail that depend on the configured [broker class](./configmaps/broker-configmaps/#broker-class-options). Using brokers and triggers abstracts the details of event routing from the event producer and event consumer.
+For more information on which channels are available and how to install them,
+see the list of [available channels](https://knative.dev/docs/eventing/channels/channels-crds/).
 
-<img src="images/broker-workflow.svg" width="70%">
+## How it works
+<!--TODO: Add a diagram that shows this-->
+When an Event is sent to the Broker, all request metadata other than the CloudEvent data and context attributes is stripped away.
+Unless the information existed as a `CloudEvent` attribute, no information is retained about how this Event entered the Broker.
 
-After an event has entered a broker, it can be forwarded to subscribers by using triggers. Triggers allow events to be filtered by attributes, so that events with particular attributes can be sent to subscribers that have registered interest in events with those attributes.
+Once an Event has entered the Broker, it can be forwarded to event Channels by using Triggers.
+This event delivery mechanism hides details of event routing from the event producer and event consumer.
 
-A subscriber can be any URL or _Addressable_ resource. Subscribers can also reply to an active request from the broker, and can respond with a new CloudEvent that will be sent back into the broker.
+Triggers register a subscriber's interest in a particular class of events, so that the subscriber's event sink will receive events that match the Trigger's filter.
 
-For most use cases, a single broker per namespace is sufficient, but
-there are several use cases where multiple brokers can simplify
-architecture. For example, separate brokers for events containing Personally
-Identifiable Information (PII) and non-PII events can simplify audit and access
-control rules.
+## Default Broker configuration
 
-## Broker types
+Knative Eventing provides a `config-br-defaults` ConfigMap, which lives in the
+`knative-eventing` namespace, and provides default configuration settings to
+enable the creation of Brokers and Channels by using defaults.
+For more information, see the [`config-br-defaults`](./config-br-defaults.md) ConfigMap documentation.
 
-The following broker types are available for use with Knative Eventing.
+Create a Broker using the default settings:
 
-### Multi-tenant channel-based broker
+```shell
+kubectl create -f - <<EOF
+apiVersion: eventing.knative.dev/v1
+kind: Broker
+metadata:
+  name: default
+  namespace: default
+EOF
+```
 
-Knative Eventing provides a multi-tenant (MT) channel-based broker implementation that uses channels for event routing.
+## Configuring broker classes
 
-Before you can use the MT channel-based broker, you must install a [channel implementation](../channels/channel-types-defaults).
+You can configure Knative Eventing so that when you create a broker, it uses a
+different type of broker than the default Knative channel-based broker. To
+configure a different broker type, or *class*, you must modify the
+`eventing.knative.dev/broker.class` annotation and `spec.config` for the Broker
+object. `MTChannelBasedBroker` is the broker class default.
 
-### Alternative broker implementations
+### Procedure
 
-In the Knative Eventing ecosystem, alternative broker implementations are welcome as long as they respect the [broker specifications](https://github.com/knative/specs/blob/main/specs/eventing/broker.md).
+1. Modify the `eventing.knative.dev/broker.class` annotation. Replace
+`MTChannelBasedBroker` with the class type you want to use:
 
-The following is a list of brokers provided by the community or vendors:
+```yaml
+kind: Broker
+metadata:
+  annotations:
+    eventing.knative.dev/broker.class: MTChannelBasedBroker
+```
 
-#### GCP broker
+1. Configure the `spec.config` with the details of the ConfigMap that defines
+the backing channel for the broker class:
 
-The GCP broker is optimized for running in GCP. For more details, refer to the [documentation](https://github.com/google/knative-gcp/blob/master/docs/install/install-gcp-broker.md).
+```yaml
+kind: Broker
+spec:
+  config:
+    apiVersion: v1
+    kind: ConfigMap
+    name: config-br-default-channel
+    namespace: knative-eventing
+```
 
-#### Apache Kafka broker
+A full example combined into a fully specified resource could look like this:
 
-For information about the Apache Kafka broker, see [link](./kafka-broker).
+```yaml
+apiVersion: eventing.knative.dev/v1
+kind: Broker
+metadata:
+  annotations:
+    eventing.knative.dev/broker.class: MTChannelBasedBroker
+  name: default
+  namespace: default
+spec:
+  config:
+    apiVersion: v1
+    kind: ConfigMap
+    name: config-br-default-channel
+    namespace: knative-eventing
+```
 
 ## Next steps
 
-- Create a [MT channel-based broker](./create-mtbroker).
-- Configure [default broker ConfigMap settings](./configmaps/broker-configmaps).
-- View the [broker specifications](https://github.com/knative/specs/blob/main/specs/eventing/broker.md).
+After you have created a Broker, you can complete the following tasks to finish setting up event delivery.
+
+### Subscriber
+
+Create a function to receive events. This document uses a Knative Service, but
+it could be anything that is
+[Callable](https://github.com/knative/eventing/blob/main/docs/spec/interfaces.md).
+
+```shell
+kubectl create -f - <<EOF
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: my-service
+  namespace: default
+spec:
+  template:
+    spec:
+      containers:
+      -  # This corresponds to
+         # https://github.com/knative/eventing-contrib/tree/main/cmd/event_display
+         image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
+EOF
+```
+
+### Trigger
+
+Create a `Trigger` that sends only events of a particular type to the subscriber
+created above (`my-service`). For this example, we use Ping Source, and it
+emits events types `dev.knative.sources.ping`.
+
+```shell
+kubectl create -f - <<EOF
+apiVersion: eventing.knative.dev/v1
+kind: Trigger
+metadata:
+  name: my-service-trigger
+  namespace: default
+spec:
+  broker: default
+  filter:
+    attributes:
+      type: dev.knative.sources.ping
+  subscriber:
+    ref:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      name: my-service
+EOF
+```
+
+### Emitting Events using Ping Source
+
+Knative Eventing comes with a [Ping Source](../samples/ping-source/README.md) which
+emits an event on a configured schedule. For this we'll configure it to emit
+events once a minute, saying, yes, you guessed it `Hello World!`.
+
+```shell
+kubectl create -f - <<EOF
+apiVersion: sources.knative.dev/v1beta2
+kind: PingSource
+metadata:
+  name: test-ping-source
+spec:
+  schedule: "*/1 * * * *"
+  contentType: "application/json"
+  data: '{"message": "Hello world!"}'
+  sink:
+    ref:
+      # Deliver events to Broker.
+      apiVersion: eventing.knative.dev/v1
+      kind: Broker
+      name: default
+EOF
+```
+
+The following example is more complex, and demonstrates the use of `deadLetterSink` configuration to send failed events to Knative Service called `dlq-service`:
+
+```yaml
+apiVersion: eventing.knative.dev/v1
+kind: Broker
+metadata:
+  annotations:
+    eventing.knative.dev/broker.class: MTChannelBasedBroker
+  name: default
+spec:
+  # Configuration specific to this broker.
+  config:
+    apiVersion: v1
+    kind: ConfigMap
+    name: config-br-default-channel
+    namespace: knative-eventing
+  # Where to deliver Events that failed to be processed.
+  delivery:
+    deadLetterSink:
+      ref:
+        apiVersion: serving.knative.dev/v1
+        kind: Service
+        name: dlq-service
+```
+
+See also: [Delivery Parameters](../event-delivery.md#configuring-broker-delivery)

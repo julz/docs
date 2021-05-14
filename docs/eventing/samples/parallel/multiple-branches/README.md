@@ -1,12 +1,3 @@
----
-title: "Multiple Cases"
-linkTitle: "Multiple Cases"
-weight: 20
-type: "docs"
----
-
-# Multiple Cases
-
 We are going to create a Parallel with two branches:
 
 - the first branch accepts events with a time that is is even
@@ -98,7 +89,7 @@ spec:
   template:
     spec:
       containers:
-        - image: gcr.io/knative-releases/knative.dev/eventing/cmd/event_display
+        - image: gcr.io/knative-releases/knative.dev/eventing-contrib/cmd/event_display
 ```
 
 Change `default` below to create the `Sequence` in the Namespace where you want

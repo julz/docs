@@ -1,10 +1,11 @@
 ---
-title: "Kubernetes services"
-weight: 03
+title: "Knative Kubernetes Services"
+#linkTitle: "OPTIONAL_ALTERNATE_NAV_TITLE"
+weight: 9
 type: "docs"
 ---
 
-# Kubernetes services
+# Knative Kubernetes Services
 
 This guide describes the
 [Kubernetes Services](https://kubernetes.io/docs/concepts/services-networking/service/)

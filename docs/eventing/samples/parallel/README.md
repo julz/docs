@@ -1,12 +1,3 @@
----
-title: "Parallel Example"
-linkTitle: "Parallel"
-weight: 10
-type: "docs"
----
-
-# Parallel Example
-
 The following examples will help you understand how to use Parallel to describe
 various flows.
 

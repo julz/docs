@@ -14,10 +14,10 @@ The `target` annotation, used to configure per-revision targets,  is _metric agn
 
 ## Configuring targets
 
-* **Global settings key:** `container-concurrency-target-default`. For more information, see the documentation on [metrics](./autoscaling-metrics.md).
+* **Global settings key:** `container-concurrency-target-default` for setting a concurrency target, and `requests-per-second-target-default` for setting a requests-per-second (RPS) target. For more information, see the documentation on [metrics](./autoscaling-metrics.md).
 * **Per-revision annotation key:** `autoscaling.knative.dev/target`
 * **Possible values:** An integer (metric agnostic).
-* **Default:** `"100"` for `container-concurrency-target-default`. There is no default value set for the `target` annotation.
+* **Default:** `"100"` for `container-concurrency-target-default`, and `"200"` for `requests-per-second-target-default`. There is no default value set for the `target` annotation.
 
 
 === "Target annotation - Per-revision"
@@ -55,6 +55,29 @@ The `target` annotation, used to configure per-revision targets,  is _metric agn
       config:
         autoscaler:
           container-concurrency-target-default: "200"
+    ```
+
+=== "Requests per second (RPS) target - Global (ConfigMap)"
+    ```yaml
+    apiVersion: v1
+    kind: ConfigMap
+    metadata:
+     name: config-autoscaler
+     namespace: knative-serving
+    data:
+     requests-per-second-target-default: "150"
+    ```
+
+=== "Requests per second (RPS) target - Global (Operator)"
+    ```yaml
+    apiVersion: operator.knative.dev/v1alpha1
+    kind: KnativeServing
+    metadata:
+      name: knative-serving
+    spec:
+      config:
+        autoscaler:
+          requests-per-second-target-default: "150"
     ```
 
 

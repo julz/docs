@@ -7,10 +7,6 @@ showlandingtoc: "false"
 
 # Prerequisites
 
-!!! tip
-    If you're installing Knative for the first time, a better place to start may be [Getting Started](../getting-started/getting-started.md).
-
-
 Before installing Knative, you must meet the following prerequisites:
 
 ## System requirements
@@ -38,5 +34,5 @@ Before installation, you must meet the following prerequisites:
 
 You can install the Serving component, Eventing component, or both on your cluster. If you're planning on installing both, **we recommend starting with Knative Serving.**
 
-  - [Installing Knative Serving using YAML files](./install-serving-with-yaml.md)
-  - [Installing Knative Eventing using YAML files](./install-eventing-with-yaml.md)
+  - [Installing Knative Serving using YAML files](./install-serving-with-yaml)
+  - [Installing Knative Eventing using YAML files](./install-eventing-with-yaml)
