@@ -249,9 +249,9 @@ markdown_extensions:
 copyright: "Copyright © 2021 The Knative Authors"
 
 extra:
-  branch: v0.23.0 # Branch to use for examples
-  # version for download links, empty or "dev" to use googlestorage nightlies.
-  # version: v0.23.0
+  branch: v0.24.0          # Branch to use for examples
+  knative_version: dev     # Version for download links, empty or "dev" to use googlestorage nightlies.
+  version_warning: false   # Set to true to display the version announcement in the header.
   social:
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/KnativeProject
